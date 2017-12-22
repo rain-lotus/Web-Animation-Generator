@@ -1,0 +1,31 @@
+.drag-and-drop {
+    cursor: move;
+    position: absolute;
+    z-index: 1000;
+    padding: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.drag {
+    z-index: 1001;
+    background-color: #232323 !important;
+}
+
+#red-box{
+    background-color: #ff6363;
+    top: 0px;
+    left: 50px;
+}
+
+#blue-box{
+    background-color: aqua;
+    top: 0px;
+    left: 200px;
+}
+
+#yellow-box{
+    background-color: khaki;
+    top: 0px;
+    left: 350px;
+}
