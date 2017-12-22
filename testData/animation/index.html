@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="animejs.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="square" id="elem">elem</div>
+    <div class="square" id="elem2">elem2</div>
+    <div class="square" id="elem3">elem3</div>
+</div>
+
+<div class="edit">
+    target <input type="text" id="target"><br>
+    translatex <input type="text" id="translatex"><br>
+    translatey <input type="text" id="translatey"><br>
+    <input type="button" value="追加" id="add">
+    <p class="pala"></p>
+
+    <input type="button" value="run" class="button"><br>
+    <br>
+    テキストボックスに「何」を「どこ(x)」,[どこ(y)]に持っていくよって書いて、<br>
+    追加を押したらタイムラインに追加されます。<br>
+    runでアニメーションスタート <br>
+    初期値も設定してあります
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script src="animejs.js"></script>
+</body>
+</html>
