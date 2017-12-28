@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script>
+        window.AudioContext = window.webkitAudioContext || window.AudioContext;
+        var audioctx = new AudioContext();
+
+        var buffer = null;
+        LoadSample(audioctx, "sound/kalimba1.wav");
+
+       
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="640" height="640"></canvas>
+</body>
+
+</html>

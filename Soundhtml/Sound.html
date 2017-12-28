@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script>
+        window.AudioContext = window.webkitAudioContext || window.AudioContext;
+        var audioctx = new AudioContext();
+
+        var buffer = null;
+        LoadSample(audioctx, "sound/kalimba1.wav");
+
+        window.addEventListener("load", init);
+
+        function init() {
+            // Stageオブジェクトを作成します
+            var stage = new createjs.Stage("myCanvas");
+            stage.enableMouseOver();
+            // タッチ操作をサポートしているブラウザーならば
+            if (createjs.Touch.isSupported() == true) {
+                // タッチ操作を有効にします。
+                createjs.Touch.enable(stage)
+            }
+
+            // 使用するサウンドは事前に登録します。
+            // 音声ファイルのパス、任意のIDを指定します。
+            // createjs.Sound.registerSound("sound/kalimba1.wav", "kalimba");
+
+            // 円を作成します
+            var shape = new createjs.Shape();
+            shape.graphics.beginFill("Red"); // 赤色で描画するように設定
+            shape.graphics.drawCircle(0, 0, 100); //半径 100px の円を描画
+            shape.x = 200; // X 座標 200px の位置に配置
+            shape.y = 200; // Y 座標 200px の位置に配置
+
+            stage.addChild(shape); // 表示リストに追加
+
+            var mouseshape = new createjs.Shape();
+            mouseshape.graphics.beginFill("yellow");
+            mouseshape.graphics.drawCircle(0, 0, 10);
+            stage.addChild(mouseshape);
+
+
+            // 各種マウスイベントを登録する
+            shape.addEventListener("click", handleclick);
+            shape.addEventListener("mouseover", handleMouseOver);
+            shape.addEventListener("mouseout", handleMouseOut);
+
+            // tick イベントを登録する
+            createjs.Ticker.addEventListener("tick", handleTick);
+
+            var dragPointX;
+            var dragPointY;
+
+
+            function handleclick(event) {
+                dragPointX = stage.mouseX - shape.x;
+                dragPointY = stage.mouseY - shape.y;
+                //createjs.Sound.play("kalimba");
+                Play();
+            }
+            // マウスオーバーしたとき
+            function handleMouseOver(event) {
+                // 緑で塗り直す
+                shape.graphics
+                    .clear()
+                    .beginFill("green")
+                    .drawCircle(0, 0, 100);
+            }
+
+            // マウスアウトしたとき
+            function handleMouseOut(event) {
+                // 赤で塗り直す
+                shape.graphics
+                    .clear()
+                    .beginFill("DarkRed")
+                    .drawCircle(0, 0, 100);
+            }
+
+
+            function handleTick(event) {
+                // マウス座標を取得する
+                var mx = stage.mouseX;
+                var my = stage.mouseY;
+                // シェイプをマウスに追随させる
+                mouseshape.x = mx;
+                mouseshape.y = my;
+
+                // 画面を更新する
+                stage.update();
+            }
+        }
+
+        function Play() {
+            var src = audioctx.createBufferSource();
+            src.buffer = buffer;
+            src.connect(audioctx.destination);
+            src.start();
+        }
+
+        function LoadSample(ctx, url) {
+            var req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.responseType = "arraybuffer";
+            req.onload = function() {
+                if (req.response) {
+                    ctx.decodeAudioData(req.response).then(function(b) {
+                        buffer = b;
+                    }, function() {});
+                }
+            }
+            req.send();
+        }
+
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="640" height="640"></canvas>
+</body>
+
+</html>
