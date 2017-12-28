@@ -109,8 +109,8 @@
 
     //マウスボタンが上がったら発火
     function mup(e) {
+        //カチカチ動かしたかった
         var drag = document.getElementsByClassName("drag")[0];
-
         drag.style.top = Math.round(parseInt(drag.style.top) / 50) * 50 + "px";
 
         //ムーブベントハンドラの消去
