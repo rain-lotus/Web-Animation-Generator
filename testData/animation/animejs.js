@@ -19,12 +19,10 @@ $("#add").click(function () {
     // $("#translatex").val("");
 
     push_val2array(translatex, "#translatex","250");
-
     var tary = $("#translatey").val();
     if (tary == "") tary = "250";
     translatey.push(tary);
     $("#translatey").val("");
-
     $(".pala").html(target + "<br>" + translatex + "<br>" + translatey);
 });
 
