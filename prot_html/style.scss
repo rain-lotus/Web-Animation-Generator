@@ -1,7 +1,6 @@
-//cssの隙間をなくすためにhtmlとbodyの設定は必要
 html{
-  height: 100%;
-}
+   height: 100%;
+ }
 body{
   height: 100%;
   margin: 0;
@@ -17,7 +16,6 @@ header{
   background-color: #555555;
 }
 image{
-  //TODO ここはロゴの大きさをあとで決めていい感じにする
   width: 200px;
   height: 150px;
 }
