@@ -9,14 +9,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="animejs.css">
 </head>
+
 <body>
-<div class="wrapper">
-    <div class="square" id="elem">elem</div>
-    <div class="square" id="elem2">elem2</div>
-    <div class="square" id="elem3">elem3</div>
+<div class="canvas">
+    <!--.element is object-->
+    <div class="element square" id="elem">elem</div>
+    <div class="element square" id="elem2">elem2</div>
+    <div class="element square" id="elem3">elem3</div>
 </div>
 
 <div class="edit">
+    <div class="elema button" >elema</div>
+    <div class="elemb button" >elemb</div>
+    <div class="elemc button" >elemc</div><br>
+
     target <input type="text" id="target"><br>
     translatex <input type="text" id="translatex"><br>
     translatey <input type="text" id="translatey"><br>
@@ -29,6 +35,8 @@
     追加を押したらタイムラインに追加されます。<br>
     runでアニメーションスタート <br>
     初期値も設定してあります
+
+    <div id="history"></div>
 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
