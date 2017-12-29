@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<div class="canvas">
+<div id="canvas">
     <!--.element is object-->
     <div class="element square" id="elem">elem</div>
     <div class="element square" id="elem2">elem2</div>
@@ -19,9 +19,10 @@
 </div>
 
 <div class="edit">
-    <div class="elema button" >elema</div>
-    <div class="elemb button" >elemb</div>
-    <div class="elemc button" >elemc</div><br>
+    <!--TODO キャンバスにぶち込む要素達。初期設定する-->
+    <div class="add_element" id="elema">elema</div>
+    <div class="add_element" id="elemb">elemb</div>
+    <div class="add_element" id="elemc">elemc</div><br>
 
     target <input type="text" id="target"><br>
     translatex <input type="text" id="translatex"><br>
@@ -40,6 +41,6 @@
 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-<script src="animejs.js"></script>
+<script src="editanime.js"></script>
 </body>
 </html>

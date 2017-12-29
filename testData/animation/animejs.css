@@ -1,4 +1,4 @@
-.canvas{
+#canvas{
     background-color: #555555;
     padding: 20px;
     margin: 0 auto;
@@ -8,6 +8,33 @@
 
 .element{
     border-radius: 5px;
+}
+
+#elema{
+    display: inline-block;
+    background-color: #ff6363;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#elemb{
+    display: inline-block;
+    background-color: #4285f4;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#elemc{
+    display: inline-block;
+    background-color: khaki;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .elema{
