@@ -6,7 +6,7 @@ require_once('./twitteroauth.php');
 //Consumer keyの値をTwitterAPI開発者ページでご確認下さい。
 $sConsumerKey = "Pm2y1nDpgmtTrKl502YuH8SxE";
 //Consumer secretの値を格納
-$sConsumerSecret = "	a6maELzlapKQucPGxQhL5r1N94Qy4tkP4EeatsyNfE0KFJXoN8
+$sConsumerSecret = "a6maELzlapKQucPGxQhL5r1N94Qy4tkP4EeatsyNfE0KFJXoN8
 ";
 //callbakurl
 $sCallBackUrl = 'https://rain-lotus.github.io/CMP-B/testpage/twitter/callback.php';
