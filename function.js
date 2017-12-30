@@ -5,10 +5,8 @@ var timeline_palameter = {
     }
 };
 var timeline = anime.timeline(timeline_palameter);
-
 var animation = {};//連想配列
 var animation_array = [];//連想配列の配列
-
 var is_chose_pos = false;
 var is_moving = false;
 var posx, posy;
@@ -37,7 +35,9 @@ var move_element = function (e) {
         "left": event.pageX - x + "px"
     });
     $(".drag").mouseup(drop_element);
+    is_moving = false;
 };
+
 var drop_element = function (e) {
     $(document.body).off('mousemove');
     $(".drag").mouseup = "";
@@ -49,56 +49,61 @@ var drop_element = function (e) {
 };
 //document.on_click
 var select_element = function () {
-  $(this).addClass("selected");
+    if (!is_moving) {
+        if ($(this).hasClass("selected")) $(this).removeClass("selected");
+        else $(this).addClass("selected");
+    } else {
+        is_moving = false;
+    }
 };
 
-//履歴box追加
-//この漢字でいいけど何か考えないと
-function add_history_block(name) {
-    //dd操作のため
-    if (!is_moving) {
-        var history_box = "<div class='history'>" + name + "</div>"
+//.add_move class
+var modify_animation = function () {
+    this.make_history_block = function () {
+        var name = "";
+        $(".selected").each(function (i, elem) {
+            name += "#" + $(elem).attr("id");
+            if(i != $(".selected").length-1) name += ",";
+        });
+        var history_box = "<div class='history'><p class='name'>" + name + "</p></div>"
         $("#history").append(history_box);
         is_chose_pos = true;
+    };
 
-        //TODO ここ仮
-        animation["targets"] = "#" + name;
+    //仮にtranslateのfunctionを入れている
+    //今編集しようとしているブロックに対して行き先指定（これでいいのかもわからない）
+    this.regist_move = function (e) {
+        //多分マウス位置
+        posx = e.offsetX;
+        posy = e.offsetY;
+        //ここの必ず最後を取ってくるやつも後で変えないと
+        var i = $(".history").length - 1;
+        var positionX = "<p class='posX'>" + posx + "</p>";
+        var positionY = "<p class='posY'>" + posy + "</p>";
+        $(".history:eq(" + i + ")").append(positionX);
+        $(".history:eq(" + i + ")").append(positionY);
+        is_chose_pos = false;
+        //仮
+        this.add_animation(i);
+    };
 
-        //これがないと親要素のイベントが発生
-        setTimeout(function () {
-            busy = 0;
-        }, 500);
-    }
-    is_moving = false;
-}
+    this.add_animation = function (boxnum) {
+        var targets = $(".history:eq(" + boxnum + ") p.name").text();
+        animation['targets'] = targets;
+        var positionX = $(".history:eq(" + boxnum + ") p.posX").text();
+        animation['translateX'] = positionX;
+        var positionY = $(".history:eq(" + boxnum + ") p.posY").text();
+        animation['translateY'] = positionY;
 
-//今編集しようとしているブロックに対して行き先指定（これでいいのかもわからない）
-function add_position(e) {
-    //多分マウス位置
-    posx = e.offsetX;
-    posy = e.offsetY;
-    var i = $(".history").length - 1;
-    var position = "<p>" + posx + "," + posy + "</p>";
+        //プレビューの実装（微妙）
+        animate_block();
 
-    $(".history:eq(" + i + ")").append(position);
-    is_chose_pos = false;
-
-    //TODO 仮
-    animation["translateX"] = posx.toString();
-    animation["translateY"] = posy.toString();
-    animation_array.push(animation);
-
-    //プレビューの実装（微妙）
-    animate_block();
-
-    animation = {};
-
-
-}
+        animation = {};
+    };
+};
 
 //プレビュー(仮)
 var animate_block = function () {
-    console.log("aaergethq");
     timeline = anime.timeline(timeline_palameter);
     timeline.add(animation);
 };

@@ -40,19 +40,15 @@ var translatey = [];
 // }
 //
 
-$(".button").click(function () {
+$("#run").click(function () {
     console.log("weth");
     var timeline = anime.timeline();
-
     var name = 'targets';
-
     var animation_array = {};
-    animation_array[name] = "#elem";
+    animation_array[name] = "#translate, #rotate,";
     animation_array['translateX'] = "250";
     animation_array['easing'] = 'linear';
-
     console.log(animation_array);
-
     timeline.add(animation_array);
 
     // {

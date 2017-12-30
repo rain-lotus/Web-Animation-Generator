@@ -3,6 +3,8 @@
   width: 60%;
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 #wrapper:before {
   content: "";
@@ -15,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: darkcyan;
+  outline: #555555 solid 1px;
 }
 
 .element {
@@ -44,11 +46,11 @@
   @extend .add_element;
 }
 .elemb {
-  @extend #elema;
+  @extend #elemb;
   @extend .add_element;
 }
 .elemc {
-  @extend #elema;
+  @extend #elemc;
   @extend .add_element;
 }
 
@@ -60,7 +62,6 @@
 }
 
 body {
-  background-color: #232323;
 }
 
 .history {
@@ -79,5 +80,5 @@ body {
 }
 
 .selected{
-  border: blueviolet solid 2px;
+  outline: chartreuse solid 2px;
 }
