@@ -6,8 +6,7 @@ require_once('./twitteroauth.php');
 //Consumer keyの値をTwitterAPI開発者ページでご確認下さい。
 $sConsumerKey = "Pm2y1nDpgmtTrKl502YuH8SxE";
 //Consumer secretの値を格納
-$sConsumerSecret = "a6maELzlapKQucPGxQhL5r1N94Qy4tkP4EeatsyNfE0KFJXoN8
-";
+$sConsumerSecret = "a6maELzlapKQucPGxQhL5r1N94Qy4tkP4EeatsyNfE0KFJXoN8";
 //callbakurl
 $sCallBackUrl = 'https://rain-lotus.github.io/CMP-B/testpage/twitter/callback.php';
 ?>
@@ -28,8 +27,8 @@ $sCallBackUrl = 'https://rain-lotus.github.io/CMP-B/testpage/twitter/callback.ph
 if((isset($_SESSION['oauthToken']) && $_SESSION['oauthToken'] !== NULL) && (isset($_SESSION['oauthTokenSecret']) && $_SESSION['oauthTokenSecret'] !== NULL)){
 
 	//値の格納
-	$sUserId = 			$_SESSION['userId'];
-	$sScreenName = 		$_SESSION['screenName'];
+	$sUserId = $_SESSION['userId'];
+	$sScreenName = $_SESSION['screenName'];
 
 	//表示
 	?>
@@ -49,18 +48,20 @@ if((isset($_SESSION['oauthToken']) && $_SESSION['oauthToken'] !== NULL) && (isse
 	$oOauthToken = $oOauth->getRequestToken($sCallBackUrl);
 
 	//セッション格納
-	$_SESSION['requestToken'] = 			$sToken = $oOauthToken['oauth_token'];
-	$_SESSION['requestTokenSecret'] = 		$oOauthToken['oauth_token_secret'];
+	$_SESSION['requestToken'] = $sToken = $oOauthToken['oauth_token'];
+	$_SESSION['requestTokenSecret'] = $oOauthToken['oauth_token_secret'];
 
 	//認証URLの引数 falseの場合はtwitter側で認証確認表示
-	if(isset($_GET['authorizeBoolean']) && $_GET['authorizeBoolean'] != '')
+	if(isset($_GET['authorizeBoolean']) && $_GET['authorizeBoolean'] != ''){
 	$bAuthorizeBoolean = false;
-	else
+	}
+	else{
 	$bAuthorizeBoolean = true;
-
+	}
 	//Authorize url を取得
 	$sUrl = $oOauth->getAuthorizeURL($sToken, $bAuthorizeBoolean);
 	?>
+	    
                 <a href="<?php echo $sUrl; ?>">ログイン</a>
 
                 <?php } ?>
