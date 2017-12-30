@@ -88,16 +88,35 @@ var modify_animation = function () {
     };
 
     this.add_animation = function (boxnum) {
+        var this_animations_array = [];
+
         var targets = $(".history:eq(" + boxnum + ") p.name").text();
         animation['targets'] = targets;
-        var positionX = $(".history:eq(" + boxnum + ") p.posX").text();
-        animation['translateX'] = positionX;
-        var positionY = $(".history:eq(" + boxnum + ") p.posY").text();
-        animation['translateY'] = positionY;
+
+        targets_array = targets.split(",");
+        for(var target in targets_array){
+            animation = {};
+
+            animation['targets'] = targets_array[target];
+            var positionX = $(".history:eq(" + boxnum + ") p.posX").text();
+            var element_posx = parseInt($(targets_array[target]).css('left'),10);
+            var x = positionX - element_posx;
+            animation['translateX'] = x.toString();
+
+            var positionY = $(".history:eq(" + boxnum + ") p.posY").text();
+            var element_posy = parseInt($(targets_array[target]).css('top'),10);
+            var y = positionY - element_posy;
+            animation['translateY'] = y.toString();
+
+            animation['offset'] = "0";
+
+            console.log(animation);
+
+            this_animations_array.push(animation);
+        }
 
         //プレビューの実装（微妙）
-        animate_block();
-
+        animate_array(this_animations_array);
         animation = {};
     };
 };
@@ -108,11 +127,13 @@ var animate_block = function () {
     timeline.add(animation);
 };
 
-//全体タイムライン作成
-function animate_array() {
+//任意のアニメーション配列に対してタイムライン作成
+function animate_array(array) {
+    //タイムラインリセット
     timeline = anime.timeline(timeline_palameter);
-    for (var i = 0; i < animation_array.length; i++) {
-        timeline.add(animation_array[i]);
+    for (var i = 0; i < array.length; i++) {
+        console.log(array[i]);
+        timeline.add(array[i]);
     }
 }
 
