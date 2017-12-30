@@ -34,6 +34,15 @@ var animation_array = [];
     $(".button").click(function () {
         animate();
     });
+
+    //htmlに対する動作
+    // $('html').mousemove(function (e) {
+    //     $("#select_position").css({
+    //         'top': e.clientY - 10,
+    //         'left': e.clientX - 10
+    //     });
+    // });
+
 })()
 
 var element_sum = 0;
@@ -41,7 +50,6 @@ var element_sum = 0;
 //elememt edit function
 //要素を追加
 function add_element(type) {
-    //
     $("#canvas").append("<div class='element " + type + "' id='" + type + element_sum + "'>" + type + element_sum + "</div>");
     element_sum++;
 }
@@ -51,9 +59,11 @@ function add_element(type) {
 function add_history_block(name) {
     $("#history").append("<div class='history'>" + name + "</div>");
     is_chose_pos = true;
-
     //TODO ここ仮
     animation["targets"] = "#" + name;
+
+    //ポジション追加
+    // $("#select_position").css('display','initial');
 
     //これがないと親要素のイベントが発生
     setTimeout(function () {
@@ -76,6 +86,9 @@ function add_position(e) {
 
     animation_array.push(animation);
     animation = {};
+
+    //ポジション削除
+    // $("#select_position").css('display','none');
 }
 
 //animation editing
@@ -88,46 +101,3 @@ function animate() {
     }
 }
 
-//animation managing vals
-function historyblock_to_animation() {
-    //.historyブロックから要素を取り出していい感じにして連想配列にするところ
-}
-
-
-//
-// function add_history_box() {
-//     $("#history").append("<div class='history'>aaaa</div>");
-// }
-//
-// $("#but1").click(function () {
-//     target.push("#elem3");
-//     translatex.push(500);
-// });
-//
-// $("#add").click(function () {
-//     var tar = $("#target").val();
-//     if (tar == "") tar = "elem";
-//     target.push("#" + tar);
-//     $("#target").val("");
-//
-//     // var trax = $("#translatex").val();
-//     // if (trax == "") trax = "250";
-//     // translatex.push(trax);
-//     // $("#translatex").val("");
-//
-//     push_val2array(translatex, "#translatex", "250");
-//
-//     var tary = $("#translatey").val();
-//     if (tary == "") tary = "250";
-//     translatey.push(tary);
-//     $("#translatey").val("");
-//     $(".pala").html(target + "<br>" + translatex + "<br>" + translatey);
-// });
-//
-// function push_val2array(array, id, default_value) {
-//     var temp = $(id).val();
-//     if (temp == "") temp = array.length == 0 ? default_value : array[array.length - 1];
-//     array.push(temp);
-//     $(id).val("");
-// }
-//

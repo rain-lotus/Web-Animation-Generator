@@ -1,3 +1,13 @@
+<?php
+//$db = new PDO("sqlite:../../data/works.sqlite");
+//$db ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+//
+//if (!empty($_GET['animation'])){
+//    $animation = $_GET['animation'];
+//    $db->query("insert into sketch(animation) values('$animation')");
+//}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,31 +21,28 @@
 </head>
 
 <body>
-<div id="canvas">
-    <!--.element is object-->
-    <div class="element square" id="elem">elem</div>
-    <div class="element square" id="elem2">elem2</div>
-    <div class="element square" id="elem3">elem3</div>
+<div id="wrapper">
+    <div id="canvas">
+        <span id='select_position'></span>
+        <!--.element is object-->
+
+    </div>
 </div>
 
 <div class="edit">
     <!--TODO キャンバスにぶち込む要素達。初期設定する-->
+    <!--<div class="add_element" id="その要素のタイプ名とか"><div>-->
+    <!--完全に幾何学でやる場合である……-->
+
     <div class="add_element" id="elema">elema</div>
     <div class="add_element" id="elemb">elemb</div>
-    <div class="add_element" id="elemc">elemc</div><br>
-
-    target <input type="text" id="target"><br>
-    translatex <input type="text" id="translatex"><br>
-    translatey <input type="text" id="translatey"><br>
-    <input type="button" value="追加" id="add">
-    <p class="pala"></p>
+    <div class="add_element" id="elemc">elemc</div>
+    <br>
 
     <input type="button" value="run" class="button"><br>
-    <br>
-    テキストボックスに「何」を「どこ(x)」,[どこ(y)]に持っていくよって書いて、<br>
-    追加を押したらタイムラインに追加されます。<br>
-    runでアニメーションスタート <br>
-    初期値も設定してあります
+
+    <!--    多分こんな感じで原始的にhtmlとanimation_arrayの文字列を送って保存すれば行ける。もっといい方法があればいいんだけど-->
+    <!--    <a href="index.php?animation=zaadfaewsfw"><input type="button" value="save" id="save"></a><br>-->
 
     <div id="history"></div>
 
