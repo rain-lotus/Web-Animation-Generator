@@ -1,6 +1,7 @@
 //ボタンとかシークバーとかの実装
 $(".play").click(function () {
     timeline.play();
+    compile_animation();
 });
 $(".pause").click(function () {
     timeline.pause();

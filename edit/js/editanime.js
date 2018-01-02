@@ -24,15 +24,6 @@
         compile_animation();
     });
 
-    //ボタンとかシークバーとか実装したい
-    $(".play").click(function () {
-
-    });
-    $(".pause").click(function () {
-
-    });
-
-
     //編集している時にマウス追従するやつ
     //$(document).on("mousemove","#canvas",mouse_follow(e));
 })()

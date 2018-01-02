@@ -1,13 +1,3 @@
-<!--<?php-->
-<!--//$db = new PDO("sqlite:../../data/works.sqlite");-->
-<!--//$db ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);-->
-<!--//-->
-<!--//if (!empty($_GET['animation'])){-->
-<!--//    $animation = $_GET['animation'];-->
-<!--//    $db->query("insert into sketch(animation) values('$animation')");-->
-<!--//}-->
-
-<!--?>-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +15,6 @@
     <div id="canvas">
         <span id='mouse'></span>
         <!--.element is object-->
-
     </div>
 </div>
 
@@ -53,15 +42,19 @@
         <button class="reset">reset</button>
     </div>
 
+    <div class="get_html"></div>
+
     <!--    多分こんな感じで原始的にhtmlとanimation_arrayの文字列を送って保存すれば行ける。もっといい方法があればいいんだけど-->
     <!--    <a href="index.php?animation=zaadfaewsfw"><input type="button" value="save" id="save"></a><br>-->
 
     <div id="history"></div>
+
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 <script src="js/function.js"></script>
 <script src="js/button_progress.js"></script>
 <script src="js/dragdrop.js"></script>
+<script src="js/get_html.js"></script>
 <script src="js/editanime.js"></script>
 </body>
 </html>

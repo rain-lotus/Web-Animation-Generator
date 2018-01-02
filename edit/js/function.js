@@ -49,21 +49,20 @@ var translation = function (e, num) {
     //多分マウス位置
     posx = e.offsetX;
     posy = e.offsetY;
-
     //ここの必ず最後を取ってくるやつも後で変えないと
     //何をどういう感じに足すかだけできればこの方法でどんなパラメーターも追加できるはず
     num = $(".history").length - 1;
     var positionX = "<p class='translateX'>" + posx + "</p>";
     var positionY = "<p class='translateY'>" + posy + "</p>";
-    var duration = "<p class='duration'>1800</p>"
+    var duration = "<p class='duration'>1800</p>";
 
     $(".history:eq(" + num + ")").append(positionX);
     $(".history:eq(" + num + ")").append(positionY);
     $(".history:eq(" + num + ")").append(duration);
 
     is_chose_pos = false;
+    animate_array(this.add_animation(num));
 
-    //animate_array(this.add_animation(num));
     animation = {};
 };
 
@@ -109,6 +108,7 @@ var animate_array = function (array) {
     for (var i = 0; i < array.length; i++) {
         timeline.add(array[i]);
     }
+    timeline.seek(0);
 };
 
 
