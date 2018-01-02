@@ -17,7 +17,8 @@ var add_element = function (type) {
     //ボタンがちゃんと作られていればここでいい感じに増やしてくれる
     $("#canvas").append("<div class='element " + type + "' id='" + type + element_sum + "'>" + type + element_sum + "</div>");
     element_sum++;
-}
+};
+
 //dd
 var drag_element = function (e) {
     $(this).addClass("drag");
@@ -37,7 +38,6 @@ var move_element = function (e) {
     $(".drag").mouseup(drop_element);
     is_moving = false;
 };
-
 var drop_element = function (e) {
     $(document.body).off('mousemove');
     $(".drag").mouseup = "";
@@ -60,71 +60,63 @@ var select_element = function () {
 //.add_move class
 var modify_animation = function () {
     this.make_history_block = function () {
+        //その時選択されているelementに対して一個の塊を作る
         var name = "";
         $(".selected").each(function (i, elem) {
             name += "#" + $(elem).attr("id");
             if(i != $(".selected").length-1) name += ",";
         });
-        var history_box = "<div class='history'><p class='name'>" + name + "</p></div>"
+        var history_box = "<div class='history'><p class='targets'>" + name + "</p></div>"
         $("#history").append(history_box);
         is_chose_pos = true;
     };
 
     //仮にtranslateのfunctionを入れている
     //今編集しようとしているブロックに対して行き先指定（これでいいのかもわからない）
-    this.regist_move = function (e) {
+    this.translation = function (e, num) {
         //多分マウス位置
         posx = e.offsetX;
         posy = e.offsetY;
+
         //ここの必ず最後を取ってくるやつも後で変えないと
-        var i = $(".history").length - 1;
-        var positionX = "<p class='posX'>" + posx + "</p>";
-        var positionY = "<p class='posY'>" + posy + "</p>";
-        $(".history:eq(" + i + ")").append(positionX);
-        $(".history:eq(" + i + ")").append(positionY);
+        num = $(".history").length - 1;
+
+        var positionX = "<p class='translateX'>" + posx + "</p>";
+        var positionY = "<p class='translateY'>" + posy + "</p>";
+        $(".history:eq(" + num + ")").append(positionX);
+        $(".history:eq(" + num + ")").append(positionY);
         is_chose_pos = false;
-        //仮
-        this.add_animation(i);
+
+        animate_array(this.add_animation(num));
+        animation = {};
     };
 
     this.add_animation = function (boxnum) {
+        //特定のhistoryboxからanimation配列を作ってくれる
         var this_animations_array = [];
+        //TODO もうちょっと綺麗にできるはず
+        var $target = $(".history:eq(" + boxnum + ") p.targets");
+        var targets_name = $target.text();
+        animation['targets'] = targets_name;
 
-        var targets = $(".history:eq(" + boxnum + ") p.name").text();
-        animation['targets'] = targets;
-
-        targets_array = targets.split(",");
+        var targets_array = targets_name.split(",");
         for(var target in targets_array){
+            //それぞれのターゲットに対して
             animation = {};
-
             animation['targets'] = targets_array[target];
-            var positionX = $(".history:eq(" + boxnum + ") p.posX").text();
-            var element_posx = parseInt($(targets_array[target]).css('left'),10);
-            var x = positionX - element_posx;
-            animation['translateX'] = x.toString();
-
-            var positionY = $(".history:eq(" + boxnum + ") p.posY").text();
-            var element_posy = parseInt($(targets_array[target]).css('top'),10);
-            var y = positionY - element_posy;
-            animation['translateY'] = y.toString();
-
+            //名前以下の要素のpからクラス名(=パラメーター名)と要素の値を取ってくる
+            for(var i = 1; i < $(".history:eq(" + boxnum + ") p").length; i++){
+                var parameter = $(".history:eq(" + boxnum + ") p:eq("+i+")").attr('class');
+                var parameter_value = $(".history:eq(" + boxnum + ") p."+parameter).text();
+                animation[parameter] = parameter_value.toString();
+            };
+            //TODO ここをぶろっくの数とそのdurationに対応させてい感じにする
             animation['offset'] = "0";
-
             console.log(animation);
-
             this_animations_array.push(animation);
         }
-
-        //プレビューの実装（微妙）
-        animate_array(this_animations_array);
-        animation = {};
+        return this_animations_array;
     };
-};
-
-//プレビュー(仮)
-var animate_block = function () {
-    timeline = anime.timeline(timeline_palameter);
-    timeline.add(animation);
 };
 
 //任意のアニメーション配列に対してタイムライン作成
