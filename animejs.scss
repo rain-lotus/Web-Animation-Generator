@@ -82,3 +82,11 @@ body {
 .selected{
   outline: chartreuse solid 2px;
 }
+
+#mouse{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ff6363;
+  display: none;
+}

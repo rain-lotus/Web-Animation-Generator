@@ -13,28 +13,27 @@
     $(document).on("click", ".element", select_element);
     $(document).on('mousedown','.element', drag_element);
 
-    var translate = new modify_animation();
-    $(".add_move").click(translate.make_history_block);
-
+    $(".add_move").click(make_history_block);
     //アニメーション仮
     $("#canvas").click(function (e) {
-        if (is_chose_pos) translate.translation(e, 0);
+        if (is_chose_pos) translation(e, 0);
     });
 
     //アニメーションさせる
     $("#run").click(function () {
-        animate_array();
-    });
-    //スライダーとかを入れたかった
-    $('.play').click(function () {
-        timeline.play;
-    });
-    $('.pause').click(function () {
-        timeline.pause;
-    });
-    $('.restart').click(function () {
-        timeline.restart;
+        compile_animation();
     });
 
+    //ボタンとかシークバーとか実装したい
+    $(".play").click(function () {
+
+    });
+    $(".pause").click(function () {
+
+    });
+
+
+    //編集している時にマウス追従するやつ
+    //$(document).on("mousemove","#canvas",mouse_follow(e));
 })()
 
