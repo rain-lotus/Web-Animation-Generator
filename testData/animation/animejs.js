@@ -49,7 +49,19 @@ $("#run").click(function () {
     animation_array['translateX'] = "250";
     animation_array['easing'] = 'linear';
     console.log(animation_array);
-    timeline.add(animation_array);
+
+    var array = ["#translateX", "#rotate"];
+
+    timeline.add({
+        targets: '#translate, #rotate',
+        translateX: 250,
+        direction: 'alternate',
+        loop: true,
+        delay: function (array, i, l) {
+            return i * 100;
+        }
+    });
+
 
     // {
     //     targets: "#elem",

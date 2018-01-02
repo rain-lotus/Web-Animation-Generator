@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/edit/js/button_progress.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/edit/js/dragdrop.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/animejs.css" afterPath="$PROJECT_DIR$/animejs.css" />
-      <change beforePath="$PROJECT_DIR$/animejs.css.map" afterPath="$PROJECT_DIR$/animejs.css.map" />
-      <change beforePath="$PROJECT_DIR$/animejs.scss" afterPath="$PROJECT_DIR$/animejs.scss" />
-      <change beforePath="$PROJECT_DIR$/editanime.js" afterPath="$PROJECT_DIR$/editanime.js" />
-      <change beforePath="$PROJECT_DIR$/example.js" afterPath="$PROJECT_DIR$/example.html" />
-      <change beforePath="$PROJECT_DIR$/function.js" afterPath="$PROJECT_DIR$/function.js" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/animejs.css" afterPath="$PROJECT_DIR$/edit/animejs.css" />
+      <change beforePath="$PROJECT_DIR$/animejs.css.map" afterPath="$PROJECT_DIR$/edit/animejs.css.map" />
+      <change beforePath="$PROJECT_DIR$/animejs.scss" afterPath="$PROJECT_DIR$/edit/animejs.scss" />
+      <change beforePath="$PROJECT_DIR$/editanime.js" afterPath="$PROJECT_DIR$/edit/js/editanime.js" />
+      <change beforePath="$PROJECT_DIR$/example.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/function.js" afterPath="$PROJECT_DIR$/edit/js/function.js" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/edit/index.html" />
+      <change beforePath="$PROJECT_DIR$/testData/animation/animejs.js" afterPath="$PROJECT_DIR$/testData/animation/animejs.js" />
+      <change beforePath="$PROJECT_DIR$/testData/animation/index.html" afterPath="$PROJECT_DIR$/testData/animation/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,60 +61,37 @@
     <favorites_list name="CMP-B" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48335123">
+    <splitter split-orientation="horizontal" split-proportion="0.6745602">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="animejs.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/animejs.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="animejs.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/animejs.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="713">
-                  <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="function.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/function.js">
+            <entry file="file://$PROJECT_DIR$/edit/js/function.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="152" column="20" lean-forward="false" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
-                  <folding>
-                    <element signature="e#423#609#0" expanded="false" />
-                    <element signature="e#1392#1581#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="552">
+                  <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="editanime.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/editanime.js">
+            <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="427">
-                  <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+                <state relative-caret-position="347">
+                  <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/edit/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="646">
+                  <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -119,11 +100,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="example.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/example.html">
+          <file leaf-file-name="animejs.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/testData/animation/animejs.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="508">
-                  <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="45" selection-end-column="12" />
+                <state relative-caret-position="445">
+                  <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -152,9 +133,10 @@
       <find>eq</find>
       <find>class</find>
       <find>console</find>
+      <find>event</find>
       <find>position</find>
       <find>TLcontrols</find>
-      <find>event</find>
+      <find>is_moving</find>
     </findStrings>
     <replaceStrings>
       <replace>#canvas</replace>
@@ -192,12 +174,16 @@
         <option value="$PROJECT_DIR$/testData/animation/index.html" />
         <option value="$PROJECT_DIR$/testData/blockmakeanimation/block.js" />
         <option value="$PROJECT_DIR$/example.js" />
-        <option value="$PROJECT_DIR$/testData/animation/animejs.js" />
         <option value="$PROJECT_DIR$/animejs.scss" />
         <option value="$PROJECT_DIR$/editanime.js" />
         <option value="$PROJECT_DIR$/example.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/function.js" />
+        <option value="$PROJECT_DIR$/testData/animation/animejs.js" />
+        <option value="$PROJECT_DIR$/edit/js/button_progress.js" />
+        <option value="$PROJECT_DIR$/edit/js/dragdrop.js" />
+        <option value="$PROJECT_DIR$/edit/index.html" />
+        <option value="$PROJECT_DIR$/edit/js/function.js" />
       </list>
     </option>
   </component>
@@ -323,18 +309,13 @@
             <path>
               <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
-              <item name="testData" type="462c0819:PsiDirectoryNode" />
+              <item name="edit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
-              <item name="testData" type="462c0819:PsiDirectoryNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
-              <item name="animejs.scss" type="620a8d5e:NestingTreeNode" />
+              <item name="edit" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -356,12 +337,14 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\CMP-B\edit\js" />
+      <recent name="C:\GitHub\CMP-B\edit" />
       <recent name="C:\GitHub\CMP-B" />
       <recent name="C:\GitHub\CMP-B\data" />
     </key>
@@ -480,7 +463,7 @@
       <workItem from="1514437487493" duration="37412000" />
       <workItem from="1514548577284" duration="757000" />
       <workItem from="1514597657703" duration="1378000" />
-      <workItem from="1514867007453" duration="15523000" />
+      <workItem from="1514867007453" duration="17697000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -496,11 +479,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514873003463</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ボタンとシークバー作った">
+      <created>1514884453280</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1514884453280</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100234000" />
+    <option name="totallyTimeSpent" value="102408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -510,14 +500,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5021482" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3472057" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280899" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280899" sideWeight="0.49785176" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20646766" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20622987" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861878" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -572,36 +562,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="追加：dd, animation のテストデータ" />
     <MESSAGE value="コードをいい感じにしたい" />
-    <option name="LAST_COMMIT_MESSAGE" value="コードをいい感じにしたい" />
+    <MESSAGE value="ボタンとシークバー作った" />
+    <option name="LAST_COMMIT_MESSAGE" value="ボタンとシークバー作った" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/prot_html/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testData/blockmakeanimation/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testData/animation/anime.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/programing/companynote/tagtest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -658,7 +628,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/editanime.js">
+    <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
@@ -668,7 +638,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/edit/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -681,13 +651,13 @@
         <state relative-caret-position="729">
           <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
           <folding>
-            <marker date="1514608238598" expanded="true" signature="261:279" ph="insert into sketch... " />
-            <marker date="1514608238598" expanded="true" signature="261:311" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:279" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:311" ph="insert into sketch... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/editanime.js">
+    <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1403">
           <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
@@ -702,8 +672,8 @@
         <state relative-caret-position="667">
           <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
           <folding>
-            <marker date="1514608238598" expanded="true" signature="261:279" ph="insert into sketch... " />
-            <marker date="1514608238598" expanded="true" signature="261:311" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:279" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:311" ph="insert into sketch... " />
           </folding>
         </state>
       </provider>
@@ -715,7 +685,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/editanime.js">
+    <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1403">
           <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
@@ -730,8 +700,8 @@
         <state relative-caret-position="667">
           <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
           <folding>
-            <marker date="1514608238598" expanded="true" signature="261:279" ph="insert into sketch... " />
-            <marker date="1514608238598" expanded="true" signature="261:311" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:279" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:311" ph="insert into sketch... " />
           </folding>
         </state>
       </provider>
@@ -764,7 +734,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/edit/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
@@ -783,8 +753,8 @@
         <state relative-caret-position="644">
           <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding>
-            <marker date="1514608238598" expanded="true" signature="261:279" ph="insert into sketch... " />
-            <marker date="1514608238598" expanded="true" signature="261:311" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:279" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:311" ph="insert into sketch... " />
           </folding>
         </state>
       </provider>
@@ -894,8 +864,8 @@
         <state relative-caret-position="383">
           <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <marker date="1514608238598" expanded="true" signature="261:279" ph="insert into sketch... " />
-            <marker date="1514608238598" expanded="true" signature="261:311" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:279" ph="insert into sketch... " />
+            <marker date="1514885547778" expanded="true" signature="261:311" ph="insert into sketch... " />
           </folding>
         </state>
       </provider>
@@ -918,23 +888,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testData/animation/animejs.js">
+    <entry file="file://$PROJECT_DIR$/example.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="40" />
+        <state relative-caret-position="531">
+          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="45" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/animejs.scss">
+    <entry file="file://$PROJECT_DIR$/edit/animejs.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+        <state relative-caret-position="406">
+          <caret line="91" column="1" lean-forward="false" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/animejs.css">
+    <entry file="file://$PROJECT_DIR$/edit/animejs.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
@@ -942,40 +912,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/editanime.js">
+    <entry file="file://$PROJECT_DIR$/edit/animejs.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testData/animation/animejs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit/js/button_progress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit/js/dragdrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example.html">
+    <entry file="file://$PROJECT_DIR$/edit/js/function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="45" selection-end-column="12" />
+        <state relative-caret-position="552">
+          <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="152" column="20" lean-forward="false" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
-          <folding>
-            <element signature="e#423#609#0" expanded="false" />
-            <element signature="e#1392#1581#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

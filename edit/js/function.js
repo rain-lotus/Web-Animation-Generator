@@ -6,7 +6,6 @@ var timeline_palameter = {
     }
 };
 var timeline = anime.timeline(timeline_palameter);
-
 var animation = {};//連想配列
 var animations = [];//連想配列の配列
 var is_chose_pos = false;
@@ -21,34 +20,6 @@ var add_element = function (type) {
     element_sum++;
 };
 
-//dd
-var drag_element = function (e) {
-    $(this).addClass("drag");
-    //要素内の相対座標を取得
-    x = event.pageX - this.offsetLeft;
-    y = event.pageY - this.offsetTop;
-    $(document.body).mousemove(move_element);
-    $(".drag").mouseup(drop_element);
-};
-var move_element = function (e) {
-    is_moving = true;
-    e.preventDefault();
-    $(".drag").css({
-        "top": event.pageY - y + "px",
-        "left": event.pageX - x + "px"
-    });
-    $(".drag").mouseup(drop_element);
-    is_moving = false;
-};
-var drop_element = function (e) {
-    $(document.body).off('mousemove');
-    $(".drag").mouseup = "";
-    $(".drag").removeClass("drag");
-    //これがないと親要素のイベントが発生
-    setTimeout(function () {
-        busy = 0;
-    }, 500);
-};
 //document.on_click
 var select_element = function () {
     if (!is_moving) {
@@ -61,6 +32,7 @@ var select_element = function () {
 
 var make_history_block = function () {
     //その時選択されているelementに対して一個の塊を作る
+    //TODO 何も選択してないのに出てくるのはだめだと思う
     var name = "";
     $(".selected").each(function (i, elem) {
         name += "#" + $(elem).attr("id");
@@ -96,7 +68,6 @@ var translation = function (e, num) {
 };
 
 var current_time = 0;
-
 var add_animation = function (boxnum) {
     //特定のhistoryboxからanimation配列を作ってくれる
     var this_animations_array = [];
@@ -123,6 +94,7 @@ var add_animation = function (boxnum) {
     return this_animations_array;
 };
 
+//divをタイムライン用の配列に代入
 var compile_animation = function () {
     $(".history").each(function (i) {
         Array.prototype.push.apply(animations, add_animation(i));
@@ -138,33 +110,5 @@ var animate_array = function (array) {
         timeline.add(array[i]);
     }
 };
-
-//ボタンとかシークバーとかの実装
-$(".play").click(function () {
-    timeline.play();
-});
-$(".pause").click(function () {
-    timeline.pause();
-});
-$(".restart").click(function () {
-    timeline.restart();
-});
-$(".reset").click(function () {
-    timeline.seek(0);
-});
-$(".progress").on("input",function () {
-    timeline.seek(timeline.duration * ($(this).val() / 100));
-});
-
-
-
-//マウスが動いているときは
-var mouse_follow = function (e) {
-    $("#mouse").css({
-        "top": e.pageY - $("#canvas").offset().top + "px",
-        "left": e.pageX - $("#canvas").offset().left + "px",
-        'display':'inherit'});
-};
-
 
 
