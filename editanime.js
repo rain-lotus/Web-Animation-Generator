@@ -18,9 +18,7 @@
 
     //アニメーション仮
     $("#canvas").click(function (e) {
-        //条件分岐でそれぞれのアニメーションを登録する？
-        //if (is_chose_pos) add_position(e);
-        if (is_chose_pos) translate.regist_move(e);
+        if (is_chose_pos) translate.translation(e, 0);
     });
 
     //アニメーションさせる
