@@ -15,8 +15,11 @@
 
     $(".add_move").click(make_history_block);
     //アニメーション仮
-    $("#canvas").click(function (e) {
-        if (is_chose_pos) translation(e, 0);
+    // $("#canvas").click(function (e) {
+    //     if (is_chose_pos) translation(e, 0);
+    // });
+    $(".add").click(function () {
+
     });
 
     //アニメーションさせる

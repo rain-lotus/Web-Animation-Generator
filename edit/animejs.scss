@@ -1,3 +1,12 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
 #wrapper {
   position: relative;
   width: 60%;
@@ -5,12 +14,29 @@
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
+
 }
+
 #wrapper:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
+
+.left {
+  float: left;
+  width: 20%;
+  height: 60%;
+  border: #232323 1px solid;
+}
+
+.right {
+  float: right;
+  width: 20%;
+  height: 60%;
+  border: #232323 1px solid;
+}
+
 #canvas {
   position: absolute;
   top: 0;
@@ -23,8 +49,11 @@
 .element {
   border-radius: 5px;
   position: absolute;
+  top: 0;
+  left: 0;
 }
-.add_element{
+
+.add_element {
   display: inline-block;
   width: 50px;
   height: 30px;
@@ -35,20 +64,25 @@
 #elema {
   background-color: #ff6363;
 }
+
 #elemb {
   background-color: #4285f4;
 }
+
 #elemc {
   background-color: khaki;
 }
+
 .elema {
   @extend #elema;
   @extend .add_element;
 }
+
 .elemb {
   @extend #elemb;
   @extend .add_element;
 }
+
 .elemc {
   @extend #elemc;
   @extend .add_element;
@@ -71,7 +105,7 @@ body {
   margin: 5px;
 }
 
-.add_move{
+.add_move {
   display: inline-block;
   background-color: aqua;
   color: #232323;
@@ -79,14 +113,18 @@ body {
   height: 100px;
 }
 
-.selected{
+.selected {
   outline: chartreuse solid 2px;
 }
 
-#mouse{
+#mouse {
   position: absolute;
   width: 100px;
   height: 100px;
   background-color: #ff6363;
   display: none;
+}
+
+.progress{
+  width: 80%;
 }

@@ -43,6 +43,17 @@ var make_history_block = function () {
     is_chose_pos = true;
 };
 
+//指定された番号のhistorybox(アニメーションの順番)のoffset(開始するタイミング？)を計算するよ
+var this_offset = function (num) {
+  if(num == 0){
+      return 0;
+  }else{
+      num = num-1
+      var past_offet = $(".history:eq("+num+") p.offset").text();
+      return parseInt(past_offet) + 1800;
+  }
+};
+
 //仮にtranslateのfunctionを入れている
 //今編集しようとしているブロックに対して行き先指定（これでいいのかもわからない）
 var translation = function (e, num) {
@@ -52,21 +63,27 @@ var translation = function (e, num) {
     //ここの必ず最後を取ってくるやつも後で変えないと
     //何をどういう感じに足すかだけできればこの方法でどんなパラメーターも追加できるはず
     num = $(".history").length - 1;
+
     var positionX = "<p class='translateX'>" + posx + "</p>";
     var positionY = "<p class='translateY'>" + posy + "</p>";
     var duration = "<p class='duration'>1800</p>";
+    var offset = "<p class='offset'>"+ this_offset(num) +"</p>";
 
     $(".history:eq(" + num + ")").append(positionX);
     $(".history:eq(" + num + ")").append(positionY);
     $(".history:eq(" + num + ")").append(duration);
+    $(".history:eq(" + num + ")").append(offset);
 
     is_chose_pos = false;
     animate_array(this.add_animation(num));
-
     animation = {};
 };
 
-var current_time = 0;
+
+var modify_historybox = function () {
+
+};
+
 var add_animation = function (boxnum) {
     //特定のhistoryboxからanimation配列を作ってくれる
     var this_animations_array = [];
@@ -85,19 +102,18 @@ var add_animation = function (boxnum) {
             var parameter_value = $(".history:eq(" + boxnum + ") p." + parameter).text();
             animation[parameter] = parameter_value.toString();
         }
-        //TODO ここをぶろっくの数とそのdurationに対応させてい感じにする
-        animation['offset'] = current_time;
         this_animations_array.push(animation);
     }
-    current_time += parseInt($(".history:eq(" + boxnum + ") p.duration").text());
     return this_animations_array;
 };
 
 //divをタイムライン用の配列に代入
 var compile_animation = function () {
+    animations = [];
     $(".history").each(function (i) {
         Array.prototype.push.apply(animations, add_animation(i));
     });
+    console.log(animations);
     animate_array(animations);
 };
 

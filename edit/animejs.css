@@ -1,3 +1,10 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0; }
+
 #wrapper {
   position: relative;
   width: 60%;
@@ -11,6 +18,18 @@
   display: block;
   padding-top: 100%; }
 
+.left {
+  float: left;
+  width: 20%;
+  height: 60%;
+  border: #232323 1px solid; }
+
+.right {
+  float: right;
+  width: 20%;
+  height: 60%;
+  border: #232323 1px solid; }
+
 #canvas {
   position: absolute;
   top: 0;
@@ -21,7 +40,9 @@
 
 .element {
   border-radius: 5px;
-  position: absolute; }
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .add_element, .elema, .elemb, .elemc {
   display: inline-block;
@@ -67,5 +88,8 @@
   height: 100px;
   background-color: #ff6363;
   display: none; }
+
+.progress {
+  width: 80%; }
 
 /*# sourceMappingURL=animejs.css.map */

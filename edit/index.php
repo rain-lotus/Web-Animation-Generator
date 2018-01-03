@@ -11,6 +11,35 @@
 </head>
 
 <body>
+</div>
+<div class="left">
+    <!--TODO キャンバスにぶち込む要素達。初期設定する-->
+    <!--<div class="add_element" id="その要素のタイプ名とか"><div>-->
+    <!--完全に幾何学でやる場合である……-->
+    <div class="add_element" id="elema">elema</div>
+    <div class="add_element" id="elemb">elemb</div>
+    <div class="add_element" id="elemc">elemc</div>
+    <br>
+<!--    厳しそうだから一回殺した-->
+<!--    <div class="add_move" id="translate">translate</div>-->
+<!--    <div class="add_move" id="rotate">rotate</div>-->
+<!--    <div class="add_move" id="opacity">opacity</div>-->
+<!--    <br>-->
+
+    translateX <input type="text" class="parameter" id="translateX"><br>
+    translateY <input type="text" class="parameter" id="translateY"><br>
+    rotate <input type="text" class="parameter" id="rotate"><br>
+    opacity <input type="text" class="parameter" id="opacity"><br>
+    <input type="button" value="add" class="add">
+
+</div>
+<div class="right">
+    ここは仮です<br>
+    <input type="text" placeholder="tytle"><br>
+    <input type="text" placeholder="description"><br>
+    <input type="button" value="submit">
+</div>
+
 <div id="wrapper">
     <div id="canvas">
         <span id='mouse'></span>
@@ -19,28 +48,14 @@
 </div>
 
 <div class="edit">
-    <!--TODO キャンバスにぶち込む要素達。初期設定する-->
-    <!--<div class="add_element" id="その要素のタイプ名とか"><div>-->
-    <!--完全に幾何学でやる場合である……-->
-    <div class="add_element" id="elema">elema</div>
-    <div class="add_element" id="elemb">elemb</div>
-    <div class="add_element" id="elemc">elemc</div>
-    <br>
-
-    <div class="add_move" id="translate">translate</div>
-    <div class="add_move" id="rotate">rotate</div>
-    <div class="add_move" id="opacity">opacity</div>
-    <br>
-
     <input type="button" value="run" id="run"><br>
-
     <div class="line player align-items">
         <button class="play">Play</button>
         <button class="pause">Pause</button>
         <button class="restart">Restart</button>
-        <input class="progress" step="2" type="range" min="0" max="100" value="0">
         <button class="reset">reset</button>
     </div>
+    <input class="progress" step="2" type="range" min="0" max="100" value="0">
 
     <div class="get_html"></div>
 
