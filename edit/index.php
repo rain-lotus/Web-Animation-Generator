@@ -25,14 +25,18 @@
 <!--    <div class="add_move" id="rotate">rotate</div>-->
 <!--    <div class="add_move" id="opacity">opacity</div>-->
 <!--    <br>-->
-<!---->
 
+    target <input type="text" class="parameter" id="targets"><br>
     translateX <input type="text" class="parameter" id="translateX"><br>
     translateY <input type="text" class="parameter" id="translateY"><br>
     rotate <input type="text" class="parameter" id="rotate"><br>
     opacity <input type="text" class="parameter" id="opacity"><br>
+    duration <input type="text" class="parameter" id="duration"><br>
+    offset <input type="text" class="parameter" id="offset"><br>
+
     <input type="button" value="add" class="add">
-    backgroundcolor
+    <input type="button" value="change" class="change">
+    <input type="button" value="remove" class="remove">
 
 </div>
 <div class="right">

@@ -1,3 +1,5 @@
+//ドラッグアンドドロップ
+
 var drag_element = function (e) {
     $(this).addClass("drag");
     //要素内の相対座標を取得
@@ -27,6 +29,7 @@ var drop_element = function (e) {
 };
 
 //マウスが動いているときは
+//ここは多分つかわないから最後に消す
 var mouse_follow = function (e) {
     $("#mouse").css({
         "top": e.pageY - $("#canvas").offset().top + "px",
