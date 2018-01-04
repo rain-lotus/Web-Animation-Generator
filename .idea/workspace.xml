@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/edit/js/old_functions.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/edit/index.php" afterPath="$PROJECT_DIR$/edit/index.php" />
+      <change beforePath="$PROJECT_DIR$/edit/js/editanime.js" afterPath="$PROJECT_DIR$/edit/js/editanime.js" />
       <change beforePath="$PROJECT_DIR$/edit/js/function.js" afterPath="$PROJECT_DIR$/edit/js/function.js" />
+      <change beforePath="$PROJECT_DIR$/edit/js/get_html.js" afterPath="$PROJECT_DIR$/edit/js/get_html.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,14 +55,26 @@
     <favorites_list name="CMP-B" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5027389">
+    <splitter split-orientation="horizontal" split-proportion="0.5593427">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="function.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/edit/js/function.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="299">
-                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                <state relative-caret-position="529">
+                  <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="old_functions.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/edit/js/old_functions.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="332">
+                  <caret line="53" column="7" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="53" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -79,21 +94,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/edit/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="416">
-                  <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+                <state relative-caret-position="506">
+                  <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="editanime.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="editanime.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="529">
-                  <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                <state relative-caret-position="577">
+                  <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -121,7 +136,6 @@
       <find>element_type</find>
       <find>controlsProgressEl</find>
       <find>this</find>
-      <find>eq</find>
       <find>class</find>
       <find>console</find>
       <find>event</find>
@@ -130,6 +144,8 @@
       <find>is_moving</find>
       <find>text</find>
       <find>con</find>
+      <find>eq</find>
+      <find>selec</find>
     </findStrings>
     <replaceStrings>
       <replace>#canvas</replace>
@@ -177,12 +193,13 @@
         <option value="$PROJECT_DIR$/edit/index.html" />
         <option value="$PROJECT_DIR$/edit/js/button_progress.js" />
         <option value="$PROJECT_DIR$/edit/submit_test.php" />
-        <option value="$PROJECT_DIR$/edit/js/get_html.js" />
         <option value="$PROJECT_DIR$/edit/animejs.css" />
         <option value="$PROJECT_DIR$/edit/animejs.scss" />
+        <option value="$PROJECT_DIR$/edit/js/old_functions.js" />
+        <option value="$PROJECT_DIR$/edit/index.php" />
         <option value="$PROJECT_DIR$/edit/js/editanime.js" />
         <option value="$PROJECT_DIR$/edit/js/function.js" />
-        <option value="$PROJECT_DIR$/edit/index.php" />
+        <option value="$PROJECT_DIR$/edit/js/get_html.js" />
       </list>
     </option>
   </component>
@@ -202,7 +219,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1682" />
     <option name="height" value="1007" />
   </component>
@@ -475,7 +492,7 @@
       <workItem from="1514597657703" duration="1378000" />
       <workItem from="1514867007453" duration="26134000" />
       <workItem from="1514967244756" duration="8346000" />
-      <workItem from="1515022964710" duration="3740000" />
+      <workItem from="1515022964710" duration="11317000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -509,10 +526,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122931000" />
+    <option name="totallyTimeSpent" value="130508000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -593,13 +610,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/prot_html/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/SabamisoFTP/sabamiso/CMP/9/mydata.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -914,20 +924,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edit/js/get_html.js">
+    <entry file="file://$PROJECT_DIR$/edit/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="506">
+          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,19 +940,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edit/js/function.js">
+    <entry file="file://$PROJECT_DIR$/edit/js/old_functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="332">
+          <caret line="53" column="7" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="53" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edit/index.php">
+    <entry file="file://$PROJECT_DIR$/edit/js/editanime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="577">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit/js/get_html.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit/js/function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
