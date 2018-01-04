@@ -1,3 +1,7 @@
+//前に作っていたデータ
+//バックアップ
+//細かく作っているはずだから使い回しとか組み合わせし直しとかできるはず
+
 var progress = document.querySelector('.progress');
 var timeline_palameter = {
     easing: 'linear',
@@ -89,7 +93,7 @@ var translation = function (e, num) {
     $(".history:eq(" + num + ")").append(offset);
 
     is_chose_pos = false;
-    animate_array(this.add_animation(num));
+    animate_array(this.box2animation(num));
     animation = {};
 };
 

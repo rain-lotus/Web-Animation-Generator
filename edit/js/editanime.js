@@ -5,6 +5,7 @@
 //divから要素を取ってきて連想配列にする←大事
 //連想配列をタイムラインにぶち込んでアニメーションさせる
 
+//古い方
 // (function () {
 //     $(".add_element").click(function () {
 //         add_element($(this).attr('id'));
@@ -31,18 +32,19 @@
 //     //$(document).on("mousemove","#canvas",mouse_follow(e));
 // })
 
+//全体の流れ
+//イベントの登録、関数の実行タイミングをここにまとめる
+
 (function () {
+    //エレメントの操作
     $(".add_element").click(function () {
         add_element($(this).attr('id'));
     });
-
-    //追加したelementに対する動き
     $(document).on("click", ".element", function () {
         select_element($(this));
         update_targets($(this));
     });
     $(document).on('mousedown', '.element', drag_element);
-
 
     //キーフレームのboxの操作
     $(".change").click(function () {
@@ -59,5 +61,10 @@
         remove_box();
     });
 
+    //アニメーションの動作
+    $("#run").click(function () {
+        //box2animation();
+        compile_animation();
+    });
 })()
 

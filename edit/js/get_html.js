@@ -1,3 +1,5 @@
+//コメントアウトを外すと常に.canvasの中身がhtmlソースになって吐き出される
+
 // (function () {
 //     $(".add_element").click(function () {
 //         //作っったhtmlソースの取得
