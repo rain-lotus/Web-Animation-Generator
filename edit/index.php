@@ -25,12 +25,14 @@
 <!--    <div class="add_move" id="rotate">rotate</div>-->
 <!--    <div class="add_move" id="opacity">opacity</div>-->
 <!--    <br>-->
+<!---->
 
     translateX <input type="text" class="parameter" id="translateX"><br>
     translateY <input type="text" class="parameter" id="translateY"><br>
     rotate <input type="text" class="parameter" id="rotate"><br>
     opacity <input type="text" class="parameter" id="opacity"><br>
     <input type="button" value="add" class="add">
+    backgroundcolor
 
 </div>
 <div class="right">
@@ -58,9 +60,6 @@
     <input class="progress" step="2" type="range" min="0" max="100" value="0">
 
     <div class="get_html"></div>
-
-    <!--    多分こんな感じで原始的にhtmlとanimation_arrayの文字列を送って保存すれば行ける。もっといい方法があればいいんだけど-->
-    <!--    <a href="index.php?animation=zaadfaewsfw"><input type="button" value="save" id="save"></a><br>-->
 
     <div id="history"></div>
 

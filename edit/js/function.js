@@ -30,6 +30,13 @@ var select_element = function () {
     }
 };
 
+var add_history_block = function(){
+
+};
+
+
+
+
 var make_history_block = function () {
     //その時選択されているelementに対して一個の塊を作る
     //TODO 何も選択してないのに出てくるのはだめだと思う
@@ -106,6 +113,7 @@ var add_animation = function (boxnum) {
     }
     return this_animations_array;
 };
+
 
 //divをタイムライン用の配列に代入
 var compile_animation = function () {
