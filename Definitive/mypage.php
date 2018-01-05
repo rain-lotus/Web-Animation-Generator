@@ -1,6 +1,6 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
-$pdo = new PDO("sqlite:works.sqlite");
+$pdo = new PDO("sqlite:data/works.sqlite");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $st = $pdo->query("select * from sketch");
 $data = $st->fetchAll();
