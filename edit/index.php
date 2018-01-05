@@ -20,12 +20,16 @@
     <div class="add_element" id="elemb">elemb</div>
     <div class="add_element" id="elemc">elemc</div>
     <br>
-<!--    厳しそうだから一回殺した-->
-<!--    <div class="add_move" id="translate">translate</div>-->
-<!--    <div class="add_move" id="rotate">rotate</div>-->
-<!--    <div class="add_move" id="opacity">opacity</div>-->
-<!--    <br>-->
 
+    要素の初期設定<br>
+    name <input type="text" class="info" id="name"><br>
+    posX <input type="text" class="info" id="top"><br>
+    posY <input type="text" class="info" id="left"><br>
+    rotate <input type="text" class="info" id="rotate"><br>
+    opacity <input type="text" class="info" id="opacity"><br>
+
+    <br>
+    animation<br>
     target <input type="text" class="parameter" id="targets"><br>
     translateX <input type="text" class="parameter" id="translateX"><br>
     translateY <input type="text" class="parameter" id="translateY"><br>
@@ -61,11 +65,19 @@
         <button class="restart">Restart</button>
         <button class="reset">reset</button>
     </div>
-    <input class="progress" step="2" type="range" min="0" max="100" value="0">
+
+    <div id="timeline">
+        <input class="progress" step="2" type="range" min="0" max="100" value="0">
+        <div id="history">
+
+        </div>
+    </div>
 
     <div class="get_html"></div>
 
-    <div id="history"></div>
+    <div id="elements">
+
+    </div>
 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>

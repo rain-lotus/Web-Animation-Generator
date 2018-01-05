@@ -95,10 +95,7 @@ body {
   color: #FFF;
 }
 
-body {
-}
-
-.history {
+.history, .element_info{
   background-color: #ff6363;
   padding: 10px 50px 20px 20px;
   display: inline-block;
@@ -125,6 +122,13 @@ body {
   display: none;
 }
 
-.progress{
-  width: 80%;
+
+#timeline{
+  background-color: bisque;
+  .progress{
+    width: 100%;
+  }
+}
+#history{
+  background-color: cadetblue;
 }

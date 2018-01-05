@@ -66,7 +66,7 @@ body {
   background-color: #555555;
   color: #FFF; }
 
-.history {
+.history, .element_info {
   background-color: #ff6363;
   padding: 10px 50px 20px 20px;
   display: inline-block;
@@ -89,7 +89,12 @@ body {
   background-color: #ff6363;
   display: none; }
 
-.progress {
-  width: 80%; }
+#timeline {
+  background-color: bisque; }
+  #timeline .progress {
+    width: 100%; }
+
+#history {
+  background-color: cadetblue; }
 
 /*# sourceMappingURL=animejs.css.map */
