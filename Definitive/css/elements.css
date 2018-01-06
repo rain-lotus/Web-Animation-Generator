@@ -2,7 +2,8 @@
     border-radius: 5px;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+}
 
 .add_element, .elema, .elemb, .elemc {
     display: inline-block;

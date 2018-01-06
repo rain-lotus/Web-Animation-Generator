@@ -37,8 +37,6 @@ function set_history_width() {
             'width': width.toString() + "%",
             'left': start.toString() + "%"
         });
-
-        console.log(width);
     });
 }
 

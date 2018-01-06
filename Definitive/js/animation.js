@@ -61,6 +61,4 @@ var animate_array = function (array) {
             timeline.seek(0);
         }
     });
-
-    console.log()
 };

@@ -5,7 +5,7 @@
 
 #editor_wrapper {
     width: 100%;
-    height: 800px;
+    min-height: 800px;
     display: flex;
 }
 
@@ -26,7 +26,7 @@
 }
 
 #canvas {
-    position: absolute;
+    position: relative;
     width: 800px;
     height: 800px;
     background-color: #FFFFFF;
@@ -63,6 +63,8 @@
     background-color: lightgrey;
     width: 80%;
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px 0 30px 0;
 }
@@ -76,6 +78,7 @@ table.parameter {
 
 th{
     padding: 0 10px 0 10px;
+    width: 50%;
 }
 
 .align-items{
@@ -83,13 +86,17 @@ th{
 }
 
 table.parameter input[type='text'] {
-    width: 150px;
+    width: 100%;
     border: 0;
     padding: 5px;
     color: #555555;
     margin: 5px 0 5px 0;
     border-radius: 2px;
     font-size: 1em;
+}
+
+.parameter_name{
+    width: 90px !important;
 }
 
 /*コピペ*/

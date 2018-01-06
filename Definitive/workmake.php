@@ -82,6 +82,37 @@ $data = $st->fetchAll();
                 <div class="add_element" id="elemb">elemb</div>
                 <div class="add_element" id="elemc">elemc</div>
 
+<!--                <table class="parameter">-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">name</th>-->
+<!--                        <th><input type="text" class="parameter" id="name" readonly="readonly"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">X</th>-->
+<!--                        <th><input type="text" class="parameter" id="X"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">Y</th>-->
+<!--                        <th><input type="text" class="parameter" id="Y"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">rotate</th>-->
+<!--                        <th><input type="text" class="parameter" id="rotate_init"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">opacity</th>-->
+<!--                        <th><input type="text" class="parameter" id="opacity_init"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">color</th>-->
+<!--                        <th><input type="text" class="parameter" id="backgroundColor_init"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">scale</th>-->
+<!--                        <th><input type="text" class="parameter" id="scale_init"></th>-->
+<!--                    </tr>-->
+<!--                </table>-->
+
             </div>
 
             <div class="para_wrap">
@@ -106,6 +137,14 @@ $data = $st->fetchAll();
                         <th class="parameter_name">opacity</th>
                         <th><input type="text" class="parameter" id="opacity"></th>
                     </tr>
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">color</th>-->
+<!--                        <th><input type="text" class="parameter" id="backgroundColor"></th>-->
+<!--                    </tr>-->
+                    <tr>
+                        <th class="parameter_name">scale</th>
+                        <th><input type="text" class="parameter" id="scale"></th>
+                    </tr>
                     <tr>
                         <th class="parameter_name">duration</th>
                         <th><input type="text" class="parameter" id="duration"></th>
@@ -120,12 +159,19 @@ $data = $st->fetchAll();
         </div>
 
         <div class="center editor">
-            <div id="canvas">
-
-            </div>
+            <div id="canvas"></div>
         </div>
 
-        <div class="right editor"></div>
+        <div class="right editor">
+
+            <form action="post.php" method="get">
+                <textarea name="html" placeholder="html" id="get_html"></textarea>
+                <textarea type="text" name="animation" placeholder="animation" id="get_animation"></textarea>
+                <input type="submit" value="保存">
+
+            </form>
+
+        </div>
     </div>
 
     <div class="edit">
@@ -143,7 +189,6 @@ $data = $st->fetchAll();
         </div>
 
         <!--        隠す要素-->
-        <div class="get_html"></div>
         <div id="elements"></div>
     </div>
 </div>

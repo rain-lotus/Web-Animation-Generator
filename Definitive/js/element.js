@@ -5,19 +5,40 @@
 //追加
 var element_sum = 0;
 
+$modifi_element = "";
+
 function add_element(type) {
     //ボタンがちゃんと作られていればここでいい感じに増やしてくれる
-    var elem = "<div class='element " + type + "' id='" + type + element_sum + "'>" + type + element_sum + "</div>";
+
+    var name = type + element_sum;
+    var elem = "<div class='element " + type + "' id='" + name + "'>" + name + "</div>";
+
     $("#canvas").append(elem);
+    $modifi_element = $("#"+name);
     add_element_info(type);
     element_sum++;
+    input_element_info();
 }
 
 function add_element_info(type) {
     //TODO 巻き戻しのテスト
-    var info = "<div class='element_info' id='" + type + element_sum + "'></div>";
+    var name = type + element_sum;
+    var info = "<div class='element_info'></div>";
     $("#elements").append(info);
 }
+
+function input_element_info(){
+    $(".elements table.parameter input").each(function (i,elem) {
+        if ($(elem).attr('id') == "X") $(elem).val(parseInt($modifi_element.css('left')));
+        else if ($(elem).attr('id') == "Y") $(elem).val(parseInt($modifi_element.css('top')));
+        else if ($(elem).attr('id') == "rotate_init") $(elem).val(parseInt($modifi_element.css('rotate')));
+        else if ($(elem).attr('id') == "opacity_init") $(elem).val(parseInt($modifi_element.css('opacity')));
+        else if ($(elem).attr('id') == "backgroundColor_init") $(elem).val(parseInt($modifi_element.css('backround_Color')));
+        else if ($(elem).attr('id') == "scale_init") $(elem).val(parseInt($modifi_element.css('scale')));
+
+    });
+}
+
 
 //選択
 function select_element($elem) {
