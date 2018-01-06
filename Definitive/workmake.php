@@ -14,19 +14,19 @@ $data = $st->fetchAll();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!--スタイルシート-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="css/style_editor.css" media="all">
+    <link rel="stylesheet" href="css/elements.css" media="all">
     <!--タイトル-->
     <title>our app title</title>
 </head>
 
 
 <body>
-
 <!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダー-->
 <header>
-
     <!--サイト説明 　左側に。　文考える →画像にする-->
     <div id="citecap">
         <img src="images/citecap.png" width="358" height="250" style="position: absolute; left: 80px;">
@@ -73,13 +73,138 @@ $data = $st->fetchAll();
 <br>
 <!--//////////////////////////////////////////////////////////////////////////////////////////作品の編集-->
 <h1>作品編集　タイトルは迷い</h1>
-<p> ここにいろいろと</p>
+<div id="editor">
+    <div id="editor_wrapper">
+        <div class="left editor">
+            <div class="elements">
+                <!--                ここを書く！-->
+                <div class="add_element" id="elema">elema</div>
+                <div class="add_element" id="elemb">elemb</div>
+                <div class="add_element" id="elemc">elemc</div>
+
+<!--                <table class="parameter">-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">name</th>-->
+<!--                        <th><input type="text" class="parameter" id="name" readonly="readonly"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">X</th>-->
+<!--                        <th><input type="text" class="parameter" id="X"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">Y</th>-->
+<!--                        <th><input type="text" class="parameter" id="Y"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">rotate</th>-->
+<!--                        <th><input type="text" class="parameter" id="rotate_init"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">opacity</th>-->
+<!--                        <th><input type="text" class="parameter" id="opacity_init"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">color</th>-->
+<!--                        <th><input type="text" class="parameter" id="backgroundColor_init"></th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">scale</th>-->
+<!--                        <th><input type="text" class="parameter" id="scale_init"></th>-->
+<!--                    </tr>-->
+<!--                </table>-->
+
+            </div>
+
+            <div class="para_wrap">
+                <table class="parameter">
+                    <tr>
+                        <th class="parameter_name">targets</th>
+                        <th><input type="text" class="parameter" id="targets" readonly="readonly"></th>
+                    </tr>
+                    <tr>
+                        <th class="parameter_name">translateX</th>
+                        <th><input type="text" class="parameter" id="translateX"></th>
+                    </tr>
+                    <tr>
+                        <th class="parameter_name">translateY</th>
+                        <th><input type="text" class="parameter" id="translateY"></th>
+                    </tr>
+                    <tr>
+                        <th class="parameter_name">rotate</th>
+                        <th><input type="text" class="parameter" id="rotate"></th>
+                    </tr>
+                    <tr>
+                        <th class="parameter_name">opacity</th>
+                        <th><input type="text" class="parameter" id="opacity"></th>
+                    </tr>
+<!--                    <tr>-->
+<!--                        <th class="parameter_name">color</th>-->
+<!--                        <th><input type="text" class="parameter" id="backgroundColor"></th>-->
+<!--                    </tr>-->
+                    <tr>
+                        <th class="parameter_name">scale</th>
+                        <th><input type="text" class="parameter" id="scale"></th>
+                    </tr>
+                    <tr>
+                        <th class="parameter_name">duration</th>
+                        <th><input type="text" class="parameter" id="duration"></th>
+                    </tr>
+                    <tr>
+                        <th class="parameter_name">offset</th>
+                        <th><input type="text" class="parameter" id="offset"></th>
+                    </tr>
+                </table>
+                <input type="button" value="削除" class="remove">
+            </div>
+        </div>
+
+        <div class="center editor">
+            <div id="canvas"></div>
+        </div>
+
+        <div class="right editor">
+
+            <form action="post.php" method="get">
+                <textarea name="html" placeholder="html" id="get_html"></textarea>
+                <textarea type="text" name="animation" placeholder="animation" id="get_animation"></textarea>
+                <input type="submit" value="保存">
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="edit">
+        <div class="line player align-items">
+            <button class="play">Play</button>
+            <button class="pause">Pause</button>
+            <button class="restart">Restart</button>
+            <button class="reset">reset</button>
+        </div>
+        <div id="timeline">
+            <input class="progress" step="2" type="range" min="0" max="100" value="0">
+            <div id="history">
+
+            </div>
+        </div>
+
+        <!--        隠す要素-->
+        <div id="elements"></div>
+    </div>
+</div>
 
 
 <!--//////////////////////////////////////////////////////////////////////////////////////////作品の編集ここまで-->
 
 <!--内容ここまで///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 
+<script src="js/element.js"></script>
+<script src="js/keyframe.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/dragdrop.js"></script>
+<script src="js/get_html.js"></script>
+<script src="js/editanime.js"></script>
 </body>
 </html>

@@ -83,5 +83,50 @@
 
     </div>
 </header>
+
+<div class="relative">
+    <style>
+        .relative{
+            height: 300px;
+            width: 100%;
+            background-color: antiquewhite;
+        }
+        .wrap{
+            width: 1000px;
+            background-color: #ff6363;
+            height: 100%;
+            margin: auto;
+            white-space: nowrap;
+            position: relative;
+        }
+        .some{
+            background-color: #232323;
+            border: #FFFFFF 1px solid;
+            height: 100px;
+
+            box-sizing: border-box;
+        }
+        .first{
+            width: 60%;
+
+        }
+        .second{
+            position: relative;
+            left: 60%;
+            top: inherit;
+            width: 30%;
+        }
+        .therd{
+            position: relative;
+            left: 40%;
+            width: 50%;
+        }
+    </style>
+    <div class="wrap">
+        <div class="some first"></div>
+        <div class="some second"></div>
+        <div class="some therd"></div>
+    </div>
+</div>
 </body>
 </html>
