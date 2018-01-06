@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .el {
+            background-color: #000;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="TLcontrols">
+    <div class="line">
+        <div class="square el"></div>
+    </div>
+    <div class="line">
+        <div class="circle el"></div>
+    </div>
+    <div class="line">
+        <div class="triangle el"></div>
+    </div>
+    <div class="line player align-items">
+        <button class="play">Play</button>
+        <button class="pause">Pause</button>
+        <button class="restart">Restart</button>
+        <input class="progress" step="2" type="range" min="0" max="100" value="0"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script>
+    var controlsProgressEl = document.querySelector('#TLcontrols .progress');
+
+    var TLcontrols = anime.timeline({
+        direction: 'alternate',
+        loop: true,
+        easing: 'linear',
+        update: function (anim) {
+            controlsProgressEl.value = anim.progress;
+        }
+    });
+
+    TLcontrols
+        .add({
+            targets: '.square',
+            translateX: 250,
+            offset: '1000' // Starts at 1000ms
+        })
+        .add({
+            targets: '.circle',
+            translateX: 250,
+            offset: '500' // Starts at 500ms
+        })
+        .add({
+            targets: '.triangle',
+            translateX: 250,
+            offset: '0' // Starts at 0ms
+        });
+
+    document.querySelector('#TLcontrols .play').onclick = TLcontrols.play;
+    document.querySelector('#TLcontrols .pause').onclick = TLcontrols.pause;
+    document.querySelector('#TLcontrols .restart').onclick = TLcontrols.restart;
+
+    controlsProgressEl.addEventListener('input', function () {
+        TLcontrols.seek(TLcontrols.duration * (controlsProgressEl.value / 100));
+    });
+
+    ['input', 'change'].forEach(function (evt) {
+        controlsProgressEl.addEventListener(evt, function () {
+            TLcontrols.seek(TLcontrols.duration * (controlsProgressEl.value / 100));
+        });
+    });
+    console.log(TLcontrols.duration);
+
+</script>
+</body>
+</html>
