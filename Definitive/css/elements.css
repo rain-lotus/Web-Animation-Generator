@@ -1,46 +1,20 @@
-.element {
-    /*     border-radius: 5px;
-        position: absolute; */
+.element, .add_element {
+    display: inline-block;
     top: 0;
     left: 0;
+    cursor: pointer;
+    background-color: #000;
 }
 
 #rect, .rect {
-    display: inline-block;
     width: 50px;
     height: 50px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    background-color: #999ccc;
 }
 
 #ellipse, .ellipse {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    background-color: #ff9933;
-}
-
-.add_element, .elema, .elemb, .elemc {
-    display: inline-block;
     width: 50px;
-    height: 30px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-#elema, .elema {
-    background-color: #ff6363;
-}
-
-#elemb, .elemb {
-    background-color: #4285f4;
-}
-
-#elemc, .elemc {
-    background-color: khaki;
+    height: 50px;
+    border-radius: 25px;
 }
 
 .sketch_wrap {
@@ -50,4 +24,11 @@
 
 .sketch_wrap img {
     display: inline-block;
+}
+
+.elem_wrap{
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+    vertical-align: center;
 }

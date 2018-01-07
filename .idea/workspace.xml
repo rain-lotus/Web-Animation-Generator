@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Definitive/mypage.php" afterPath="$PROJECT_DIR$/Definitive/mypage.php" />
-      <change beforePath="$PROJECT_DIR$/Definitive/workpage2.php" afterPath="$PROJECT_DIR$/Definitive/workpage.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/css/elements.css" afterPath="$PROJECT_DIR$/Definitive/css/elements.css" />
+      <change beforePath="$PROJECT_DIR$/Definitive/css/style_editor.css" afterPath="$PROJECT_DIR$/Definitive/css/style_editor.css" />
+      <change beforePath="$PROJECT_DIR$/Definitive/workmake.php" afterPath="$PROJECT_DIR$/Definitive/workmake.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/workpage.php" afterPath="$PROJECT_DIR$/Definitive/workpage.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,23 +59,75 @@
     <favorites_list name="CMP-B" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="workpage.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Definitive/workpage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4163">
-              <caret line="162" column="53" lean-forward="false" selection-start-line="162" selection-start-column="53" selection-end-line="162" selection-end-column="53" />
-              <folding>
-                <marker date="1515312930238" expanded="true" signature="468:505" ph="select * fro... sketch" />
-                <marker date="1515312930238" expanded="true" signature="2296:2339" ph="..." />
-                <marker date="1515312930238" expanded="true" signature="2486:2529" ph="..." />
-                <marker date="1515312930238" expanded="true" signature="6390:6411" ph="SELECT * FRO... comment" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5433659">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="workmake.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1309">
+                  <caret line="165" column="33" lean-forward="true" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="33" />
+                  <folding>
+                    <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <marker date="1515314279035" expanded="true" signature="192:212" ph="select * fro... sketch" />
+                    <marker date="1515314279035" expanded="true" signature="1975:2018" ph="..." />
+                    <marker date="1515314279035" expanded="true" signature="2165:2208" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="style_editor.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="513">
+                  <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tekitou.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tekitou.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-115">
+                  <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="elements.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Definitive/css/elements.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="workmake.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="389">
+                  <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+                  <folding>
+                    <marker date="1515314279035" expanded="true" signature="192:212" ph="select * fro... sketch" />
+                    <marker date="1515314279035" expanded="true" signature="1975:2018" ph="..." />
+                    <marker date="1515314279035" expanded="true" signature="2165:2208" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,8 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tar</find>
-      <find>selec</find>
       <find>finishedPromise</find>
       <find>parameter</find>
       <find>css</find>
@@ -118,6 +168,8 @@
       <find>ima</find>
       <find>image33</find>
       <find>comment</find>
+      <find>flex</find>
+      <find>eleme</find>
     </findStrings>
     <replaceStrings>
       <replace>#canvas</replace>
@@ -186,17 +238,17 @@
         <option value="$PROJECT_DIR$/Definitive/js/get_html.js" />
         <option value="$PROJECT_DIR$/Definitive/js/editanime.js" />
         <option value="$PROJECT_DIR$/Definitive/Twitterlogin.php" />
-        <option value="$PROJECT_DIR$/Definitive/css/elements.css" />
-        <option value="$PROJECT_DIR$/Definitive/css/style_editor.css" />
         <option value="$PROJECT_DIR$/Definitive/css/style.css" />
         <option value="$PROJECT_DIR$/Definitive/top.php" />
         <option value="$PROJECT_DIR$/Definitive/workpage2.php" />
         <option value="$PROJECT_DIR$/Definitive/about.php" />
         <option value="$PROJECT_DIR$/Definitive/callback.php" />
-        <option value="$PROJECT_DIR$/Definitive/workmake.php" />
         <option value="$PROJECT_DIR$/Definitive/workpagecomment-submit.php" />
         <option value="$PROJECT_DIR$/Definitive/mypage.php" />
         <option value="$PROJECT_DIR$/Definitive/workpage.php" />
+        <option value="$PROJECT_DIR$/Definitive/css/style_editor.css" />
+        <option value="$PROJECT_DIR$/Definitive/workmake.php" />
+        <option value="$PROJECT_DIR$/Definitive/css/elements.css" />
       </list>
     </option>
   </component>
@@ -218,7 +270,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1582" />
+    <option name="width" value="1815" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -335,12 +387,6 @@
               <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
               <item name="Definitive" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Definitive" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -495,7 +541,7 @@
       <workItem from="1514867007453" duration="26134000" />
       <workItem from="1514967244756" duration="8346000" />
       <workItem from="1515022964710" duration="21877000" />
-      <workItem from="1515130343395" duration="79490000" />
+      <workItem from="1515130343395" duration="80826000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -529,10 +575,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220558000" />
+    <option name="totallyTimeSpent" value="221894000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1582" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1815" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -547,8 +593,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34733257" sideWeight="0.49677765" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15583554" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19628647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23434807" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19931073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09344791" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -764,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tekitou.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/js/button_progress.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -844,22 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/css/elements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3174">
-          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/top.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -875,22 +897,6 @@
         <state relative-caret-position="92">
           <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="190" column="7" lean-forward="false" selection-start-line="190" selection-start-column="7" selection-end-line="190" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#a#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1515311092890" expanded="true" signature="192:212" ph="select * fro... sketch" />
-            <marker date="1515311092890" expanded="true" signature="1973:2016" ph="..." />
-            <marker date="1515311092890" expanded="true" signature="2161:2204" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -957,14 +963,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/workpage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4163">
-          <caret line="162" column="53" lean-forward="false" selection-start-line="162" selection-start-column="53" selection-end-line="162" selection-end-column="53" />
+        <state relative-caret-position="964">
+          <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
           <folding>
-            <marker date="1515312930238" expanded="true" signature="468:505" ph="select * fro... sketch" />
-            <marker date="1515312930238" expanded="true" signature="2296:2339" ph="..." />
-            <marker date="1515312930238" expanded="true" signature="2486:2529" ph="..." />
-            <marker date="1515312930238" expanded="true" signature="6390:6411" ph="SELECT * FRO... comment" />
+            <marker date="1515313828191" expanded="true" signature="468:505" ph="select * fro... sketch" />
+            <marker date="1515313828191" expanded="true" signature="2296:2339" ph="..." />
+            <marker date="1515313828191" expanded="true" signature="2486:2529" ph="..." />
+            <marker date="1515313828191" expanded="true" signature="6390:6411" ph="SELECT * FRO... comment" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekitou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <marker date="1515314279035" expanded="true" signature="192:212" ph="select * fro... sketch" />
+            <marker date="1515314279035" expanded="true" signature="1975:2018" ph="..." />
+            <marker date="1515314279035" expanded="true" signature="2165:2208" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/css/elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

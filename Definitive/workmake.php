@@ -45,9 +45,9 @@ $data = $st->fetchAll();
 
         header("Content-type: text/html; charset=utf-8");
 
-        if(!isset($_SESSION['access_token'])){//Twitterの認証が済んでいるなら
+        if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
             echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
-        }else{
+        } else {
             echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
         }
 
@@ -85,15 +85,12 @@ $data = $st->fetchAll();
     <div id="editor_wrapper">
         <div class="left editor">
             <div class="elements">
-                <!--                ここを書く！-->
-                <div class="add_element" id="elema">elema</div>
-
-                <div class="add_element" id="rect">elema</div>
-                <div class="add_element" id="ellipse">elema</div>
-
-                <div class="add_element" id="elemb">elemb</div>
-                <div class="add_element" id="elemc">elemc</div>
-
+                <div class="elem_wrap">
+                    <div class="add_element" id="rect"></div>
+                </div>
+                <div class="elem_wrap">
+                    <div class="add_element" id="ellipse"></div>
+                </div>
             </div>
 
             <div class="para_wrap">
@@ -118,10 +115,6 @@ $data = $st->fetchAll();
                         <th class="parameter_name">opacity</th>
                         <th><input type="text" class="parameter" id="opacity"></th>
                     </tr>
-                    <!--                    <tr>-->
-                    <!--                        <th class="parameter_name">color</th>-->
-                    <!--                        <th><input type="text" class="parameter" id="backgroundColor"></th>-->
-                    <!--                    </tr>-->
                     <tr>
                         <th class="parameter_name">scale</th>
                         <th><input type="text" class="parameter" id="scale"></th>
@@ -174,18 +167,16 @@ $data = $st->fetchAll();
     </div>
 </div>
 
+<footer></footer>
+<!--作品の編集ここまで-->
 
-<!--//////////////////////////////////////////////////////////////////////////////////////////作品の編集ここまで-->
-
-<!--内容ここまで///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
+<!--内容ここまで-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 
 <script src="js/element.js"></script>
 <script src="js/keyframe.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/dragdrop.js"></script>
-<script src="js/get_html.js"></script>
 <script src="js/editanime.js"></script>
 </body>
 </html>
