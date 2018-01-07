@@ -21,7 +21,7 @@
     $(document).on('mousedown', '.element', drag_element);
 
     //キーフレームのboxの操作
-    $(".parameter input.parameter").change(function () {
+    $(".add").click(function () {
         input_animation_parameter();
         compile_animation();
         animate_array(whole_animation);
@@ -54,9 +54,6 @@
     $(".play").click(function () {
         compile_animation();
         animate_array(whole_animation);
-
-        console.log(whole_animation);
-
         timeline.play()
     });
 

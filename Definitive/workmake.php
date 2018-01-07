@@ -137,8 +137,12 @@ $data = $st->fetchAll();
                         <th><input type="text" class="parameter" id="offset"></th>
                     </tr>
                 </table>
-                <input type="button" value="削除" class="remove">
+
+<!--                TODO ここ変えた-->
+                <input type="button" value="追加" class="add para_burron">
+                <input type="button" value="削除" class="remove para_button">
             </div>
+
         </div>
 
         <div class="center editor">

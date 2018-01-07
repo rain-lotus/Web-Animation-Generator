@@ -17,7 +17,6 @@ var box2animation = function (boxnum) {
         //連想配列にパラメータを追加
         animation[parameter] = parameter_value;
     });
-
     this_animations_array.push(animation);
     return this_animations_array;
 };
@@ -41,19 +40,19 @@ var timeline_palameter = {
     },
     autoplay: false
 };
+
 var timeline = anime.timeline(timeline_palameter);
 var animation_duration = 0;
 
 //任意のアニメーション配列に対してタイムライン作成
 var animate_array = function (array) {
+
     //タイムラインリセット
     timeline = anime.timeline(timeline_palameter);
-    animation_duration = timeline.duration;
     for (var i = 0; i < array.length; i++) {
         timeline.add(array[i]);
     }
     animation_duration = timeline.duration;
-
     timeline.add({
         //ここ通すとdurationがおかしくなるらしい
         complete: function (anim) {
