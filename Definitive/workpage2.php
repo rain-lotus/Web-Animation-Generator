@@ -36,7 +36,11 @@ if (isset($_GET["name"]) && isset($_GET["body"])) {
 
 
 /////////////////////////////////////////////////////////////////////
-
+//Twitterでログインしてなければログインページへ
+  if (!isset($_SESSION['access_token'])){
+    header("Location: Twitterlogin.php");
+    exit;
+    }
 ?>
 
 <!doctype html>
@@ -73,9 +77,12 @@ if (isset($_GET["name"]) && isset($_GET["body"])) {
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
-        <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login"
-                                    style="position: absolute; right: 93px; top: 50px;">
-
+//Twitterの認証が済んでいるならログアウトが表示される
+if(!isset($_SESSION['access_token'])){
+	echo "' <a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"'></a>";
+}else{
+	echo "'<a href=\"twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"’></a>";
+}
 
             <div id="search">
 
