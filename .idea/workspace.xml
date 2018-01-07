@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Definitive/css/elements.css" afterPath="$PROJECT_DIR$/Definitive/css/elements.css" />
       <change beforePath="$PROJECT_DIR$/Definitive/css/style_editor.css" afterPath="$PROJECT_DIR$/Definitive/css/style_editor.css" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/dragdrop.js" afterPath="$PROJECT_DIR$/Definitive/js/dragdrop.js" />
       <change beforePath="$PROJECT_DIR$/Definitive/workmake.php" afterPath="$PROJECT_DIR$/Definitive/workmake.php" />
-      <change beforePath="$PROJECT_DIR$/Definitive/workpage.php" afterPath="$PROJECT_DIR$/Definitive/workpage.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,19 +59,19 @@
     <favorites_list name="CMP-B" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5433659">
+    <splitter split-orientation="horizontal" split-proportion="0.5591472">
       <split-first>
         <leaf>
           <file leaf-file-name="workmake.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1309">
-                  <caret line="165" column="33" lean-forward="true" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="33" />
+                <state relative-caret-position="805">
+                  <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
                   <folding>
                     <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <marker date="1515314279035" expanded="true" signature="192:212" ph="select * fro... sketch" />
-                    <marker date="1515314279035" expanded="true" signature="1975:2018" ph="..." />
-                    <marker date="1515314279035" expanded="true" signature="2165:2208" ph="..." />
+                    <marker date="1515315249079" expanded="true" signature="192:212" ph="select * fro... sketch" />
+                    <marker date="1515315249079" expanded="true" signature="1975:2018" ph="..." />
+                    <marker date="1515315249079" expanded="true" signature="2165:2208" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -84,43 +84,39 @@
           <file leaf-file-name="style_editor.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+                <state relative-caret-position="260">
+                  <caret line="46" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="171" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tekitou.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tekitou.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-115">
-                  <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="elements.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="elements.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Definitive/css/elements.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+                <state relative-caret-position="85">
+                  <caret line="14" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="workmake.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
+          <file leaf-file-name="editanime.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-                  <folding>
-                    <marker date="1515314279035" expanded="true" signature="192:212" ph="select * fro... sketch" />
-                    <marker date="1515314279035" expanded="true" signature="1975:2018" ph="..." />
-                    <marker date="1515314279035" expanded="true" signature="2165:2208" ph="..." />
-                  </folding>
+                <state relative-caret-position="322">
+                  <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dragdrop.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Definitive/js/dragdrop.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -140,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>finishedPromise</find>
       <find>parameter</find>
       <find>css</find>
       <find>edit</find>
@@ -170,6 +165,7 @@
       <find>comment</find>
       <find>flex</find>
       <find>eleme</find>
+      <find>elem</find>
     </findStrings>
     <replaceStrings>
       <replace>#canvas</replace>
@@ -228,7 +224,6 @@
         <option value="$PROJECT_DIR$/edit/index.php" />
         <option value="$PROJECT_DIR$/edit/js/function.js" />
         <option value="$PROJECT_DIR$/edit/js/editanime.js" />
-        <option value="$PROJECT_DIR$/Definitive/js/dragdrop.js" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/tekitou.html" />
         <option value="$PROJECT_DIR$/Definitive/js/button_progress.js" />
@@ -247,8 +242,9 @@
         <option value="$PROJECT_DIR$/Definitive/mypage.php" />
         <option value="$PROJECT_DIR$/Definitive/workpage.php" />
         <option value="$PROJECT_DIR$/Definitive/css/style_editor.css" />
-        <option value="$PROJECT_DIR$/Definitive/workmake.php" />
         <option value="$PROJECT_DIR$/Definitive/css/elements.css" />
+        <option value="$PROJECT_DIR$/Definitive/workmake.php" />
+        <option value="$PROJECT_DIR$/Definitive/js/dragdrop.js" />
       </list>
     </option>
   </component>
@@ -268,10 +264,11 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1815" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="12" />
+    <option name="y" value="21" />
+    <option name="width" value="1736" />
+    <option name="height" value="986" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -387,6 +384,12 @@
               <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
               <item name="Definitive" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
+              <item name="Definitive" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -541,7 +544,7 @@
       <workItem from="1514867007453" duration="26134000" />
       <workItem from="1514967244756" duration="8346000" />
       <workItem from="1515022964710" duration="21877000" />
-      <workItem from="1515130343395" duration="80826000" />
+      <workItem from="1515130343395" duration="81862000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -575,10 +578,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221894000" />
+    <option name="totallyTimeSpent" value="222930000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1815" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -593,7 +596,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34733257" sideWeight="0.49677765" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23434807" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1519871" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19931073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09344791" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -802,14 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/js/dragdrop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/js/button_progress.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -830,16 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-527">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="false" />
           </folding>
@@ -910,14 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/about.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
@@ -982,31 +959,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/css/elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        <state relative-caret-position="260">
+          <caret line="46" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="171" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/js/dragdrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state relative-caret-position="805">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
           <folding>
-            <marker date="1515314279035" expanded="true" signature="192:212" ph="select * fro... sketch" />
-            <marker date="1515314279035" expanded="true" signature="1975:2018" ph="..." />
-            <marker date="1515314279035" expanded="true" signature="2165:2208" ph="..." />
+            <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1515315249079" expanded="true" signature="192:212" ph="select * fro... sketch" />
+            <marker date="1515315249079" expanded="true" signature="1975:2018" ph="..." />
+            <marker date="1515315249079" expanded="true" signature="2165:2208" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/css/elements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>

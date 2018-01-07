@@ -85,12 +85,21 @@ $data = $st->fetchAll();
     <div id="editor_wrapper">
         <div class="left editor">
             <div class="elements">
-                <div class="elem_wrap">
-                    <div class="add_element" id="rect"></div>
+                <div class="elements_wrap">
+                    <div class="elem_wrap">
+                        <div class="add_element" id="rect"></div>
+                    </div>
+                    <div class="elem_wrap">
+                        <div class="add_element" id="ellipse"></div>
+                    </div>
                 </div>
-                <div class="elem_wrap">
-                    <div class="add_element" id="ellipse"></div>
-                </div>
+                <br>
+                <table class="parameter">
+                    <tr>
+                        <th class="parameter_name">color</th>
+                        <th><input type="text" class="parameter" id="name"></th>
+                    </tr>
+                </table>
             </div>
 
             <div class="para_wrap">
@@ -137,14 +146,11 @@ $data = $st->fetchAll();
         </div>
 
         <div class="right editor">
-
             <form action="post.php" method="get">
                 <textarea name="html" placeholder="html" id="get_html"></textarea>
                 <textarea type="text" name="animation" placeholder="animation" id="get_animation"></textarea>
                 <input type="submit" value="保存">
-
             </form>
-
         </div>
     </div>
 
@@ -157,9 +163,7 @@ $data = $st->fetchAll();
         </div>
         <div id="timeline">
             <input class="progress" step="2" type="range" min="0" max="100" value="0">
-            <div id="history">
-
-            </div>
+            <div id="history"></div>
         </div>
 
         <!--        隠す要素-->
