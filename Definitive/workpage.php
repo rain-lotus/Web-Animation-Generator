@@ -7,8 +7,16 @@ if (isset($_GET["username"]) && isset($_GET["comment"])) {
     $username = $_GET["username"];
     $comment = $_GET["comment"];
     $time = date("Y-m-d H:i");
-
 }
+
+if (isset($_GET["id"])) {
+    $ID = $_GET["id"];
+    $pdo = new PDO("sqlite:data/works.sqlite");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    $st = $pdo->query("select * from sketch where id = '$ID'");
+    $data = $st->fetchAll();
+}
+
 //サニタイジング
 function h($str)
 {
@@ -17,10 +25,7 @@ function h($str)
 
 ////////////////こっち作品サムネ用
 session_start();
-$pdo = new PDO("sqlite:data/works.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->query("select * from sketch");
-$data = $st->fetchAll();
+
 ?>
 
 
@@ -61,7 +66,6 @@ $data = $st->fetchAll();
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
         <?php
-
         header("Content-type: text/html; charset=utf-8");
 
         if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
@@ -69,19 +73,18 @@ $data = $st->fetchAll();
         } else {
             echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
         }
-
         ?>
 
 
-            <div id="search">
+        <div id="search">
 
-                <form id="form02" action="#">
-                    <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+            <form id="form02" action="#">
+                <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
-                </form>
-            </div>
-            <!--//////////////////////////////////////////////////////////////////////////////////////////about login 検索フォームここまで -->
+            </form>
+        </div>
+        <!--//////////////////////////////////////////////////////////////////////////////////////////about login 検索フォームここまで -->
 </header>
 <!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダーここまで-->
 
@@ -93,38 +96,39 @@ $data = $st->fetchAll();
     <li><a href="./workmake.php"><img src="images/workmaken.png" width="290" height="80" alt="作品をつくる"></a></li>
     <li><a href="./mypage.php"><img src="images/mypagen.png" width="290" height="80" alt="マイページ"></a></li>
 </ul>
-<!--//////////////////////////////////////////////////////////////////////////////////////////常にある３つのページここまで-->
+<!--常にある３つのページここまで-->
 
 
-<!--内容///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<!--//////////////////////////////////////////////////////////////////////////////////////////作品-->
+<!--内容-->
+<!--作品-->
+
 <br>
-<!--<h1>Works</h1>-->
 <div id="contenttitle">
     <img src="images/works.png" width="338" height="150">
 </div>
-
-
 <br>
-
 
 <!--００さん　の作品　　　　　じぶんだったら　あなた　の作品！-->
 <!-- 作品の詳細 -->
 <div class="sketck_info">
-    <div id="contenttitle">
-        <img src="images/whowork.png" width="398" height="200">
-    </div>
+    <!--    <div id="contenttitle">-->
+    <!--        <img src="images/whowork.png" width="398" height="200">-->
+    <!--    </div>-->
+
     <?php
-    print '<p>作者：</p>';
+    foreach ($data as $sketch) {
+        ?>
+        <p class="strong">作者：<?php print h($sketch["username"]) ?></p>
+        <div id="contenttitle">
+            <img src="images/workinfo.png" width="338" height="120">
+        </div>
+        <p>投稿日：<?php print h($sketch["date"]) ?></p>
+        <p><?php print h($sketch["caption"]) ?></p>
+        <?php
+    }
     ?>
-    <div id="contenttitle">
-        <img src="images/workinfo.png" width="338" height="120">
-    </div>
-    <?php
-    //'.username.'  と　'.data.' と　'.caption.'
-    print '<p>投稿日：</p>';
-    print '<p>説明：</p>';
-    ?>
+
+
 </div>
 <!--作品の詳細ここまで-->
 
@@ -136,8 +140,11 @@ $data = $st->fetchAll();
 
         <div class="center editor">
             <div id="canvas">
-                <!--TODO SQLからインポートする-->
-                <!--php print html  (サニタイジングしない)-->
+                <?php
+                foreach ($data as $sketch) {
+                    print $sketch["html"];
+                }
+                ?>
             </div>
         </div>
 
@@ -155,10 +162,11 @@ $data = $st->fetchAll();
         <div id="timeline">
             <input class="progress" step="2" type="range" min="0" max="100" value="0">
             <div id="history">
-
-                <!--TODO SQLからインポートする-->
-                <!--php print animation (サニタイジングしない)-->
-
+                <?php
+                foreach ($data as $sketch) {
+                    print $sketch["animation"];
+                }
+                ?>
             </div>
         </div>
         <div id="elements"></div>

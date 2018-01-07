@@ -128,7 +128,9 @@ function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
 
         print '<div class="sketch_wrap">';
         print '<a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'" width="300" height="300" ></image></a>';
+        print '<div class="link">';
         print '<a href="workmake.php?id='.$temp.'" >編集</a>';
+        print '</div>';
         print '</div>';
     }
     ?>
