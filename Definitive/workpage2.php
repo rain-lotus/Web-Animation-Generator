@@ -60,8 +60,17 @@ $data = $st->fetchAll();
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
-        <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login"
-                                    style="position: absolute; right: 93px; top: 50px;">
+        <?php
+
+        header("Content-type: text/html; charset=utf-8");
+
+        if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
+            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+        } else {
+            echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+        }
+
+        ?>
 
 
             <div id="search">

@@ -5,18 +5,6 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $st = $pdo->query("select * from sketch");
 $data = $st->fetchAll();
 /////////////////////////////////////////////ここまで
-
-//Twitterでログインしてなければログインページへ
-session_start();
-function h($str)
-{
-    return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
-}
-
-if (!isset($_SESSION['access_token'])) {
-    header("Location: Twitterlogin.php");
-    exit;
-}
 ?>
 
 <!doctype html>
@@ -54,19 +42,21 @@ if (!isset($_SESSION['access_token'])) {
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
         <?php
-        //Twitterの認証が済んでいるならログアウトが表示される
-        if (!isset($_SESSION['access_token'])) {
-            echo "' <a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"'></a>";
-        } else {
-            echo "'<a href=\"twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"’></a>";
+
+        header("Content-type: text/html; charset=utf-8");
+
+        if(!isset($_SESSION['access_token'])){//Twitterの認証が済んでいるなら
+            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+        }else{
+            echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
         }
+
         ?>
 
         <div id="search">
 
             <form id="form02" action="#">
                 <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
-
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
             </form>
@@ -97,6 +87,10 @@ if (!isset($_SESSION['access_token'])) {
             <div class="elements">
                 <!--                ここを書く！-->
                 <div class="add_element" id="elema">elema</div>
+
+                <div class="add_element" id="rect">elema</div>
+                <div class="add_element" id="ellipse">elema</div>
+
                 <div class="add_element" id="elemb">elemb</div>
                 <div class="add_element" id="elemc">elemc</div>
 
@@ -124,6 +118,10 @@ if (!isset($_SESSION['access_token'])) {
                         <th class="parameter_name">opacity</th>
                         <th><input type="text" class="parameter" id="opacity"></th>
                     </tr>
+                    <!--                    <tr>-->
+                    <!--                        <th class="parameter_name">color</th>-->
+                    <!--                        <th><input type="text" class="parameter" id="backgroundColor"></th>-->
+                    <!--                    </tr>-->
                     <tr>
                         <th class="parameter_name">scale</th>
                         <th><input type="text" class="parameter" id="scale"></th>
@@ -144,13 +142,16 @@ if (!isset($_SESSION['access_token'])) {
         <div class="center editor">
             <div id="canvas"></div>
         </div>
+
         <div class="right editor">
 
             <form action="post.php" method="get">
                 <textarea name="html" placeholder="html" id="get_html"></textarea>
                 <textarea type="text" name="animation" placeholder="animation" id="get_animation"></textarea>
                 <input type="submit" value="保存">
+
             </form>
+
         </div>
     </div>
 
@@ -164,25 +165,7 @@ if (!isset($_SESSION['access_token'])) {
         <div id="timeline">
             <input class="progress" step="2" type="range" min="0" max="100" value="0">
             <div id="history">
-                <div class="history" style="width: 50%; left: 0%;">
-                    <p class="targets">#elema0</p>
-                    <p class="translateX">100</p>
-                    <p class="translateY">100</p>
-                    <p class="rotate">100</p>
-                    <p class="opacity">1</p>
-                    <p class="scale">1</p>
-                    <p class="duration">500</p>
-                    <p class="offset">0</p>
-                </div>
-                <div class="history" style="width: 50%; left: 50%;"><p class="targets">#elema0,#elemb1</p>
-                    <p class="translateX">100</p>
-                    <p class="translateY">100</p>
-                    <p class="rotate">100</p>
-                    <p class="opacity">1</p>
-                    <p class="scale">1</p>
-                    <p class="duration">500</p>
-                    <p class="offset">500</p>
-                </div>
+
             </div>
         </div>
 
@@ -197,10 +180,12 @@ if (!isset($_SESSION['access_token'])) {
 <!--内容ここまで///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+
 <script src="js/element.js"></script>
 <script src="js/keyframe.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/dragdrop.js"></script>
+<script src="js/get_html.js"></script>
 <script src="js/editanime.js"></script>
 </body>
 </html>

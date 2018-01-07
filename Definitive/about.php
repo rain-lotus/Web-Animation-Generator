@@ -51,7 +51,7 @@ $data = $st->fetchAll();
         <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login"
                                     style="position: absolute; right: 93px; top: 50px;">
 
-             <div id="search">
+            <div id="search">
 
                 <form id="form02" action="#">
                     <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
