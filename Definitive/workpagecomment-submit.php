@@ -7,17 +7,18 @@ function h($str)
 date_default_timezone_set("Asia/Tokyo");
 
 if (isset($_GET["username"]) && isset($_GET["comment"])) {
-
     $username = $_GET["username"];
     $comment = $_GET["comment"];
     $time = date("Y-m-d H:i");
-
     // ＊＊＊??????????プリペアドステートメントを使い、テーブルcommentに$title, $article_id, $name,$bodyを登録する処理をここに書く＊＊＊
-    $pdo = new PDO("sqlite:works.sqlite");
+    $pdo = new PDO("sqlite:data/works.sqlite");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    $st = $pdo->prepare("INSERT INTO comment(username, comment,time) VALUES( ?, ?, ?)");
+    $st = $pdo->prepare("INSERT INTO comment(username, comment,date) VALUES( ?, ?, ?)");
     $st->execute(array($username, $comment, $time));
 
+//    http_response_code( 301 ) ;
+//    header( "Location: " ) ;
+//    exit ;
 
     $result = "登録しました。";
 } else {

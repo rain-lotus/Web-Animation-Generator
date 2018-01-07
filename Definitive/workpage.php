@@ -183,6 +183,7 @@ session_start();
         <div id="contenttitle">
             <img src="images/comment.png" width="238" height="100">
         </div>
+        <input type="text" name="username" style="display: none;" value="名無し">
         <textarea name="comment" value="コメント" style=" font-size:30px;  width:500px; height:200px;"></textarea>
 
         <div id="toukoubutton">

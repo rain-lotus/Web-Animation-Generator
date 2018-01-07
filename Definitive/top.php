@@ -104,7 +104,7 @@ function h($str)
         $workimage = h($sketch["samune"]);
 
         print '<div class="sketch_wrap">';
-        print '<a href="workpage2.php?id=' . $temp . '"><image src="thumbnail/' . $workimage . '" width="300" height="300" ></image></a>';
+        print '<a href="workpage.php?id=' . $temp . '"><image src="thumbnail/' . $workimage . '" width="300" height="300" ></image></a>';
         print '</div>';
     }
     ?>

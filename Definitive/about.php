@@ -24,9 +24,8 @@ $data = $st->fetchAll();
 
 <body>
 
-<!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダー-->
+<!--ヘッダー-->
 <header>
-
     <!--サイト説明 　左側に。　文考える →画像にする-->
     <div id="citecap">
         <img src="images/citecap.png" width="358" height="250" style="position: absolute; left: 80px;">
@@ -39,20 +38,9 @@ $data = $st->fetchAll();
 
 
     <!--★画像ボタンか　画像リンクリンクがいい気がする。　　-->
-    <!--   <div id="hedbut">
-          <input type="button"  style="position: absolute; right: 344px; top: 50px; width:210px; height:80px;" value="about">
-          <input type="button" style="position: absolute; right: 93px; top: 50px;  width:210px; height:80px;" value="login">
-         ★検索　出来たら検索マークを貼りたい！
-          <input type="text" style="position: absolute; right: 93px; top: 167px;  width:460px; height:50px;"  value="search">
-       </div>
-      -->
-    <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
-                               style="position: absolute; right: 344px; top: 50px;">
-        <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login"
-                                    style="position: absolute; right: 93px; top: 50px;">
-
+    <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About" style="position: absolute; right: 344px; top: 50px;">
+        <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login" style="position: absolute; right: 93px; top: 50px;">
             <div id="search">
-
                 <form id="form02" action="#">
                     <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/

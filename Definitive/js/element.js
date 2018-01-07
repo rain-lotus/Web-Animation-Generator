@@ -11,20 +11,11 @@ function add_element(type) {
     //ボタンがちゃんと作られていればここでいい感じに増やしてくれる
 
     var name = type + element_sum;
-    var elem = "<div class='element " + type + "' id='" + name + "'>" + name + "</div>";
+    var elem = "<div class='element " + type + "' id='" + name + "'></div>";
 
     $("#canvas").append(elem);
     $modifi_element = $("#"+name);
-    add_element_info(type);
     element_sum++;
-    input_element_info();
-}
-
-function add_element_info(type) {
-    //TODO 巻き戻しのテスト
-    var name = type + element_sum;
-    var info = "<div class='element_info'></div>";
-    $("#elements").append(info);
 }
 
 function input_element_info(){

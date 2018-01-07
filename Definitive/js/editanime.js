@@ -10,11 +10,15 @@
 
 (function () {
     //エレメントの操作
+
     $(".add_element").click(function () {
         add_element($(this).attr('id'));
     });
+
     $(document).on("click", ".element", function () {
         select_element($(this));
+        $modifi_element = $(this);
+        $("#name").val(get_element_color());
         update_targets($(this));
     });
 
@@ -26,6 +30,11 @@
         compile_animation();
         animate_array(whole_animation);
         set_history_width();
+    });
+
+    $("#name").change(function () {
+        if ($modifi_element != "")
+            $modifi_element.css('backgroundColor', $(this).val());
     });
 
     $(document).on('click', '#history', function () {
@@ -68,7 +77,7 @@
     });
     $(".progress").on("input", function () {
         timeline.seek(animation_duration * ($(this).val() / 100));
-       console.log(animation_duration * ($(this).val() / 100), $(this).val());
+        console.log(animation_duration * ($(this).val() / 100), $(this).val());
     });
 
     ////////////////////////
@@ -90,4 +99,16 @@ function modify_historybox($box) {
     for (var i = 0; i < $history_p.length; i++) {
         $("#" + $history_p.eq(i).attr("class")).val($history_p.eq(i).text());
     }
+}
+
+function get_element_color() {
+    var bgColor = $modifi_element.css('backgroundColor').toString();
+    console.log(bgColor);
+    bgColor = bgColor.replace("rgb(","");
+    bgColor = bgColor.replace(")","");
+    bgColor = bgColor.split(",");
+
+    var color = "#"+parseInt(bgColor[0]).toString(16)+parseInt(bgColor[1]).toString(16)+parseInt(bgColor[2]).toString(16);
+
+    return color;
 }
