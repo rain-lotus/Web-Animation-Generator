@@ -1,9 +1,16 @@
 .element, .add_element {
-    display: inline-block;
     top: 0;
     left: 0;
     cursor: pointer;
     background-color: #000;
+}
+
+.element{
+    position: absolute;
+}
+
+.add_element{
+    margin: auto;
 }
 
 #rect, .rect {
@@ -24,6 +31,11 @@
 
 .sketch_wrap img {
     display: inline-block;
+}
+
+.elements_wrap{
+    display: flex;
+    margin-top: 10px;
 }
 
 .elem_wrap{

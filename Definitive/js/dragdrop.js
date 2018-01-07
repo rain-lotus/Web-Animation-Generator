@@ -9,7 +9,8 @@ function drag_element(e) {
     y = event.pageY - this.offsetTop;
     $(document.body).mousemove(move_element);
     $(".drag").mouseup(drop_element);
-};
+}
+
 function move_element(e) {
     is_moving = true;
     e.preventDefault();
@@ -19,7 +20,8 @@ function move_element(e) {
     });
     $(".drag").mouseup(drop_element);
     is_moving = false;
-};
+}
+
 function drop_element(e) {
     $(document.body).off('mousemove');
     $(".drag").mouseup = "";
@@ -28,4 +30,4 @@ function drop_element(e) {
     setTimeout(function () {
         busy = 0;
     }, 500);
-};
+}
