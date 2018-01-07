@@ -115,17 +115,45 @@ a {
 
 /*///////////////////////////////////作品ページ*/
 #workimage {
-
     text-align: center;
 }
 
 /*できません*/
 #comment {
     text-align: center;
+    margin: 50px;
 }
 
-.comment h3 {
-    text-align: center;
+.comments{
+    width: 800px;
+    margin: auto;
+    border-bottom: #707070 1px solid;
+}
+
+.comment {
+    text-align: right;
+    border-top: #707070 1px solid;
+    padding: 20px 50px 10px 50px;
+}
+
+.comment h3{
+    text-align: left;
+}
+.comment p{
+    text-align: left;
+}
+
+.username {
+    font-size: 28px;
+}
+
+.sketck_info{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+#toukoubutton{
+    margin: 30px;
 }
 
 /*///////////////////////////////////作品ページここまで*/
@@ -205,3 +233,7 @@ a {
 }
 
 /*///////////////////////////////////検索フォームここまで*/
+footer{
+    height: 200px;
+    width: 100%;
+}

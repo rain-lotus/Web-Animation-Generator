@@ -10,8 +10,10 @@ if (isset($_GET["username"]) && isset($_GET["comment"])) {
 
 }
 //サニタイジング
-function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
-
+function h($str)
+{
+    return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
+}
 
 ////////////////こっち作品サムネ用
 session_start();
@@ -19,10 +21,7 @@ $pdo = new PDO("sqlite:data/works.sqlite");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $st = $pdo->query("select * from sketch");
 $data = $st->fetchAll();
-
-
 ?>
-
 
 
 <!doctype html>
@@ -34,7 +33,9 @@ $data = $st->fetchAll();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--スタイルシート-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="css/style_editor.css" media="all">
     <!--タイトル-->
     <title>our app title</title>
 </head>
@@ -99,113 +100,82 @@ $data = $st->fetchAll();
 
 
 <!--００さん　の作品　　　　　じぶんだったら　あなた　の作品！-->
-<!--<h2>００さん　の　作品</h2>-->
-<div id="contenttitle">
-    <img src="images/whowork.png" width="398" height="200">
+<!-- 作品の詳細 -->
+<div class="sketck_info">
+    <div id="contenttitle">
+        <img src="images/whowork.png" width="398" height="200">
+    </div>
+    <?php
+    print '<p>作者：</p>';
+    ?>
+    <div id="contenttitle">
+        <img src="images/workinfo.png" width="338" height="120">
+    </div>
+    <?php
+    //'.username.'  と　'.data.' と　'.caption.'
+    print '<p>投稿日：</p>';
+    print '<p>説明：</p>';
+    ?>
 </div>
+<!--作品の詳細ここまで-->
 
 
-<!--？！サムネ画像　１こ 対応するやつをもってこれるようにしよう-->
+<div id="editor">
+    <div id="editor_wrapper">
+        <div class="left editor">
+        </div>
 
-<div id="workimage">
- <?php
-  
-  /*/////////////////////////////////１こだけにしよう*/
-  foreach($data as $sketch) {    
-$temp=h($sketch["id"]);	
-  $workimage=h($sketch["samune"]);
-  
-print '<p><a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'"></image></a></p>';
-  //編集リンク
-print '<a href="workmake.php?id='.$temp.'">編集</a>';
-    }
-  ?>
+        <div class="center editor">
+            <div id="canvas">
+                <!--TODO SQLからインポートする-->
+                <!--php print html  (サニタイジングしない)-->
+            </div>
+        </div>
+
+        <div class="right editor">
+        </div>
+    </div>
+
+    <div class="edit">
+        <div class="line player align-items">
+            <button class="play">Play</button>
+            <button class="pause">Pause</button>
+            <button class="restart">Restart</button>
+            <button class="reset">reset</button>
+        </div>
+        <div id="timeline">
+            <input class="progress" step="2" type="range" min="0" max="100" value="0">
+            <div id="history">
+
+                <!--TODO SQLからインポートする-->
+                <!--php print animation (サニタイジングしない)-->
+
+            </div>
+        </div>
+        <div id="elements"></div>
+    </div>
 </div>
+<!--作品ここまで-->
 
+<!--コメント-->
 
-
-
-<!--//////////////////////////////////////////////////////////////////////////////////////////作品ここまで-->
-
-
-<br>
-<br>
-<!--/////////////////////////////////////////////////////////////////////////////////////////作品の詳細-->
-
-<!-- <h1>作品の詳細</h1>-->
-<div id="contenttitle">
-    <img src="images/workinfo.png" width="338" height="120">
-</div>
-
-      <?php 
-      //'.username.'  と　'.data.' と　'.caption.'
-   
-print '<p>作者：</p>';   
-print '<p>投稿日：</p>';
-
-print '<p>説明：</p>';
-  ?>
-<!--//////////////////////////////////////////////////////////////////////////////////////////作品の詳細ここまで-->
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////コメント-->
-
-
-<!--////////////////////////////////////////////////////////////////////////////////////////////コメント投稿-->
+<!--コメント投稿-->
 <div id="comment">
     <form action="workpagecomment-submit.php" method="get">
-
-        <!--<h2>ハンドルネーム</h2>-->
-        <div id="contenttitle">
-            <img src="images/HN.png" width="238" height="100">
-        </div>
-        <br>
-        <input type="text" name="username" 　value="ハンドルネーム" style=" font-size:30px">
-        <!--/ <input type="text" style="position: absolute;  width:460px; height:50px; left: 41.0%; "  value="ハンドルネーム" name="name" >-->
-        <br>
-        <br>
-        <br>
-        <br>
-
         <!--<h2>内容<</h2>-->
         <div id="contenttitle">
             <img src="images/comment.png" width="238" height="100">
         </div>
-        <br>
-        <textarea name="comment" value="コメント" style=" font-size:30px;  width:500px; height:400px;"></textarea>
-        <!--  <input type="text" style="position: absolute; width:460px; height:300px;  left: 41.0%;"   value="内容" name="body"> -->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <textarea name="comment" value="コメント" style=" font-size:30px;  width:500px; height:200px;"></textarea>
 
-
-        <!--ボタン-->
-        <!--<div id="toukoubut">      </div>-->
         <div id="toukoubutton">
-            <!--ボタンと画像の大きさを合わせる！-->
-           
-      
-            <button type="submit" style="width:160px; height:50px;"><img src="images/commentbut.png" width="160" height="50"></button>
-            <!--<input type="button"  value="ログイン"  style="width:160px; height:50px;"> -->
-          
+            <button type="submit" style="width:160px; height:50px;"><img src="images/commentbut.png" width="160"
+                                                                         height="50"></button>
         </div>
-     
-      
 </div>
 
+<!--コメント投稿ここまで-->
 
-<!--/////////////////////////////////////////////////////////////////////////////////////////コメント投稿ここまで-->
-
-
-<br>
-<br>
 <!--  <h1>コメント一覧</h1>-->
 <div id="contenttitle">
     <img src="images/commentlist.png" width="338" height="120">
@@ -213,22 +183,28 @@ print '<p>説明：</p>';
 
 
 <!--//////////////////////////////////////////////////////////////////////////コメント表示-->
-<?php
-$st = $pdo->query("SELECT * FROM comment");
-  $data2 = $st->fetchAll();
-////////////////////////////////////////コメント
-foreach ($data2 as $comment) {
-//>>>コメント内容<<<
-//名前　内容
-    print '<div class="comment">';
-    print '<p>' . h($comment["data"]) . '</p>';
-    print '<h3>' . h($comment["username"]) . '</h3>';
-    print '<p>' . h($comment["comment"]) . '</p>';
-  
-    print '<p>----------------------</p>';
-    print '</div>';
-}
-?>
+<div class="comments">
+    <?php
+    $st = $pdo->query("SELECT * FROM comment");
+    $data2 = $st->fetchAll();
+    ////////////////////////////////////////コメント
+    foreach ($data2 as $comment) {
+        ?>
+        <!--コメント内容-->
+        <div class="comment">
+            <h3 class="username"> <?php print h($comment["username"]) ?> </h3>
+            <p> <?php print h($comment["comment"]) ?> </p>
+            <?php print h($comment["data"]) ?>
+
+        </div>
+        <?php
+    }
+    ?>
+</div>
+
+<footer>
+
+</footer>
 
 <!--//////////////////////////////////////////////////////////////////////////コメント表示ここまで-->
 
@@ -238,6 +214,11 @@ foreach ($data2 as $comment) {
 
 <!--内容ここまで///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script src="js/element.js"></script>
+<script src="js/keyframe.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/dragdrop.js"></script>
+<script src="js/editanime.js"></script>
 </body>
 </html>
