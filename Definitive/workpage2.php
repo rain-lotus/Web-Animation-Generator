@@ -194,7 +194,7 @@ $data = $st->fetchAll();
         <div class="comment">
             <h3 class="username"> <?php print h($comment["username"]) ?> </h3>
             <p> <?php print h($comment["comment"]) ?> </p>
-            <?php print h($comment["data"]) ?>
+            <?php print h($comment["date"]) ?>
 
         </div>
         <?php

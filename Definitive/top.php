@@ -1,6 +1,5 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
-
 session_start();
 $pdo = new PDO("sqlite:data/works.sqlite");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
@@ -9,7 +8,6 @@ $data = $st->fetchAll();
 //サニタイジング
 function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
 ?>
-
 
 <!doctype html>
 <html lang="ja">
@@ -97,17 +95,17 @@ if(!isset($_SESSION['access_token'])){//Twitterの認証が済んでいるなら
 <!--/////////////////////画像　idごとにリンクにしてみた。　あと画像をとってきてリンクにしたい-->
 <div class="image33">
     <?php
-foreach($data as $sketch) {    
-$temp=h($sketch["id"]);
-	$workimage=h($sketch["samune"]);
-	
-print '<a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'" width="300" height="300" ></image></a>';
+        foreach($data as $sketch) {
+        $temp=h($sketch["id"]);
+        $workimage=h($sketch["samune"]);
 
-}
+        print '<div class="sketch_wrap">';
+        print '<a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'" width="300" height="300" ></image></a>';
+        print '</div>';
+        }
    ?>
 </div>
-	
-	
+
 <!--/////////////////////////////////////////////////////////////////////////////////////////作品ここまで-->
 
 <br>
