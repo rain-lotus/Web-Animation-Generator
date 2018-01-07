@@ -92,37 +92,6 @@ if(!isset($_SESSION['access_token'])){
                 <div class="add_element" id="elemb">elemb</div>
                 <div class="add_element" id="elemc">elemc</div>
 
-<!--                <table class="parameter">-->
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">name</th>-->
-<!--                        <th><input type="text" class="parameter" id="name" readonly="readonly"></th>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">X</th>-->
-<!--                        <th><input type="text" class="parameter" id="X"></th>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">Y</th>-->
-<!--                        <th><input type="text" class="parameter" id="Y"></th>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">rotate</th>-->
-<!--                        <th><input type="text" class="parameter" id="rotate_init"></th>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">opacity</th>-->
-<!--                        <th><input type="text" class="parameter" id="opacity_init"></th>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">color</th>-->
-<!--                        <th><input type="text" class="parameter" id="backgroundColor_init"></th>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">scale</th>-->
-<!--                        <th><input type="text" class="parameter" id="scale_init"></th>-->
-<!--                    </tr>-->
-<!--                </table>-->
-
             </div>
 
             <div class="para_wrap">
@@ -147,10 +116,10 @@ if(!isset($_SESSION['access_token'])){
                         <th class="parameter_name">opacity</th>
                         <th><input type="text" class="parameter" id="opacity"></th>
                     </tr>
-<!--                    <tr>-->
-<!--                        <th class="parameter_name">color</th>-->
-<!--                        <th><input type="text" class="parameter" id="backgroundColor"></th>-->
-<!--                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <th class="parameter_name">color</th>-->
+                    <!--                        <th><input type="text" class="parameter" id="backgroundColor"></th>-->
+                    <!--                    </tr>-->
                     <tr>
                         <th class="parameter_name">scale</th>
                         <th><input type="text" class="parameter" id="scale"></th>
@@ -194,7 +163,25 @@ if(!isset($_SESSION['access_token'])){
         <div id="timeline">
             <input class="progress" step="2" type="range" min="0" max="100" value="0">
             <div id="history">
-
+                <div class="history" style="width: 50%; left: 0%;">
+                    <p class="targets">#elema0</p>
+                    <p class="translateX">100</p>
+                    <p class="translateY">100</p>
+                    <p class="rotate">100</p>
+                    <p class="opacity">1</p>
+                    <p class="scale">1</p>
+                    <p class="duration">500</p>
+                    <p class="offset">0</p>
+                </div>
+                <div class="history" style="width: 50%; left: 50%;"><p class="targets">#elema0,#elemb1</p>
+                    <p class="translateX">100</p>
+                    <p class="translateY">100</p>
+                    <p class="rotate">100</p>
+                    <p class="opacity">1</p>
+                    <p class="scale">1</p>
+                    <p class="duration">500</p>
+                    <p class="offset">500</p>
+                </div>
             </div>
         </div>
 
@@ -214,7 +201,6 @@ if(!isset($_SESSION['access_token'])){
 <script src="js/keyframe.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/dragdrop.js"></script>
-<script src="js/get_html.js"></script>
 <script src="js/editanime.js"></script>
 </body>
 </html>
