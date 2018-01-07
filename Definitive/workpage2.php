@@ -1,45 +1,28 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
-/*$pdo = new PDO("sqlite:works.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->query("select * from sketch");
-$data = $st->fetchAll();
-*/
-/////////////////////////////////////////////ここまで
-//////////////////////////////////////////////////////////////////追加
-session_start();
 
-$pdo = new PDO("sqlite:data/myblog.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->prepare("INSERT INTO comment(name, body,time) VALUES( ?, ?, ?)");
-//$st->execute(array(コメント先の記事ID, 投稿者, 本文));
-$st->execute(array($name, $body, $time));
-//////////////////////////////////////////////////////////////////追加ここまで
+//日本時間の日付時刻
+date_default_timezone_set("Asia/Tokyo");
+if (isset($_GET["username"]) && isset($_GET["comment"])) {
+    $username = $_GET["username"];
+    $comment = $_GET["comment"];
+    $time = date("Y-m-d H:i");
 
-
-////////////////////////////////////////////////////////////////コメント用変数
+}
+//サニタイジング
 function h($str)
 {
     return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
 }
 
-//日本時間の日付時刻
-date_default_timezone_set("Asia/Tokyo");
-if (isset($_GET["name"]) && isset($_GET["body"])) {
-    $name = $_GET["name"];
-    $body = $_GET["body"];
-    $time = date("Y-m-d H:i");
-
-}
-
-
-/////////////////////////////////////////////////////////////////////
-//Twitterでログインしてなければログインページへ
-  if (!isset($_SESSION['access_token'])){
-    header("Location: Twitterlogin.php");
-    exit;
-    }
+////////////////こっち作品サムネ用
+session_start();
+$pdo = new PDO("sqlite:data/works.sqlite");
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+$st = $pdo->query("select * from sketch");
+$data = $st->fetchAll();
 ?>
+
 
 <!doctype html>
 <html lang="ja">
@@ -50,7 +33,9 @@ if (isset($_GET["name"]) && isset($_GET["body"])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--スタイルシート-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="css/style_editor.css" media="all">
     <!--タイトル-->
     <title>our app title</title>
 </head>
@@ -75,12 +60,9 @@ if (isset($_GET["name"]) && isset($_GET["body"])) {
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
-//Twitterの認証が済んでいるならログアウトが表示される
-if(!isset($_SESSION['access_token'])){
-	echo "' <a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"'></a>";
-}else{
-	echo "'<a href=\"twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"’></a>";
-}
+        <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login"
+                                    style="position: absolute; right: 93px; top: 50px;">
+
 
             <div id="search">
 
@@ -118,99 +100,82 @@ if(!isset($_SESSION['access_token'])){
 
 
 <!--００さん　の作品　　　　　じぶんだったら　あなた　の作品！-->
-<!--<h2>００さん　の　作品</h2>-->
-<div id="contenttitle">
-    <img src="images/whowork.png" width="398" height="200">
+<!-- 作品の詳細 -->
+<div class="sketck_info">
+    <div id="contenttitle">
+        <img src="images/whowork.png" width="398" height="200">
+    </div>
+    <?php
+    print '<p>作者：</p>';
+    ?>
+    <div id="contenttitle">
+        <img src="images/workinfo.png" width="338" height="120">
+    </div>
+    <?php
+    //'.username.'  と　'.data.' と　'.caption.'
+    print '<p>投稿日：</p>';
+    print '<p>説明：</p>';
+    ?>
 </div>
+<!--作品の詳細ここまで-->
 
 
-<!--？！サムネ画像　１こ 対応するやつをもってこれるようにしよう-->
-
-<div id="workimage">
-    <image class="image-grid" src="test.png" width="600" height="600"></image>
-</div>
-
-
-<?php /*        foreach ($data as $images) {
-            ?>
-            <image class="image-grid" src="test.png" width="200" height="200" ></image>
-            <?php
-        }
-        */ ?>
-
-
-<!--//////////////////////////////////////////////////////////////////////////////////////////作品ここまで-->
-
-
-<br>
-<br>
-<!--/////////////////////////////////////////////////////////////////////////////////////////作品の詳細-->
-
-<!-- <h1>作品の詳細</h1>-->
-<div id="contenttitle">
-    <img src="images/workinfo.png" width="338" height="120">
-</div>
-
-<p>だれがつくったの</p>
-
-<p>コメント…</p>
-<!--//////////////////////////////////////////////////////////////////////////////////////////作品の詳細ここまで-->
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////コメント-->
-
-
-<!--////////////////////////////////////////////////////////////////////////////////////////////コメント投稿-->
-<div id="comment">
-    <form action="workpage2.php" method="get">
-
-        <!--<h2>ハンドルネーム</h2>-->
-        <div id="contenttitle">
-            <img src="images/HN.png" width="238" height="100">
+<div id="editor">
+    <div id="editor_wrapper">
+        <div class="left editor">
         </div>
-        <br>
-        <input type="text" name="name" 　value="ハンドルネーム" style=" font-size:30px">
-        <!--/ <input type="text" style="position: absolute;  width:460px; height:50px; left: 41.0%; "  value="ハンドルネーム" name="name" >-->
-        <br>
-        <br>
-        <br>
-        <br>
 
+        <div class="center editor">
+            <div id="canvas">
+                <!--TODO SQLからインポートする-->
+                <!--php print html  (サニタイジングしない)-->
+            </div>
+        </div>
+
+        <div class="right editor">
+        </div>
+    </div>
+
+    <div class="edit">
+        <div class="line player align-items">
+            <button class="play">Play</button>
+            <button class="pause">Pause</button>
+            <button class="restart">Restart</button>
+            <button class="reset">reset</button>
+        </div>
+        <div id="timeline">
+            <input class="progress" step="2" type="range" min="0" max="100" value="0">
+            <div id="history">
+
+                <!--TODO SQLからインポートする-->
+                <!--php print animation (サニタイジングしない)-->
+
+            </div>
+        </div>
+        <div id="elements"></div>
+    </div>
+</div>
+<!--作品ここまで-->
+
+<!--コメント-->
+
+<!--コメント投稿-->
+<div id="comment">
+    <form action="workpagecomment-submit.php" method="get">
         <!--<h2>内容<</h2>-->
         <div id="contenttitle">
             <img src="images/comment.png" width="238" height="100">
         </div>
-        <br>
-        <textarea name="body" value="コメント" style=" font-size:30px;  width:500px; height:400px;"></textarea>
-        <!--  <input type="text" style="position: absolute; width:460px; height:300px;  left: 41.0%;"   value="内容" name="body"> -->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <textarea name="comment" value="コメント" style=" font-size:30px;  width:500px; height:200px;"></textarea>
 
-
-        <!--ボタン-->
-        <!--<div id="toukoubut">      </div>-->
         <div id="toukoubutton">
-            <!--ボタンと画像の大きさを合わせる！-->
             <button type="submit" style="width:160px; height:50px;"><img src="images/commentbut.png" width="160"
                                                                          height="50"></button>
-            <!--<input type="button"  value="ログイン"  style="width:160px; height:50px;"> -->
         </div>
 </div>
 
+<!--コメント投稿ここまで-->
 
-<!--/////////////////////////////////////////////////////////////////////////////////////////コメント投稿ここまで-->
-
-
-<br>
-<br>
 <!--  <h1>コメント一覧</h1>-->
 <div id="contenttitle">
     <img src="images/commentlist.png" width="338" height="120">
@@ -218,20 +183,28 @@ if(!isset($_SESSION['access_token'])){
 
 
 <!--//////////////////////////////////////////////////////////////////////////コメント表示-->
-<?php //$st = $pdo->query("commentテーブルのarticle_id属性がPHPの変数$article["id"]と一致する行を探し、新しい順に並べる");
-$st = $pdo->query("SELECT * FROM comment");
-$data2 = $st->fetchAll();
+<div class="comments">
+    <?php
+    $st = $pdo->query("SELECT * FROM comment");
+    $data2 = $st->fetchAll();
+    ////////////////////////////////////////コメント
+    foreach ($data2 as $comment) {
+        ?>
+        <!--コメント内容-->
+        <div class="comment">
+            <h3 class="username"> <?php print h($comment["username"]) ?> </h3>
+            <p> <?php print h($comment["comment"]) ?> </p>
+            <?php print h($comment["date"]) ?>
 
-////////////////////////////////////////コメント
-foreach ($data2 as $comment) {
-//>>>コメント内容<<<
-//名前　内容
-    print '<div class="comment">';
-    print '<h3>' . h($comment["name"]) . '</h3>';
-    print '<p>' . h($comment["body"]) . '</p>';
-    print '</div>';
-}
-?>
+        </div>
+        <?php
+    }
+    ?>
+</div>
+
+<footer>
+
+</footer>
 
 <!--//////////////////////////////////////////////////////////////////////////コメント表示ここまで-->
 
@@ -241,6 +214,11 @@ foreach ($data2 as $comment) {
 
 <!--内容ここまで///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script src="js/element.js"></script>
+<script src="js/keyframe.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/dragdrop.js"></script>
+<script src="js/editanime.js"></script>
 </body>
 </html>

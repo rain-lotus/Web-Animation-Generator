@@ -1,5 +1,4 @@
 /*///////////////////////////////////////////////////////////////全ページ共通*/
-
 header {
     background-color: #707070;
 }
@@ -10,7 +9,6 @@ body {
 }
 
 p {
-
     text-align: center;
     font-size: 30px;
 }
@@ -21,7 +19,7 @@ p {
 }
 
 /*サイト説明
-#citecap{  
+#citecap{
 }
 ヘッダのボタン
 #hedbut{
@@ -119,29 +117,84 @@ a {
     text-align: center;
 }
 
-/*できません*/
 #comment {
     text-align: center;
+    margin: 50px;
+}
+
+.comments {
+    width: 800px;
+    margin: auto;
+    border-bottom: #707070 1px solid;
+}
+
+.comment {
+    text-align: right;
+    border-top: #707070 1px solid;
+    padding: 20px 50px 10px 50px;
 }
 
 .comment h3 {
-    text-align: center;
+    text-align: left;
+}
+
+.comment p {
+    text-align: left;
+}
+
+.username {
+    font-size: 28px;
+}
+
+.sketck_info {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+#toukoubutton {
+    margin: 30px;
 }
 
 /*///////////////////////////////////作品ページここまで*/
 
-/*///////////////////////////////////画像3*3*/
+/*///////////////////////////////////画像3*3                      リンクa pタグ　にしたらはんえいされなくなってしまった…*/
+
+/*mypage用*/
 .image33 {
-    width: 60%;
+    background-color: #ff6363;
+    width: 55%;
     margin: 0 auto;
+    margin-bottom: 200px;
 }
 
-.image-grid {
-    width: 30%;
-    margin: 0;
+.image33 a {
+    text-align: center;
+    width: 33%;
+    margin: 0 auto;
+    /*   display: inline-block; */
 }
 
-/*///////////////////////////////////画像3*3ここまで*/
+.sketch_wrap {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+}
+
+/*トップ用*/
+.image33top {
+    width: 55%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+.image33top a {
+    text-align: center;
+    width: 33%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+/*///////////////////////////////////画像ここまで*/
 
 /*///////////////////////////////////検索フォーム*/
 #search {
@@ -185,3 +238,7 @@ a {
 }
 
 /*///////////////////////////////////検索フォームここまで*/
+footer {
+    height: 200px;
+    width: 100%;
+}

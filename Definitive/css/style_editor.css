@@ -11,18 +11,15 @@
 
 .left {
     width: 400px;
-    background-color: #88a5f4;
 }
 
 .center {
     flex-grow: 1;
     min-width: 800px;
-    background-color: #4285f4;
 }
 
 .right {
     width: 400px;
-    background-color: #232323;
 }
 
 #canvas {
@@ -102,7 +99,6 @@ table.parameter input[type='text'] {
 /*コピペ*/
 
 .edit {
-    background-color: aqua;
     color: #FFF;
 }
 
@@ -132,7 +128,7 @@ div.player button {
 }
 
 #timeline {
-    background-color: #555555;
+    background-color: #bbb;
     width: 100%;
     margin: auto;
 }
