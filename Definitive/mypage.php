@@ -1,10 +1,16 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
+
+session_start();
 $pdo = new PDO("sqlite:data/works.sqlite");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $st = $pdo->query("select * from sketch");
 $data = $st->fetchAll();
-/////////////////////////////////////////////ここまで
+
+
+
+//サニタイジング
+function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
 ?>
 
 <!doctype html>
@@ -41,8 +47,8 @@ $data = $st->fetchAll();
      
   
   <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
-   <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About" style="position: absolute; right: 344px; top: 50px;">
-     <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login" style="position: absolute; right: 93px; top: 50px;">
+	<a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About" style="position: absolute; right: 344px; top: 50px;"></a>
+	<a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login" style="position: absolute; right: 93px; top: 50px;"></a>
   
 
        <div id="search">  
@@ -94,21 +100,33 @@ $data = $st->fetchAll();
      </div>
       <!--？！サムネ画像達。　300*300くらいで　３ついったら下の段にしたい！-->  
      
-     <div class="image33">
-       
-   
-                    <?php
-        foreach ($data as $images) {
-            ?>
-            <image class="image-grid" src="test.png"  ></image>
-            <?php
-        }
-        ?>
-       
-         </div>
-  <!--編集ボタンをつけたい。-->
+     
+<!--/////////////////////画像　idごとにリンクにしてみた。　あと画像をとってきてリンクにしたい-->
+
+<div class="image33">
+    <?php
+  
+ /*ここ追加したい！　自分のユーザidと一緒のやつ！
+//$sketch["username"] これ、データベースの作品情報のユーザーネーム　　　　あと、ツイッター認証のusernameがどれか。
+$st = $pdo->query("SELECT * FROM sketch where username=".$sketch["username"]." order by id desc");
+$data2 = $st->fetchAll();
+下を　data2にかえようy
+*/
+	
+foreach($data as $sketch) {    
+$temp=h($sketch["id"]);
+	$workimage=h($sketch["samune"]);
+
+	print '<div class="sketch_wrap">';
+  print '<a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'" width="300" height="300" ></image></a>';
+  print '<a href="workmake.php?id='.$temp.'" >編集</a>';
+	print '</div>';
+}
+   ?>
+</div>
   
   
+
   <!--//////////////////////////////自分の作品一覧ここまで-->
   
  
@@ -116,8 +134,8 @@ $data = $st->fetchAll();
   
 
   
-<!--内容///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-  
-  
-</body>
-</html>
+<!--内容/////////////////////////////////////////////////////////////-->
+
+
+  </body>
+  </html>

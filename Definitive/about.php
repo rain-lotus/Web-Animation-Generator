@@ -51,9 +51,14 @@ $data = $st->fetchAll();
         <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login"
                                     style="position: absolute; right: 93px; top: 50px;">
 
-            <input type="text" style="position: absolute; right: 93px; top: 167px;  width:460px; height:50px;"
-                   value="search">
+             <div id="search">
 
+                <form id="form02" action="#">
+                    <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+    /input間で改行したい場合はコメントアウト必須/
+    --><input id="submit02" type="submit" value=””>
+                </form>
+            </div>
 
 </header>
 <!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダーここまで-->

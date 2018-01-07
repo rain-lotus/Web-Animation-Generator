@@ -98,7 +98,8 @@ $data = $st->fetchAll();
   <a href="./top.php">トップに戻る</a>
   </div>
   <!--ツイッターの画像　はる？？？？？？？-->
-  <img src="images/logintwitterlogo.png" width="200" height="200" style="position: relative; left: 20px; buttom: 0px; " align="left" >
+ <a href="./Twitterlogin.php"><img src="images/logintwitterlogo.png" width="200" height="200" style="position: relative; left: 20px; buttom: 0px; " align="left" ></a>
+  
 
 
   

@@ -1,45 +1,29 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
-/*$pdo = new PDO("sqlite:works.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->query("select * from sketch");
-$data = $st->fetchAll();
-*/
-/////////////////////////////////////////////ここまで
-//////////////////////////////////////////////////////////////////追加
-session_start();
-
-$pdo = new PDO("sqlite:data/myblog.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->prepare("INSERT INTO comment(name, body,time) VALUES( ?, ?, ?)");
-//$st->execute(array(コメント先の記事ID, 投稿者, 本文));
-$st->execute(array($name, $body, $time));
-//////////////////////////////////////////////////////////////////追加ここまで
-
-
-////////////////////////////////////////////////////////////////コメント用変数
-function h($str)
-{
-    return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
-}
 
 //日本時間の日付時刻
 date_default_timezone_set("Asia/Tokyo");
-if (isset($_GET["name"]) && isset($_GET["body"])) {
-    $name = $_GET["name"];
-    $body = $_GET["body"];
+if (isset($_GET["username"]) && isset($_GET["comment"])) {
+    $username = $_GET["username"];
+    $comment = $_GET["comment"];
     $time = date("Y-m-d H:i");
 
 }
+//サニタイジング
+function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
 
 
-/////////////////////////////////////////////////////////////////////
-//Twitterでログインしてなければログインページへ
-  if (!isset($_SESSION['access_token'])){
-    header("Location: Twitterlogin.php");
-    exit;
-    }
+////////////////こっち作品サムネ用
+session_start();
+$pdo = new PDO("sqlite:data/works.sqlite");
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+$st = $pdo->query("select * from sketch");
+$data = $st->fetchAll();
+
+
 ?>
+
+
 
 <!doctype html>
 <html lang="ja">
@@ -75,12 +59,9 @@ if (isset($_GET["name"]) && isset($_GET["body"])) {
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
-//Twitterの認証が済んでいるならログアウトが表示される
-if(!isset($_SESSION['access_token'])){
-	echo "' <a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"'></a>";
-}else{
-	echo "'<a href=\"twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"’></a>";
-}
+        <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login"
+                                    style="position: absolute; right: 93px; top: 50px;">
+
 
             <div id="search">
 
@@ -127,16 +108,21 @@ if(!isset($_SESSION['access_token'])){
 <!--？！サムネ画像　１こ 対応するやつをもってこれるようにしよう-->
 
 <div id="workimage">
-    <image class="image-grid" src="test.png" width="600" height="600"></image>
+ <?php
+  
+  /*/////////////////////////////////１こだけにしよう*/
+  foreach($data as $sketch) {    
+$temp=h($sketch["id"]);	
+  $workimage=h($sketch["samune"]);
+  
+print '<p><a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'"></image></a></p>';
+  //編集リンク
+print '<a href="workmake.php?id='.$temp.'">編集</a>';
+    }
+  ?>
 </div>
 
 
-<?php /*        foreach ($data as $images) {
-            ?>
-            <image class="image-grid" src="test.png" width="200" height="200" ></image>
-            <?php
-        }
-        */ ?>
 
 
 <!--//////////////////////////////////////////////////////////////////////////////////////////作品ここまで-->
@@ -151,9 +137,14 @@ if(!isset($_SESSION['access_token'])){
     <img src="images/workinfo.png" width="338" height="120">
 </div>
 
-<p>だれがつくったの</p>
+      <?php 
+      //'.username.'  と　'.data.' と　'.caption.'
+   
+print '<p>作者：</p>';   
+print '<p>投稿日：</p>';
 
-<p>コメント…</p>
+print '<p>説明：</p>';
+  ?>
 <!--//////////////////////////////////////////////////////////////////////////////////////////作品の詳細ここまで-->
 
 
@@ -167,14 +158,14 @@ if(!isset($_SESSION['access_token'])){
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////コメント投稿-->
 <div id="comment">
-    <form action="workpage2.php" method="get">
+    <form action="workpagecomment-submit.php" method="get">
 
         <!--<h2>ハンドルネーム</h2>-->
         <div id="contenttitle">
             <img src="images/HN.png" width="238" height="100">
         </div>
         <br>
-        <input type="text" name="name" 　value="ハンドルネーム" style=" font-size:30px">
+        <input type="text" name="username" 　value="ハンドルネーム" style=" font-size:30px">
         <!--/ <input type="text" style="position: absolute;  width:460px; height:50px; left: 41.0%; "  value="ハンドルネーム" name="name" >-->
         <br>
         <br>
@@ -186,7 +177,7 @@ if(!isset($_SESSION['access_token'])){
             <img src="images/comment.png" width="238" height="100">
         </div>
         <br>
-        <textarea name="body" value="コメント" style=" font-size:30px;  width:500px; height:400px;"></textarea>
+        <textarea name="comment" value="コメント" style=" font-size:30px;  width:500px; height:400px;"></textarea>
         <!--  <input type="text" style="position: absolute; width:460px; height:300px;  left: 41.0%;"   value="内容" name="body"> -->
         <br>
         <br>
@@ -199,10 +190,14 @@ if(!isset($_SESSION['access_token'])){
         <!--<div id="toukoubut">      </div>-->
         <div id="toukoubutton">
             <!--ボタンと画像の大きさを合わせる！-->
-            <button type="submit" style="width:160px; height:50px;"><img src="images/commentbut.png" width="160"
-                                                                         height="50"></button>
+           
+      
+            <button type="submit" style="width:160px; height:50px;"><img src="images/commentbut.png" width="160" height="50"></button>
             <!--<input type="button"  value="ログイン"  style="width:160px; height:50px;"> -->
+          
         </div>
+     
+      
 </div>
 
 
@@ -218,17 +213,19 @@ if(!isset($_SESSION['access_token'])){
 
 
 <!--//////////////////////////////////////////////////////////////////////////コメント表示-->
-<?php //$st = $pdo->query("commentテーブルのarticle_id属性がPHPの変数$article["id"]と一致する行を探し、新しい順に並べる");
+<?php
 $st = $pdo->query("SELECT * FROM comment");
-$data2 = $st->fetchAll();
-
+  $data2 = $st->fetchAll();
 ////////////////////////////////////////コメント
 foreach ($data2 as $comment) {
 //>>>コメント内容<<<
 //名前　内容
     print '<div class="comment">';
-    print '<h3>' . h($comment["name"]) . '</h3>';
-    print '<p>' . h($comment["body"]) . '</p>';
+    print '<p>' . h($comment["data"]) . '</p>';
+    print '<h3>' . h($comment["username"]) . '</h3>';
+    print '<p>' . h($comment["comment"]) . '</p>';
+  
+    print '<p>----------------------</p>';
     print '</div>';
 }
 ?>

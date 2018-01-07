@@ -7,12 +7,16 @@ $data = $st->fetchAll();
 /////////////////////////////////////////////ここまで
 
 //Twitterでログインしてなければログインページへ
-  session_start();
-  function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
-  if (!isset($_SESSION['access_token'])){
+session_start();
+function h($str)
+{
+    return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
+}
+
+if (!isset($_SESSION['access_token'])) {
     header("Location: Twitterlogin.php");
     exit;
-    }
+}
 ?>
 
 <!doctype html>
@@ -49,21 +53,24 @@ $data = $st->fetchAll();
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
-//Twitterの認証が済んでいるならログアウトが表示される
-if(!isset($_SESSION['access_token'])){
-	echo "' <a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"'></a>";
-}else{
-	echo "'<a href=\"twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"’></a>";
-}
-            <div id="search">
+        <?php
+        //Twitterの認証が済んでいるならログアウトが表示される
+        if (!isset($_SESSION['access_token'])) {
+            echo "' <a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"'></a>";
+        } else {
+            echo "'<a href=\"twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"’></a>";
+        }
+        ?>
 
-                <form id="form02" action="#">
-                    <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+        <div id="search">
+
+            <form id="form02" action="#">
+                <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
-                </form>
-            </div>
-            <!--//////////////////////////////////////////////////////////////////////////////////////////about login 検索フォームここまで -->
+            </form>
+        </div>
+        <!--//////////////////////////////////////////////////////////////////////////////////////////about login 検索フォームここまで -->
 
 </header>
 <!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダーここまで-->
@@ -116,10 +123,6 @@ if(!isset($_SESSION['access_token'])){
                         <th class="parameter_name">opacity</th>
                         <th><input type="text" class="parameter" id="opacity"></th>
                     </tr>
-                    <!--                    <tr>-->
-                    <!--                        <th class="parameter_name">color</th>-->
-                    <!--                        <th><input type="text" class="parameter" id="backgroundColor"></th>-->
-                    <!--                    </tr>-->
                     <tr>
                         <th class="parameter_name">scale</th>
                         <th><input type="text" class="parameter" id="scale"></th>
@@ -140,16 +143,13 @@ if(!isset($_SESSION['access_token'])){
         <div class="center editor">
             <div id="canvas"></div>
         </div>
-
         <div class="right editor">
 
             <form action="post.php" method="get">
                 <textarea name="html" placeholder="html" id="get_html"></textarea>
                 <textarea type="text" name="animation" placeholder="animation" id="get_animation"></textarea>
                 <input type="submit" value="保存">
-
             </form>
-
         </div>
     </div>
 
@@ -196,7 +196,6 @@ if(!isset($_SESSION['access_token'])){
 <!--内容ここまで///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-
 <script src="js/element.js"></script>
 <script src="js/keyframe.js"></script>
 <script src="js/animation.js"></script>

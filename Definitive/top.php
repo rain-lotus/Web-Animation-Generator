@@ -1,11 +1,15 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
+
+session_start();
 $pdo = new PDO("sqlite:data/works.sqlite");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $st = $pdo->query("select * from sketch");
 $data = $st->fetchAll();
-/////////////////////////////////////////////ここまで
+//サニタイジング
+function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
 ?>
+
 
 <!doctype html>
 <html lang="ja">
@@ -39,12 +43,18 @@ $data = $st->fetchAll();
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
-//Twitterの認証が済んでいるならログアウトが表示される
-if(!isset($_SESSION['access_token'])){
-	echo "' <a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"'></a>";
+	</a>
+       <?php
+ 
+header("Content-type: text/html; charset=utf-8");
+
+if(!isset($_SESSION['access_token'])){//Twitterの認証が済んでいるなら
+	echo "<a href=\"login2.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
 }else{
-	echo "'<a href=\"twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"’></a>";
+	echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
 }
+
+  ?>
 
             <div id="search">
 
@@ -84,20 +94,20 @@ if(!isset($_SESSION['access_token'])){
 
 <br>
 <br>
-<!--/////////////////////画像　３＊３に並ぶようにしてください！　　　あとリンクにしたいね-->
+<!--/////////////////////画像　idごとにリンクにしてみた。　あと画像をとってきてリンクにしたい-->
 <div class="image33">
-
     <?php
+foreach($data as $sketch) {    
+$temp=h($sketch["id"]);
+	$workimage=h($sketch["samune"]);
+	
+print '<a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'" width="300" height="300" ></image></a>';
 
-    foreach ($data as $images) {
-        ?>
-        <a href="workpage2.php">
-            <image class="image-grid" src="test.png"></image>
-        </a>
-        <?php
-    }
-    ?>
+}
+   ?>
 </div>
+	
+	
 <!--/////////////////////////////////////////////////////////////////////////////////////////作品ここまで-->
 
 <br>
@@ -105,15 +115,4 @@ if(!isset($_SESSION['access_token'])){
 <br>
 <br>
 
-<!--/////////////////////////////////////////////////////////////////////////////////クレジット-->
-<div id="contenttitle">
-    <img src="images/credit.png" width="338" height="150">
-</div>
-<p>いろいろかこうね</p>
-
-<br>
-<br>
-
-<!--/////////////////////////////////////////////////////////////////////////////////クレジットここまで-->     
-     
-     
+<!--/////////////////////////////////////////////////////////////////////////////////
