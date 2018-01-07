@@ -66,6 +66,7 @@ if (!isset($_SESSION['access_token'])) {
 
             <form id="form02" action="#">
                 <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
             </form>

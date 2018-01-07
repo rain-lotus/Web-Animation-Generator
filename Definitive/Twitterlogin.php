@@ -5,7 +5,7 @@ define("Consumer_Key", "Pm2y1nDpgmtTrKl502YuH8SxE");
 define("Consumer_Secret", "a6maELzlapKQucPGxQhL5r1N94Qy4tkP4EeatsyNfE0KFJXoN8");
  
 //Callback URL(callback.phpの場所に合わせてURLを変える)
-define('Callback','http://localhost:8080/Definitive/callback.php');
+define('Callback','http:/localhost:8080/twitter/Definitive/callback.php');
  
 //ライブラリを読み込む
 require "twitteroauth-master/autoload.php";
