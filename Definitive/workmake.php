@@ -23,8 +23,11 @@ if (isset($_GET["id"])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--スタイルシート-->
+    <!--js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="js/makethumbnail.js"></script>
+    <!--スタイルシート-->
     <link rel="stylesheet" href="css/style.css" media="all">
     <link rel="stylesheet" href="css/style_editor.css" media="all">
     <link rel="stylesheet" href="css/elements.css" media="all">
@@ -164,7 +167,7 @@ if (isset($_GET["id"])) {
 
         <div class="right editor">
 
-            <form action="post.php" method="get">
+            <form action="post.php" name="mainform" id="form" method="post" style="display: none;">
                 <?php
                     if (isset($ID)){
                         ?>
@@ -180,9 +183,10 @@ if (isset($_GET["id"])) {
                 <h3>説明</h3>
                 <textarea name="caption" cols="30" rows="10" class="sketch_info"></textarea>
 
-                <input type="submit" value="保存" class="para_button">
+                <input type="submit" value="保存確定！" id="submit">
+                <input type="hidden"  name="thumbnail" id="get_thumbnail" value="hoge">
             </form>
-
+             <button id="print" onclick="screenshot('#canvas')">保存</button>
         </div>
     </div>
 
