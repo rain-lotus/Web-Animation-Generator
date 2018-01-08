@@ -38,15 +38,24 @@ $data = $st->fetchAll();
 
 
     <!--★画像ボタンか　画像リンクリンクがいい気がする。　　-->
-    <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About" style="position: absolute; right: 344px; top: 50px;">
-        <a href="./login2.php"><img src="images/login.png" width="210" height="80" alt="Login" style="position: absolute; right: 93px; top: 50px;">
-            <div id="search">
-                <form id="form02" action="#">
-                    <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+    <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About" style="position: absolute; right: 344px; top: 50px;"></a>
+    <?php
+    header("Content-type: text/html; charset=utf-8");
+
+    if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
+        echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
+    } else {
+        echo "<a href=\"Twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\">";
+        echo "</a>";
+    }
+    ?>
+    <div id="search">
+        <form id="form02" action="#">
+            <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
-                </form>
-            </div>
+        </form>
+    </div>
 
 </header>
 <!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダーここまで-->
