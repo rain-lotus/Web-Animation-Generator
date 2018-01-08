@@ -5,6 +5,7 @@
                     var imgData = canvas.toDataURL();
                      imgData = imgData.replace('data:image/png;base64,', '');  // 頭のいらない部分を落とす
                     $('#get_thumbnail').val(imgData);
+                        $("#print").hide();
                        $('#form').show();
 
                 }
