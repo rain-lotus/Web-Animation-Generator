@@ -20,6 +20,7 @@
 
 .right {
     width: 400px;
+    text-align: center;
 }
 
 #canvas {
@@ -33,7 +34,24 @@
     margin: auto;
 }
 
-.remove {
+.sketch_info{
+    width: 80%;
+    border: #707070 1px solid;
+    padding: 5px;
+    margin: 15px 0 15px 0;
+    border-radius: 2px;
+    font-size: 1em;
+}
+
+input.sketch_info{
+    height: 30px;
+}
+
+.hidden{
+    display: none;
+}
+
+.para_button {
     display: block;
     background-color: #ff6363;
     font-size: 1em;
@@ -42,6 +60,11 @@
     text-align: center;
     border: none;
     margin: auto;
+    margin-top: 10px;
+}
+
+.remove{
+    background-color: #88a5f4;
 }
 
 .elements {

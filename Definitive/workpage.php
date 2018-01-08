@@ -3,11 +3,6 @@
 
 //日本時間の日付時刻
 date_default_timezone_set("Asia/Tokyo");
-if (isset($_GET["username"]) && isset($_GET["comment"])) {
-    $username = $_GET["username"];
-    $comment = $_GET["comment"];
-    $time = date("Y-m-d H:i");
-}
 
 if (isset($_GET["id"])) {
     $ID = $_GET["id"];
@@ -191,6 +186,7 @@ session_start();
         <div id="contenttitle">
             <img src="images/comment.png" width="238" height="100">
         </div>
+
         <?php
         if(isset($_SESSION['screen_name'])){
             $name = $_SESSION['screen_name'];
@@ -198,6 +194,7 @@ session_start();
             $name = "ゲスト";
         }
         ?>
+
         <input type="text" name="username" style="display: none;" value="<?php print $name ?>">
         <textarea name="comment" value="コメント" style=" font-size:30px;  width:500px; height:200px;"></textarea>
 
@@ -248,6 +245,6 @@ session_start();
 <script src="js/keyframe.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/dragdrop.js"></script>
-<script src="js/editanime.js"></script>
+<script src="js/browsanime.js"></script>
 </body>
 </html>

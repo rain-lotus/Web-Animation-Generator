@@ -1,7 +1,7 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
 session_start();
-if (!isset($_SESSION['screen_name'])) {
+if (!isset($_SESSION['screen_name'])){
     header("Location: Twitterlogin.php");
     exit;
 }
@@ -146,7 +146,7 @@ if (isset($_GET["id"])) {
                 </table>
 
                 <!--                TODO ここ変えた-->
-                <input type="button" value="追加" class="add para_burron">
+                <input type="button" value="追加" class="add para_button">
                 <input type="button" value="削除" class="remove para_button">
             </div>
 
@@ -163,11 +163,26 @@ if (isset($_GET["id"])) {
         </div>
 
         <div class="right editor">
+
             <form action="post.php" method="get">
-                <textarea name="html" placeholder="html" id="get_html"></textarea>
-                <textarea type="text" name="animation" placeholder="animation" id="get_animation"></textarea>
-                <input type="submit" value="保存">
+                <?php
+                    if (isset($ID)){
+                        ?>
+                        <input type="text" name="id" class="hidden" value="<?php echo $ID?>">
+                        <?php
+                    }
+                ?>
+                <textarea name="html" placeholder="html" id="get_html" class="hidden"></textarea>
+                <textarea type="text" name="animation" placeholder="animation" id="get_animation" class="hidden"></textarea>
+
+                <h3>タイトル</h3>
+                <input type="text" name="title" class="sketch_info">
+                <h3>説明</h3>
+                <textarea name="caption" cols="30" rows="10" class="sketch_info"></textarea>
+
+                <input type="submit" value="保存" class="para_button">
             </form>
+
         </div>
     </div>
 
