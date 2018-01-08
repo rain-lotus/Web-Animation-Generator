@@ -44,6 +44,7 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css" media="all">
     <link rel="stylesheet" href="css/style_editor.css" media="all">
+    <link rel="stylesheet" href="css/elements.css" media="all">
     <!--タイトル-->
     <title>our app title</title>
 </head>

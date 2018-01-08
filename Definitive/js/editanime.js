@@ -76,8 +76,8 @@
         timeline.seek(0);
     });
     $(".progress").on("input", function () {
-        timeline.seek(animation_duration * ($(this).val() / 100));
-        console.log(animation_duration * ($(this).val() / 100), $(this).val());
+        timeline.seek(timeline.duration * ($(this).val() / 100));
+        console.log(timeline.duration * ($(this).val() / 100), $(this).val());
     });
 
     ////////////////////////
