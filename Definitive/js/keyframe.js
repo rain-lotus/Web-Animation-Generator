@@ -40,15 +40,15 @@ function set_history_width() {
     });
 }
 
-var clear_parameter_box = function () {
+function clear_parameter_box() {
     $input_paarmeters.each(function (i, elem) {
         $(elem).val("");
     });
-};
+}
 
-var remove_box = function () {
+function remove_box() {
     $(".history").eq(modifying_block_number).remove();
-};
+}
 
 // var modify_historybox = function ($box) {
 //     //履歴クリックしたらパラメーター入力欄に値を入れたい:引数が対象

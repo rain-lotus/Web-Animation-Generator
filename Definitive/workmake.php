@@ -184,6 +184,7 @@ if (isset($_GET["id"])) {
                 <input type="submit" value="保存確定！" id="submit" class="para_button">
                 <input type="hidden"  name="thumbnail" id="get_thumbnail" value="hoge">
             </form>
+
              <input type="button" id="print" onclick="screenshot('#canvas')" value="保存" class="para_button">
         </div>
     </div>
