@@ -1,9 +1,18 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
-$pdo = new PDO("sqlite:data/works.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->query("select * from sketch");
-$data = $st->fetchAll();
+session_start();
+if (!isset($_SESSION['screen_name'])){
+    header("Location: Twitterlogin.php");
+    exit;
+}
+
+if (isset($_GET["id"])) {
+    $ID = $_GET["id"];
+    $pdo = new PDO("sqlite:data/works.sqlite");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    $st = $pdo->query("select * from sketch where id = '$ID'");
+    $data = $st->fetchAll();
+}
 /////////////////////////////////////////////ここまで
 ?>
 
@@ -42,21 +51,19 @@ $data = $st->fetchAll();
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
         <?php
-
         header("Content-type: text/html; charset=utf-8");
 
         if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
-            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
         } else {
-            echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+            echo "<a href=\"Twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\">";
+            echo "</a>";
         }
-
         ?>
-
         <div id="search">
 
-            <form id="form02" action="#">
-                <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+            <form id="form02" action="top.php" method="get">
+                <input id="input02" type="text" placeholder="Search" name="search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
             </form>
@@ -137,20 +144,45 @@ $data = $st->fetchAll();
                         <th><input type="text" class="parameter" id="offset"></th>
                     </tr>
                 </table>
-                <input type="button" value="削除" class="remove">
+
+                <!--                TODO ここ変えた-->
+                <input type="button" value="追加" class="add para_button">
+                <input type="button" value="削除" class="remove para_button">
             </div>
+
         </div>
 
         <div class="center editor">
-            <div id="canvas"></div>
+            <div id="canvas"><?php
+                if(isset($_GET["id"])) {
+                    foreach ($data as $sketch) {
+                        print $sketch["html"];
+                    }
+                }
+                ?></div>
         </div>
 
         <div class="right editor">
+
             <form action="post.php" method="get">
-                <textarea name="html" placeholder="html" id="get_html"></textarea>
-                <textarea type="text" name="animation" placeholder="animation" id="get_animation"></textarea>
-                <input type="submit" value="保存">
+                <?php
+                    if (isset($ID)){
+                        ?>
+                        <input type="text" name="id" class="hidden" value="<?php echo $ID?>">
+                        <?php
+                    }
+                ?>
+                <textarea name="html" placeholder="html" id="get_html" class="hidden"></textarea>
+                <textarea type="text" name="animation" placeholder="animation" id="get_animation" class="hidden"></textarea>
+
+                <h3>タイトル</h3>
+                <input type="text" name="title" class="sketch_info">
+                <h3>説明</h3>
+                <textarea name="caption" cols="30" rows="10" class="sketch_info"></textarea>
+
+                <input type="submit" value="保存" class="para_button">
             </form>
+
         </div>
     </div>
 
@@ -163,7 +195,13 @@ $data = $st->fetchAll();
         </div>
         <div id="timeline">
             <input class="progress" step="2" type="range" min="0" max="100" value="0">
-            <div id="history"></div>
+            <div id="history"><?php
+                if(isset($_GET["id"])) {
+                    foreach ($data as $sketch) {
+                        print $sketch["animation"];
+                    }
+                }
+                ?></div>
         </div>
 
         <!--        隠す要素-->

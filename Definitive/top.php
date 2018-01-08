@@ -11,6 +11,12 @@ function h($str)
     return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
 }
 
+if(isset($_GET['search'])){
+    $search = $_GET['search'];
+    $st = $pdo->query("select * from sketch where username like '%$search%' or title like '%$search%' or caption like '%$search%'");
+    $data = $st->fetchAll();
+}
+
 ?>
 
 <!doctype html>
@@ -46,22 +52,21 @@ function h($str)
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
                                style="position: absolute; right: 344px; top: 50px;">
     </a>
-    <?php
 
+    <?php
     header("Content-type: text/html; charset=utf-8");
 
     if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
-        echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+        echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
     } else {
-        echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+        echo "<a href=\"Twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\">";
+        echo "</a>";
     }
-
     ?>
 
     <div id="search">
-
-        <form id="form02" action="#">
-            <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+        <form id="form02" action="top.php">
+            <input id="input02" type="text" placeholder="Search" name="search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
         </form>
@@ -104,7 +109,7 @@ function h($str)
         $workimage = h($sketch["samune"]);
 
         print '<div class="sketch_wrap">';
-        print '<a href="workpage2.php?id=' . $temp . '"><image src="thumbnail/' . $workimage . '" width="300" height="300" ></image></a>';
+        print '<a href="workpage.php?id=' . $temp . '"><image src="thumbnail/' . $workimage . '" width="300" height="300" ></image></a>';
         print '</div>';
     }
     ?>

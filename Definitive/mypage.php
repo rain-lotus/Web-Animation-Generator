@@ -1,13 +1,15 @@
 <?php
-//////////////////////////////////////////////SQLITEきたら書き換える！
-
 session_start();
+if (!isset($_SESSION['screen_name'])) {
+    header("Location: Twitterlogin.php");
+    exit;
+}
+
 $pdo = new PDO("sqlite:data/works.sqlite");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->query("select * from sketch");
+$name = $_SESSION['screen_name'];
+$st = $pdo->query("select * from sketch WHERE username = '$name' ");
 $data = $st->fetchAll();
-
-
 
 //サニタイジング
 function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
@@ -49,20 +51,19 @@ function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About" style="position: absolute; right: 344px; top: 50px;"></a>
     <?php
-
     header("Content-type: text/html; charset=utf-8");
 
-    if(!isset($_SESSION['access_token'])){//Twitterの認証が済んでいるなら
-        echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
-    }else{
-        echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+    if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
+        echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
+    } else {
+        echo "<a href=\"Twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\">";
+        echo "</a>";
     }
-
     ?>
 
     <div id="search">
 
-        <form id="form02" action="#">
+        <form id="form02" action="top.php" method="get">
             <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
@@ -97,8 +98,7 @@ function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
 </div>
 <br>
 <!--//////////////////////////////○○　さん-　ツイッターの＠マークをとってきて表示！-->
-<h2>○○さん</h2>
-
+<h2>@<?php print $_SESSION['screen_name'] ?>さん</h2>
 
 <br>
 <br>
@@ -127,7 +127,7 @@ function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
         $workimage=h($sketch["samune"]);
 
         print '<div class="sketch_wrap">';
-        print '<a href="workpage2.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'" width="300" height="300" ></image></a>';
+        print '<a href="workpage.php?id='.$temp.'"><image src="thumbnail/'.$workimage.'" width="300" height="300" ></image></a>';
         print '<div class="link">';
         print '<a href="workmake.php?id='.$temp.'" >編集</a>';
         print '</div>';

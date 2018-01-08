@@ -3,11 +3,6 @@
 
 //日本時間の日付時刻
 date_default_timezone_set("Asia/Tokyo");
-if (isset($_GET["username"]) && isset($_GET["comment"])) {
-    $username = $_GET["username"];
-    $comment = $_GET["comment"];
-    $time = date("Y-m-d H:i");
-}
 
 if (isset($_GET["id"])) {
     $ID = $_GET["id"];
@@ -15,6 +10,17 @@ if (isset($_GET["id"])) {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     $st = $pdo->query("select * from sketch where id = '$ID'");
     $data = $st->fetchAll();
+}
+
+if (isset($_GET["username"]) && isset($_GET["comment"])) {
+    $username = $_GET["username"];
+    $comment = $_GET["comment"];
+    $time = date("Y-m-d H:i");
+    // ＊＊＊??????????プリペアドステートメントを使い、テーブルcommentに$title, $article_id, $name,$bodyを登録する処理をここに書く＊＊＊
+    $pdo = new PDO("sqlite:data/works.sqlite");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    $st = $pdo->prepare("INSERT INTO comment(username, comment,date, sketchid) VALUES( ?, ?, ?, ?)");
+    $st->execute(array($username, $comment, $time, $ID));
 }
 
 //サニタイジング
@@ -25,10 +31,7 @@ function h($str)
 
 ////////////////こっち作品サムネ用
 session_start();
-
 ?>
-
-
 <!doctype html>
 <html lang="ja">
 <head>
@@ -69,17 +72,16 @@ session_start();
         header("Content-type: text/html; charset=utf-8");
 
         if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
-            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
         } else {
-            echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+            echo "<a href=\"Twitterlogout.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\">";
+            echo "</a>";
         }
         ?>
 
-
         <div id="search">
-
-            <form id="form02" action="#">
-                <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+            <form id="form02" action="top.php" method="get">
+                <input id="input02" type="text" placeholder="Search" name="search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
             </form>
@@ -118,10 +120,10 @@ session_start();
     <?php
     foreach ($data as $sketch) {
         ?>
-        <p class="strong">作者：<?php print h($sketch["username"]) ?></p>
         <div id="contenttitle">
             <img src="images/workinfo.png" width="338" height="120">
         </div>
+        <p class="strong">作者：<?php print h($sketch["username"]) ?></p>
         <p>投稿日：<?php print h($sketch["date"]) ?></p>
         <p><?php print h($sketch["caption"]) ?></p>
         <?php
@@ -178,16 +180,26 @@ session_start();
 
 <!--コメント投稿-->
 <div id="comment">
-    <form action="workpagecomment-submit.php" method="get">
+    <form action="workpage.php?id=<?php echo $ID ?>" method="get">
+        <input type="text" name="id" style="display: none;" value="<?php echo $ID ?>">
         <!--<h2>内容<</h2>-->
         <div id="contenttitle">
             <img src="images/comment.png" width="238" height="100">
         </div>
+
+        <?php
+        if(isset($_SESSION['screen_name'])){
+            $name = $_SESSION['screen_name'];
+        }else{
+            $name = "ゲスト";
+        }
+        ?>
+
+        <input type="text" name="username" style="display: none;" value="<?php print $name ?>">
         <textarea name="comment" value="コメント" style=" font-size:30px;  width:500px; height:200px;"></textarea>
 
         <div id="toukoubutton">
-            <button type="submit" style="width:160px; height:50px;"><img src="images/commentbut.png" width="160"
-                                                                         height="50"></button>
+            <button type="submit" style="width:160px; height:50px;"><img src="images/commentbut.png" width="160" height="50"></button>
         </div>
 </div>
 
@@ -202,17 +214,16 @@ session_start();
 <!--//////////////////////////////////////////////////////////////////////////コメント表示-->
 <div class="comments">
     <?php
-    $st = $pdo->query("SELECT * FROM comment");
+    $st = $pdo->query("SELECT * FROM comment where sketchid = '$ID'");
     $data2 = $st->fetchAll();
     ////////////////////////////////////////コメント
     foreach ($data2 as $comment) {
         ?>
         <!--コメント内容-->
         <div class="comment">
-            <h3 class="username"> <?php print h($comment["username"]) ?> </h3>
+            <h3 class="username"> @<?php print h($comment["username"]) ?> </h3>
             <p> <?php print h($comment["comment"]) ?> </p>
             <?php print h($comment["date"]) ?>
-
         </div>
         <?php
     }
@@ -234,6 +245,6 @@ session_start();
 <script src="js/keyframe.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/dragdrop.js"></script>
-<script src="js/editanime.js"></script>
+<script src="js/browsanime.js"></script>
 </body>
 </html>

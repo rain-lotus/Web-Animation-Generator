@@ -14,68 +14,96 @@
 
     </style>
 </head>
+
 <body>
-<div id="TLcontrols">
+<div id="seekAnim">
     <div class="line">
-        <div class="square el"></div>
+        <div class="small square el"></div>
     </div>
     <div class="line">
-        <div class="circle el"></div>
+        <div class="small circle el"></div>
     </div>
     <div class="line">
-        <div class="triangle el"></div>
+        <div class="small triangle el"></div>
     </div>
+    <div class="line player"><input class="progress" step=".001" type="range" min="0" max="100" value="0"></div>
+
     <div class="line player align-items">
         <button class="play">Play</button>
         <button class="pause">Pause</button>
         <button class="restart">Restart</button>
-        <input class="progress" step="2" type="range" min="0" max="100" value="0"></div>
+        <button class="reset">Reset</button>
+    </div>
+    <button class="test">test</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-<script>
-    var controlsProgressEl = document.querySelector('#TLcontrols .progress');
 
-    var TLcontrols = anime.timeline({
-        direction: 'alternate',
-        loop: true,
+<script>
+    var seekProgressEl = document.querySelector('#seekAnim .progress');
+
+    var seekAnim = anime.timeline({
         easing: 'linear',
-        update: function (anim) {
-            controlsProgressEl.value = anim.progress;
-        }
+        autoplay: false
     });
 
-    TLcontrols
-        .add({
-            targets: '.square',
-            translateX: 250,
-            offset: '1000' // Starts at 1000ms
-        })
-        .add({
-            targets: '.circle',
-            translateX: 250,
-            offset: '500' // Starts at 500ms
-        })
-        .add({
-            targets: '.triangle',
-            translateX: 250,
-            offset: '0' // Starts at 0ms
+
+    document.querySelector('.test').onclick = function(){
+        seekAnim = anime.timeline({
+            easing: 'linear',
+            autoplay: false
         });
 
-    document.querySelector('#TLcontrols .play').onclick = TLcontrols.play;
-    document.querySelector('#TLcontrols .pause').onclick = TLcontrols.pause;
-    document.querySelector('#TLcontrols .restart').onclick = TLcontrols.restart;
+        seekAnim
+            .add({
+                targets: '.square.el',
+                translateX: 250,
+                easing: 'easeOutExpo',
+                opacity: 0
+            })
+            // .add({
+            //     targets: '.circle.el',
+            //     translateX: 250,
+            //     easing: 'easeOutExpo'
+            // })
+            // .add({
+            //     targets: '.triangle.el',
+            //     translateX: 250,
+            //     easing: 'easeOutExpo'
+            // });
 
-    controlsProgressEl.addEventListener('input', function () {
-        TLcontrols.seek(TLcontrols.duration * (controlsProgressEl.value / 100));
+        seekAnim.add({
+            //ここ通すとdurationがおかしくなるらしい
+            complete: function (anim) {
+                console.log(anim.completed);
+                seekAnim.seek(0);
+            }
+        });
+
+
+    }
+
+    seekProgressEl.addEventListener('input', function () {
+        seekAnim.seek(seekAnim.duration * (seekProgressEl.value / 100));
     });
 
     ['input', 'change'].forEach(function (evt) {
-        controlsProgressEl.addEventListener(evt, function () {
-            TLcontrols.seek(TLcontrols.duration * (controlsProgressEl.value / 100));
+        seekProgressEl.addEventListener(evt, function () {
+            seekAnim.seek(seekAnim.duration * (seekProgressEl.value / 100));
         });
     });
-    console.log(TLcontrols.duration);
+
+    document.querySelector('.play').onclick = function(){
+        seekAnim.play();
+        console.log(seekAnim.duration);
+    };
+
+    document.querySelector('.pause').onclick = seekAnim.pause;
+    document.querySelector('.restart').onclick = seekAnim.restart;
+
+    document.querySelector('.reset').onclick = function(){
+        seekAnim.seek(0);
+    }
 
 </script>
 </body>
