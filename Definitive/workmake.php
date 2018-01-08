@@ -5,7 +5,6 @@ if (!isset($_SESSION['screen_name'])){
     header("Location: Twitterlogin.php");
     exit;
 }
-
 if (isset($_GET["id"])) {
     $ID = $_GET["id"];
     $pdo = new PDO("sqlite:data/works.sqlite");
@@ -55,7 +54,6 @@ if (isset($_GET["id"])) {
                                style="position: absolute; right: 344px; top: 50px;">
         <?php
         header("Content-type: text/html; charset=utf-8");
-
         if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
             echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
         } else {
@@ -183,10 +181,10 @@ if (isset($_GET["id"])) {
                 <h3>説明</h3>
                 <textarea name="caption" cols="30" rows="10" class="sketch_info"></textarea>
 
-                <input type="submit" value="保存確定！" id="submit">
+                <input type="submit" value="保存確定！" id="submit" class="para_button">
                 <input type="hidden"  name="thumbnail" id="get_thumbnail" value="hoge">
             </form>
-             <button id="print" onclick="screenshot('#canvas')">保存</button>
+             <input type="button" id="print" onclick="screenshot('#canvas')" value="保存" class="para_button">
         </div>
     </div>
 
