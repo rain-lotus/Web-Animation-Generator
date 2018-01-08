@@ -53,11 +53,11 @@ var animate_array = function (array) {
         timeline.add(array[i]);
     }
     animation_duration = timeline.duration;
-    timeline.add({
-        //ここ通すとdurationがおかしくなるらしい
-        complete: function (anim) {
-            console.log(anim.completed);
-            timeline.seek(0);
-        }
-    });
+    // timeline.add({
+    //     //ここ通すとdurationがおかしくなるらしい
+    //     complete: function (anim) {
+    //         console.log(anim.completed);
+    //         timeline.seek(0);
+    //     }
+    // });
 };
