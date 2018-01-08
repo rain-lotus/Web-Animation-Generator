@@ -1,9 +1,18 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
-$pdo = new PDO("sqlite:data/works.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->query("select * from sketch");
-$data = $st->fetchAll();
+session_start();
+if (!isset($_SESSION['screen_name'])) {
+    header("Location: Twitterlogin.php");
+    exit;
+}
+
+if (isset($_GET["id"])) {
+    $ID = $_GET["id"];
+    $pdo = new PDO("sqlite:data/works.sqlite");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    $st = $pdo->query("select * from sketch where id = '$ID'");
+    $data = $st->fetchAll();
+}
 /////////////////////////////////////////////ここまで
 ?>
 
@@ -46,17 +55,17 @@ $data = $st->fetchAll();
         header("Content-type: text/html; charset=utf-8");
 
         if (!isset($_SESSION['access_token'])) {//Twitterの認証が済んでいるなら
-            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+            echo "<a href=\"Twitterlogin.php\"><img src=\"images\login.png\" width=\"210\" height=\"80\"  alt=\"Login\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
         } else {
-            echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"</a>";
+            echo "<a href=\"top.php\"><img src=\"images\logout.png\" width=\"210\" height=\"80\"  alt=\"Logout\" style=\"position: absolute; right: 93px; top: 50px;\"></a>";
         }
 
         ?>
 
         <div id="search">
 
-            <form id="form02" action="#">
-                <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+            <form id="form02" action="top.php" method="get">
+                <input id="input02" type="text" placeholder="Search" name="search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
             </form>
@@ -138,7 +147,7 @@ $data = $st->fetchAll();
                     </tr>
                 </table>
 
-<!--                TODO ここ変えた-->
+                <!--                TODO ここ変えた-->
                 <input type="button" value="追加" class="add para_burron">
                 <input type="button" value="削除" class="remove para_button">
             </div>
@@ -146,7 +155,13 @@ $data = $st->fetchAll();
         </div>
 
         <div class="center editor">
-            <div id="canvas"></div>
+            <div id="canvas"><?php
+                if(isset($_GET["id"])) {
+                    foreach ($data as $sketch) {
+                        print $sketch["html"];
+                    }
+                }
+                ?></div>
         </div>
 
         <div class="right editor">
@@ -167,7 +182,13 @@ $data = $st->fetchAll();
         </div>
         <div id="timeline">
             <input class="progress" step="2" type="range" min="0" max="100" value="0">
-            <div id="history"></div>
+            <div id="history"><?php
+                if(isset($_GET["id"])) {
+                    foreach ($data as $sketch) {
+                        print $sketch["animation"];
+                    }
+                }
+                ?></div>
         </div>
 
         <!--        隠す要素-->
