@@ -4,7 +4,7 @@
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Definitive/data/works.sqlite" afterPath="$PROJECT_DIR$/Definitive/data/works.sqlite" />
-      <change beforePath="$PROJECT_DIR$/Definitive/post.php" afterPath="$PROJECT_DIR$/Definitive/post.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/editanime.js" afterPath="$PROJECT_DIR$/Definitive/js/editanime.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,6 +38,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="works" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="comment: table" type="ffe0bd85:SqliteImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -46,25 +53,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="post.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Definitive/post.php">
+      <file leaf-file-name="animation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Definitive/js/animation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <marker date="1515463336518" expanded="true" signature="993:1051" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1074" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1090" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1116" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1132" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1170" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1053:1074" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1074:1090" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1090:1116" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1117:1132" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1132:1170" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1217:1315" ph="INSERT INTO sketch... " />
-              </folding>
+            <state relative-caret-position="460">
+              <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editanime.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sketch" pinned="false" current-in-tab="false">
+        <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.sketch">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment" pinned="false" current-in-tab="true">
+        <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.comment">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -184,13 +206,13 @@
         <option value="$PROJECT_DIR$/Definitive/about.php" />
         <option value="$PROJECT_DIR$/Definitive/js/browsanime.js" />
         <option value="$PROJECT_DIR$/Definitive/css/style_editor.css" />
-        <option value="$PROJECT_DIR$/Definitive/js/editanime.js" />
         <option value="$PROJECT_DIR$/Definitive/js/animation.js" />
         <option value="$PROJECT_DIR$/Definitive/js/keyframe.js" />
         <option value="$PROJECT_DIR$/Definitive/workmake.php" />
         <option value="$PROJECT_DIR$/Definitive/workpage.php" />
         <option value="$PROJECT_DIR$/Definitive/css/style.css" />
         <option value="$PROJECT_DIR$/Definitive/post.php" />
+        <option value="$PROJECT_DIR$/Definitive/js/editanime.js" />
       </list>
     </option>
   </component>
@@ -210,9 +232,9 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="336" />
-    <option name="y" value="12" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="333" />
+    <option name="y" value="25" />
     <option name="width" value="1535" />
     <option name="height" value="998" />
   </component>
@@ -339,7 +361,7 @@
               <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
               <item name="Definitive" type="462c0819:PsiDirectoryNode" />
-              <item name="thumbnail" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
@@ -512,7 +534,7 @@
       <workItem from="1515372073169" duration="19350000" />
       <workItem from="1515408503564" duration="9068000" />
       <workItem from="1515459491555" duration="268000" />
-      <workItem from="1515460718393" duration="2221000" />
+      <workItem from="1515460718393" duration="4341000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -546,10 +568,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262886000" />
+    <option name="totallyTimeSpent" value="265006000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="336" y="12" width="1535" height="998" extended-state="0" />
+    <frame x="333" y="25" width="1535" height="998" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -564,8 +586,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55408657" sideWeight="0.49677765" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16153319" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27104723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2073922" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14579055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09344791" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -630,11 +652,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Definitive/images/mypageok.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/images/password.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -828,24 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/js/animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/js/keyframe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1888">
-          <caret line="96" column="59" lean-forward="true" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -879,24 +882,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.sketch">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
             <marker date="1515463336518" expanded="true" signature="993:1051" ph="update sketch... " />
             <marker date="1515463336518" expanded="true" signature="993:1074" ph="update sketch... " />
@@ -911,6 +900,44 @@
             <marker date="1515463336518" expanded="true" signature="1132:1170" ph="update sketch... " />
             <marker date="1515463336518" expanded="true" signature="1217:1315" ph="INSERT INTO sketch... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/js/makethumbnail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/js/animation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.sketch">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

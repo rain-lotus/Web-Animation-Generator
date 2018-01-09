@@ -10,7 +10,6 @@
 
 (function () {
     //エレメントの操作
-
     $(".add_element").click(function () {
         add_element($(this).attr('id'));
     });
@@ -61,6 +60,7 @@
     ///////////////////////////
 
     $(".play").click(function () {
+        timeline.seek(0);
         compile_animation();
         animate_array(whole_animation);
         timeline.play()
