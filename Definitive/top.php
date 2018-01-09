@@ -35,7 +35,7 @@ if(isset($_GET['search'])){
 
 <body>
 <!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダー-->
-<header>
+<header style="text-align: center">
 
     <!--サイト説明 　左側に。　文考える →画像にする-->
     <div id="citecap">
@@ -44,9 +44,8 @@ if(isset($_GET['search'])){
 
     <!--△ロゴ 真ん中になってる？　本物決めて、大きさ調整-->
     <div id="title">
-        <img src="images/rogo.png" width="338" height="250" style="position: relative; left: 43.5%; top: 0px; ">
+        <img src="images/rogo.png" width="338" height="250" >
     </div>
-
 
     <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
     <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
