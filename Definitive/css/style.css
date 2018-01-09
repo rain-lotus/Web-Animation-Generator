@@ -18,6 +18,10 @@ p {
     /* text-align: center;*/
 }
 
+
+.top_img{
+    border: #ddd 2px solid;
+}
 /*サイト説明
 #citecap{
 }
