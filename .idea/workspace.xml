@@ -2,8 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CMP-B.iml" afterPath="$PROJECT_DIR$/.idea/CMP-B.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Definitive/data/works.sqlite" afterPath="$PROJECT_DIR$/Definitive/data/works.sqlite" />
+      <change beforePath="$PROJECT_DIR$/Definitive/Twitterlogin.php" afterPath="$PROJECT_DIR$/Definitive/Twitterlogin.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/about.php" afterPath="$PROJECT_DIR$/Definitive/about.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/callback.php" afterPath="$PROJECT_DIR$/Definitive/callback.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/css/elements.css" afterPath="$PROJECT_DIR$/Definitive/css/elements.css" />
+      <change beforePath="$PROJECT_DIR$/Definitive/css/style.css" afterPath="$PROJECT_DIR$/Definitive/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/Definitive/css/style_editor.css" afterPath="$PROJECT_DIR$/Definitive/css/style_editor.css" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/animation.js" afterPath="$PROJECT_DIR$/Definitive/js/animation.js" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/browsanime.js" afterPath="$PROJECT_DIR$/Definitive/js/browsanime.js" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/dragdrop.js" afterPath="$PROJECT_DIR$/Definitive/js/dragdrop.js" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/editanime.js" afterPath="$PROJECT_DIR$/Definitive/js/editanime.js" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/element.js" afterPath="$PROJECT_DIR$/Definitive/js/element.js" />
+      <change beforePath="$PROJECT_DIR$/Definitive/js/keyframe.js" afterPath="$PROJECT_DIR$/Definitive/js/keyframe.js" />
+      <change beforePath="$PROJECT_DIR$/Definitive/mypage.php" afterPath="$PROJECT_DIR$/Definitive/mypage.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/post.php" afterPath="$PROJECT_DIR$/Definitive/post.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/top.php" afterPath="$PROJECT_DIR$/Definitive/top.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/CODE_OF_CONDUCT.md" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/CODE_OF_CONDUCT.md" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/CONTRIBUTING.md" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/LICENSE.md" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/LICENSE.md" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/README.md" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/README.md" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/autoload.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/autoload.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/composer.json" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/composer.json" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/phpmd.xml" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/phpmd.xml" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/phpunit.xml" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/phpunit.xml" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Config.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Config.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Consumer.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Consumer.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/HmacSha1.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/HmacSha1.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Request.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Request.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Response.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Response.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/SignatureMethod.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/SignatureMethod.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Token.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Token.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/TwitterOAuth.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/TwitterOAuth.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/TwitterOAuthException.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/TwitterOAuthException.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Util.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Util.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Util/JsonDecoder.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/Util/JsonDecoder.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/cacert.pem" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/src/cacert.pem" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/AbstractSignatureMethodTest.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/AbstractSignatureMethodTest.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/ConsumerTest.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/ConsumerTest.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/HmacSha1Test.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/HmacSha1Test.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/TokenTest.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/TokenTest.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/TwitterOAuthTest.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/TwitterOAuthTest.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/Util/JsonDecoderTest.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/Util/JsonDecoderTest.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/bootstrap.php" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/bootstrap.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/sample_env" afterPath="$PROJECT_DIR$/Definitive/twitteroauth-master/tests/sample_env" />
+      <change beforePath="$PROJECT_DIR$/Definitive/workmake.php" afterPath="$PROJECT_DIR$/Definitive/workmake.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/workpage.php" afterPath="$PROJECT_DIR$/Definitive/workpage.php" />
+      <change beforePath="$PROJECT_DIR$/post.php" afterPath="$PROJECT_DIR$/post.php" />
+      <change beforePath="$PROJECT_DIR$/tekitou.html" afterPath="$PROJECT_DIR$/tekitou.html" />
+      <change beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/CODE_OF_CONDUCT.md" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/CODE_OF_CONDUCT.md" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/CONTRIBUTING.md" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/LICENSE.md" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/LICENSE.md" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/README.md" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/README.md" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/autoload.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/autoload.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/composer.json" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/composer.json" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/phpmd.xml" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/phpmd.xml" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/phpunit.xml" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/phpunit.xml" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Config.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Config.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Consumer.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Consumer.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/HmacSha1.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/HmacSha1.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Request.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Request.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Response.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Response.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/SignatureMethod.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/SignatureMethod.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Token.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Token.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/TwitterOAuth.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/TwitterOAuth.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/TwitterOAuthException.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/TwitterOAuthException.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Util.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Util.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Util/JsonDecoder.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/Util/JsonDecoder.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/cacert.pem" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/src/cacert.pem" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/AbstractSignatureMethodTest.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/AbstractSignatureMethodTest.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/ConsumerTest.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/ConsumerTest.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/HmacSha1Test.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/HmacSha1Test.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/TokenTest.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/TokenTest.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/TwitterOAuthTest.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/TwitterOAuthTest.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/Util/JsonDecoderTest.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/Util/JsonDecoderTest.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/bootstrap.php" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/bootstrap.php" />
+      <change beforePath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/sample_env" afterPath="$PROJECT_DIR$/testData/twitteroauth-master/twitteroauth-master/tests/sample_env" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>con</find>
       <find>info</find>
       <find>can</find>
       <find>wrap</find>
@@ -104,6 +182,7 @@
       <find>imagecreatefromstring</find>
       <find>strong</find>
       <find>head</find>
+      <find>player</find>
     </findStrings>
     <replaceStrings>
       <replace>#canvas</replace>
@@ -203,8 +282,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="729" />
-    <option name="width" value="1198" />
+    <option name="x" value="564" />
+    <option name="width" value="1363" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -479,7 +558,7 @@
       <workItem from="1515372073169" duration="19350000" />
       <workItem from="1515408503564" duration="9068000" />
       <workItem from="1515459491555" duration="268000" />
-      <workItem from="1515460718393" duration="5836000" />
+      <workItem from="1515460718393" duration="6793000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -513,7 +592,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267384000" />
+    <option name="totallyTimeSpent" value="268585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="729" y="0" width="1198" height="1047" extended-state="0" />
@@ -530,7 +609,7 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5527809" sideWeight="0.49677765" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2411032" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28380784" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15925267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09344791" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -562,7 +641,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33144155" sideWeight="0.49785176" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.100961536" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55408657" sideWeight="0.49677765" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -789,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -816,20 +888,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <marker date="1515463336518" expanded="true" signature="993:1051" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="993:1074" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="993:1090" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="993:1116" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="993:1132" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="993:1170" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="1053:1074" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="1074:1090" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="1090:1116" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="1117:1132" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="1132:1170" ph="update sketch... " />
-            <marker date="1515463336518" expanded="true" signature="1217:1315" ph="INSERT INTO sketch... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -837,11 +896,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="37" column="10" lean-forward="false" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-          <folding>
-            <marker date="1515474330090" expanded="true" signature="192:212" ph="select * fro... sketch" />
-            <marker date="1515474330090" expanded="true" signature="1505:1548" ph="..." />
-            <marker date="1515474330090" expanded="true" signature="1698:1741" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -849,13 +904,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2369">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <marker date="1515474330152" expanded="true" signature="308:345" ph="select * fro... sketch" />
-            <marker date="1515474330152" expanded="true" signature="774:847" ph="INSERT INTO comment... " />
-            <marker date="1515474330152" expanded="true" signature="2703:2746" ph="..." />
-            <marker date="1515474330152" expanded="true" signature="2904:2947" ph="..." />
-            <marker date="1515474330152" expanded="true" signature="7238:7282" ph="SELECT * FRO... comment" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -870,11 +919,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-          <folding>
-            <marker date="1515474249773" expanded="true" signature="276:321" ph="select * fro... sketch" />
-            <marker date="1515474249773" expanded="true" signature="1830:1873" ph="..." />
-            <marker date="1515474249773" expanded="true" signature="2023:2066" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -882,12 +927,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="110" column="76" lean-forward="true" selection-start-line="110" selection-start-column="76" selection-end-line="110" selection-end-column="76" />
-          <folding>
-            <marker date="1515474427954" expanded="true" signature="209:229" ph="select * fro... sketch" />
-            <marker date="1515474427954" expanded="true" signature="428:534" ph="select * fro... sketch" />
-            <marker date="1515474427954" expanded="true" signature="1997:2040" ph="..." />
-            <marker date="1515474427954" expanded="true" signature="2190:2233" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -898,22 +938,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="145" column="17" lean-forward="true" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="194" column="48" lean-forward="true" selection-start-line="194" selection-start-column="48" selection-end-line="194" selection-end-column="48" />
-          <folding>
-            <marker date="1515474330032" expanded="true" signature="363:400" ph="select * fro... sketch" />
-            <marker date="1515474330032" expanded="true" signature="2305:2348" ph="..." />
-            <marker date="1515474330032" expanded="true" signature="2506:2549" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="154" column="34" lean-forward="true" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
+    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
