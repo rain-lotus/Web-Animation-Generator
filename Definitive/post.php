@@ -33,7 +33,7 @@ if (isset($_POST["html"]) && isset($_POST["animation"]) && isset($_POST["title"]
         $st->execute(array($username, $title, $caption, $time, $animation, $html, $img_name));
     }
 
-//    header("Location: top.php");
-//    exit;
+    header("Location: mypage.php");
+    exit;
 }
 ?>
