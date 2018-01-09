@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Definitive/css/style.css" afterPath="$PROJECT_DIR$/Definitive/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/Definitive/css/style_editor.css" afterPath="$PROJECT_DIR$/Definitive/css/style_editor.css" />
+      <change beforePath="$PROJECT_DIR$/Definitive/data/works.sqlite" afterPath="$PROJECT_DIR$/Definitive/data/works.sqlite" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,32 +51,7 @@
     <favorites_list name="CMP-B" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="workmake.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="194" column="48" lean-forward="true" selection-start-line="194" selection-start-column="48" selection-end-line="194" selection-end-column="48" />
-              <folding>
-                <marker date="1515474330032" expanded="true" signature="363:400" ph="select * fro... sketch" />
-                <marker date="1515474330032" expanded="true" signature="2305:2348" ph="..." />
-                <marker date="1515474330032" expanded="true" signature="2506:2549" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style_editor.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="154" column="34" lean-forward="true" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,7 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>con</find>
       <find>info</find>
       <find>can</find>
       <find>wrap</find>
@@ -120,6 +93,7 @@
       <find>imagecreatefromstring</find>
       <find>strong</find>
       <find>head</find>
+      <find>player</find>
     </findStrings>
     <replaceStrings>
       <replace>#canvas</replace>
@@ -337,12 +311,6 @@
               <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
               <item name="Definitive" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CMP-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMP-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Definitive" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -496,7 +464,7 @@
       <workItem from="1515372073169" duration="19350000" />
       <workItem from="1515408503564" duration="9068000" />
       <workItem from="1515459491555" duration="268000" />
-      <workItem from="1515460718393" duration="5836000" />
+      <workItem from="1515460718393" duration="6793000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -530,11 +498,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266501000" />
+    <option name="totallyTimeSpent" value="267458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -548,7 +515,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55408657" sideWeight="0.49677765" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11439312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09344791" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -787,20 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.sketch">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -913,6 +866,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="145" column="17" lean-forward="true" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -925,11 +886,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="154" column="34" lean-forward="true" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
-          <folding />
+    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5b39df87/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2/main.sketch">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
