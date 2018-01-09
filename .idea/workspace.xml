@@ -4,7 +4,7 @@
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Definitive/css/style.css" afterPath="$PROJECT_DIR$/Definitive/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/Definitive/top.php" afterPath="$PROJECT_DIR$/Definitive/top.php" />
+      <change beforePath="$PROJECT_DIR$/Definitive/css/style_editor.css" afterPath="$PROJECT_DIR$/Definitive/css/style_editor.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,79 +53,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/post.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding>
-                <marker date="1515463336518" expanded="true" signature="993:1051" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1074" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1090" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1116" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1132" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="993:1170" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1053:1074" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1074:1090" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1090:1116" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1117:1132" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1132:1170" ph="update sketch... " />
-                <marker date="1515463336518" expanded="true" signature="1217:1315" ph="INSERT INTO sketch... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mypage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/mypage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1515474249773" expanded="true" signature="276:321" ph="select * fro... sketch" />
-                <marker date="1515474249773" expanded="true" signature="1830:1873" ph="..." />
-                <marker date="1515474249773" expanded="true" signature="2023:2066" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="callback.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/callback.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="41" column="100" lean-forward="true" selection-start-line="41" selection-start-column="100" selection-end-line="41" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/about.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="37" column="10" lean-forward="false" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1515474330090" expanded="true" signature="192:212" ph="select * fro... sketch" />
-                <marker date="1515474330090" expanded="true" signature="1505:1548" ph="..." />
-                <marker date="1515474330090" expanded="true" signature="1698:1741" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="workmake.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+            <state relative-caret-position="513">
+              <caret line="194" column="48" lean-forward="true" selection-start-line="194" selection-start-column="48" selection-end-line="194" selection-end-column="48" />
               <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1515474330032" expanded="true" signature="363:400" ph="select * fro... sketch" />
                 <marker date="1515474330032" expanded="true" signature="2305:2348" ph="..." />
                 <marker date="1515474330032" expanded="true" signature="2506:2549" ph="..." />
@@ -134,66 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workpage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/workpage.php">
+      <file leaf-file-name="style_editor.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2369">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1515474330152" expanded="true" signature="308:345" ph="select * fro... sketch" />
-                <marker date="1515474330152" expanded="true" signature="774:847" ph="INSERT INTO comment... " />
-                <marker date="1515474330152" expanded="true" signature="2703:2746" ph="..." />
-                <marker date="1515474330152" expanded="true" signature="2904:2947" ph="..." />
-                <marker date="1515474330152" expanded="true" signature="7238:7282" ph="SELECT * FRO... comment" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="animation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/js/animation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/top.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="110" column="76" lean-forward="true" selection-start-line="110" selection-start-column="76" selection-end-line="110" selection-end-column="76" />
-              <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1515474427954" expanded="true" signature="209:229" ph="select * fro... sketch" />
-                <marker date="1515474427954" expanded="true" signature="428:534" ph="select * fro... sketch" />
-                <marker date="1515474427954" expanded="true" signature="1997:2040" ph="..." />
-                <marker date="1515474427954" expanded="true" signature="2190:2233" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editanime.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Definitive/js/editanime.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Definitive/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="516">
+              <caret line="154" column="34" lean-forward="true" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -310,7 +188,6 @@
         <option value="$PROJECT_DIR$/Definitive/Twitterlogin.php" />
         <option value="$PROJECT_DIR$/Definitive/Twitterlogout.php" />
         <option value="$PROJECT_DIR$/Definitive/js/browsanime.js" />
-        <option value="$PROJECT_DIR$/Definitive/css/style_editor.css" />
         <option value="$PROJECT_DIR$/Definitive/js/animation.js" />
         <option value="$PROJECT_DIR$/Definitive/js/keyframe.js" />
         <option value="$PROJECT_DIR$/Definitive/post.php" />
@@ -321,6 +198,7 @@
         <option value="$PROJECT_DIR$/Definitive/workpage.php" />
         <option value="$PROJECT_DIR$/Definitive/top.php" />
         <option value="$PROJECT_DIR$/Definitive/css/style.css" />
+        <option value="$PROJECT_DIR$/Definitive/css/style_editor.css" />
       </list>
     </option>
   </component>
@@ -618,7 +496,7 @@
       <workItem from="1515372073169" duration="19350000" />
       <workItem from="1515408503564" duration="9068000" />
       <workItem from="1515459491555" duration="268000" />
-      <workItem from="1515460718393" duration="5603000" />
+      <workItem from="1515460718393" duration="5836000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -652,7 +530,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266268000" />
+    <option name="totallyTimeSpent" value="266501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -893,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/thumbnail/2018-01-09 00-07-55 rain_fms.png" />
     <entry file="file://$PROJECT_DIR$/Definitive/js/keyframe.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -981,20 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1515474330032" expanded="true" signature="363:400" ph="select * fro... sketch" />
-            <marker date="1515474330032" expanded="true" signature="2305:2348" ph="..." />
-            <marker date="1515474330032" expanded="true" signature="2506:2549" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/workpage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2369">
@@ -1050,8 +907,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Definitive/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="184">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/workmake.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="194" column="48" lean-forward="true" selection-start-line="194" selection-start-column="48" selection-end-line="194" selection-end-column="48" />
+          <folding>
+            <marker date="1515474330032" expanded="true" signature="363:400" ph="select * fro... sketch" />
+            <marker date="1515474330032" expanded="true" signature="2305:2348" ph="..." />
+            <marker date="1515474330032" expanded="true" signature="2506:2549" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Definitive/css/style_editor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="154" column="34" lean-forward="true" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
           <folding />
         </state>
       </provider>
