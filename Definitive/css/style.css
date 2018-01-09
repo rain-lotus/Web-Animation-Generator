@@ -117,6 +117,16 @@ a {
     text-align: center;
 }
 
+.strong{
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px;
+}
+.description{
+    font-size: 28px;
+    margin: 10px;
+}
+
 #comment {
     text-align: center;
     margin: 50px;

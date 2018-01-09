@@ -124,8 +124,9 @@ session_start();
         <div id="contenttitle">
             <img src="images/workinfo.png" width="338" height="120">
         </div>
-        <p class="strong">作者：<?php print h($sketch["username"]) ?></p>
-        <p>投稿日：<?php print h($sketch["date"]) ?></p>
+        <p class="strong"><?php print h($sketch["title"]) ?></p>
+        <p class="description">作者：<?php print h($sketch["username"]) ?></p>
+        <p class="description">投稿日：<?php print h($sketch["date"]) ?></p>
         <p><?php print h($sketch["caption"]) ?></p>
         <?php
     }

@@ -26,7 +26,7 @@ if (isset($_POST["html"]) && isset($_POST["animation"]) && isset($_POST["title"]
 
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
-        $st = $pdo->prepare("update sketch set username = '$username', title = '$title', caption = '$caption', date = '$time', animation = '$animation', html = '$html', samune = '$img_name' where id = '$id'");
+        $st = $pdo->exec("update sketch set username = '$username', title = '$title', caption = '$caption', date = '$time', animation = '$animation', html = '$html', samune = '$img_name' where id = '$id'");
 
     } else {
         $st = $pdo->prepare("INSERT INTO sketch(username,title,caption,date,animation,html,samune) VALUES( ?, ?, ?, ?, ?, ?, ?)");
