@@ -7,4 +7,6 @@
 ## About
 
 Web Animation Generato(WAG)はブラウザ上で簡単なアニメーションを作成できるWebサービスです
+
+
 [![https://gyazo.com/5d201df367ae1da30b1344a8aa1b142e](https://i.gyazo.com/5d201df367ae1da30b1344a8aa1b142e.png)](https://gyazo.com/5d201df367ae1da30b1344a8aa1b142e)
