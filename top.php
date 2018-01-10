@@ -1,10 +1,22 @@
 <?php
 //////////////////////////////////////////////SQLITEきたら書き換える！
+session_start();
 $pdo = new PDO("sqlite:data/works.sqlite");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $st = $pdo->query("select * from sketch");
 $data = $st->fetchAll();
-/////////////////////////////////////////////ここまで
+//サニタイジング
+function h($str)
+{
+    return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
+}
+
+if(isset($_GET['search'])){
+    $search = $_GET['search'];
+    $st = $pdo->query("select * from sketch where username like '%$search%' or title like '%$search%' or caption like '%$search%'");
+    $data = $st->fetchAll();
+}
+
 ?>
 
 <!doctype html>
@@ -18,13 +30,11 @@ $data = $st->fetchAll();
     <!--スタイルシート-->
     <link rel="stylesheet" href="css/style.css" media="all">
     <!--タイトル-->
-    <title>our app title</title>
+    <title>Web Animation Generator</title>
 </head>
 
-
 <body>
-
-<!--ヘッダー-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダー-->
 <header style="text-align: center">
 
     <!--サイト説明 　左側に。　文考える →画像にする-->
@@ -37,9 +47,11 @@ $data = $st->fetchAll();
         <img src="images/rogo.png" width="338" height="250" >
     </div>
 
+    <!--//////////////////////////////////////////////////////////////////////////////////////////about login検索フォーム 　はりつけよう-->
+    <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About"
+                               style="position: absolute; right: 344px; top: 50px;">
+    </a>
 
-    <!--★画像ボタンか　画像リンクリンクがいい気がする。　　-->
-    <a href="./about.php"><img src="images/about.png" width="210" height="80" alt="About" style="position: absolute; right: 344px; top: 50px;"></a>
     <?php
     header("Content-type: text/html; charset=utf-8");
 
@@ -50,13 +62,16 @@ $data = $st->fetchAll();
         echo "</a>";
     }
     ?>
+
     <div id="search">
-        <form id="form02" action="#">
-            <input id="input02" type="text" placeholder="Search" style="font-size:40px;"><!--
+        <form id="form02" action="top.php">
+            <input id="input02" type="text" placeholder="Search" name="search" style="font-size:40px;"><!--
     /input間で改行したい場合はコメントアウト必須/
     --><input id="submit02" type="submit" value=””>
         </form>
     </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////about login 検索フォームここまで -->
+
 
 </header>
 <!--//////////////////////////////////////////////////////////////////////////////////////////ヘッダーここまで-->
@@ -65,7 +80,7 @@ $data = $st->fetchAll();
 <!--//////////////////////////////////////////////////////////////////////////////////////////常にある３つのページ-->
 <ul class="topmenu">
     <!--△画像をはりつけた。なぜか縦がでかい（変えても）。サイズ調整問題　あとは各ページで開いてるときにいろ変える。透過画像だからCSS変えればおｋ…？-->
-    <li><a href="./top.php"><img src="images/topn.png" width="290" height="80" alt="TOP"></a></li>
+    <li><a href="./top.php"><img src="images/topok.png" width="290" height="80" alt="TOP"></a></li>
     <li><a href="./workmake.php"><img src="images/workmaken.png" width="290" height="80" alt="作品をつくる"></a></li>
     <li><a href="./mypage.php"><img src="images/mypagen.png" width="290" height="80" alt="マイページ"></a></li>
 </ul>
@@ -73,27 +88,37 @@ $data = $st->fetchAll();
 
 
 <!--内容///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-
-<!--/////////////////////////////////////////////////////////////////////////////////////////アバウト-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////作品-->
 <br>
 <br>
-<!--<h1>About</h1>-->
+
+<!--<h1>Works</h1>-->
 <div id="contenttitle">
-    <img src="images/about-t.png" width="338" height="150">
+    <img src="images/works.png" width="338" height="150">
 </div>
+
+
+<br>
+<br>
+<!--/////////////////////画像　idごとにリンクにしてみた。　あと画像をとってきてリンクにしたい-->
+<div class="image33">
+    <?php
+    foreach ($data as $sketch) {
+        $temp = h($sketch["id"]);
+        $workimage = h($sketch["samune"]);
+
+        print '<div class="sketch_wrap">';
+        print '<a href="workpage.php?id=' . $temp . '"><image class="top_img" src="thumbnail/' . $workimage . '" width="300" height="300" ></image></a>';
+        print '</div>';
+    }
+    ?>
+</div>
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////作品ここまで-->
+
+<br>
+<br>
 <br>
 <br>
 
-<!--/////////////////////説明など-->
-<p>説明とか！</p>
-
-
-<!--/////////////////////////////////////////////////////////////////////////////////////////アバウトここまで-->
-
-
-<!--内容///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-
-</body>
-</html>
+<!--/////////////////////////////////////////////////////////////////////////////////

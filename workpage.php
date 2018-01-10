@@ -46,7 +46,7 @@ session_start();
     <link rel="stylesheet" href="css/style_editor.css" media="all">
     <link rel="stylesheet" href="css/elements.css" media="all">
     <!--タイトル-->
-    <title>our app title</title>
+    <title>Web Animation Generator</title>
 </head>
 
 
