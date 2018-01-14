@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="works" uuid="cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2">
+    <data-source source="LOCAL" name="works" uuid="81fe8824-ec86-453f-98d7-f2a0132b2ba7">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\GitHub\CMP-B\Definitive\data\works.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\GitHub\CMP-B\data\works.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

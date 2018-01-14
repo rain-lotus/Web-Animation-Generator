@@ -185,16 +185,12 @@ div.player button {
 
 [type="range"]::-webkit-slider-thumb {
     -webkit-appearance:none;
-
     cursor:pointer;
     position:relative;
     z-index:5;
-
-    /*TODO 色*/
     border-top: 20px solid #FFFFFF;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
-
     width:20px;
     height:20px;
 }
