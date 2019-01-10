@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed8a4b3e-ab2e-4200-8f0a-ebd23f645610" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd2df0cd-b174-4ac5-bcbe-1a3fd94e58b2.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Twitterlogin.php" afterPath="$PROJECT_DIR$/Twitterlogin.php" />
-      <change beforePath="$PROJECT_DIR$/about.php" afterPath="$PROJECT_DIR$/about.php" />
-      <change beforePath="$PROJECT_DIR$/css/style_editor.css" afterPath="$PROJECT_DIR$/css/style_editor.css" />
-      <change beforePath="$PROJECT_DIR$/data/myblog.sqlite" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data/preworks.sqlite" afterPath="" />
       <change beforePath="$PROJECT_DIR$/data/works.sqlite" afterPath="$PROJECT_DIR$/data/works.sqlite" />
-      <change beforePath="$PROJECT_DIR$/js/editanime.js" afterPath="$PROJECT_DIR$/js/editanime.js" />
-      <change beforePath="$PROJECT_DIR$/js/element.js" afterPath="$PROJECT_DIR$/js/element.js" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/2018-01-09 00-16-10 rain_fms.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/2018-01-09 00-32-56 rain_fms.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/2018-01-09 01-10-02 rain_fms.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/2018-01-09 10-01-45 rain_fms.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/2018-01-09 10-21-27 rain_fms.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/2018-01-09 13-16-14 taizosorry.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/2018-01-09 13-33-35 rain_fms.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/ame-work.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/mitsu-work.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/takumi-work.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/thumbnail/test.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +28,23 @@
     <favorites_list name="CMP-B" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="top.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/top.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <marker date="1515545598117" expanded="true" signature="209:229" ph="select * fro... sketch" />
+                <marker date="1515545598117" expanded="true" signature="428:534" ph="select * fro... sketch" />
+                <marker date="1515545598117" expanded="true" signature="2007:2050" ph="..." />
+                <marker date="1515545598117" expanded="true" signature="2200:2243" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -191,10 +186,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="680" />
-    <option name="y" value="5" />
-    <option name="width" value="1241" />
-    <option name="height" value="1046" />
+    <option name="x" value="310" />
+    <option name="y" value="27" />
+    <option name="width" value="1210" />
+    <option name="height" value="1012" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -293,7 +288,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -308,13 +302,14 @@
       </pane>
       <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/programing/companynote" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -464,7 +459,14 @@
       <workItem from="1515652503321" duration="6037000" />
       <workItem from="1515742308180" duration="704000" />
       <workItem from="1515823460902" duration="5206000" />
-      <workItem from="1515931808293" duration="385000" />
+      <workItem from="1515931808293" duration="1068000" />
+      <workItem from="1516264664533" duration="584000" />
+      <workItem from="1516380549220" duration="369000" />
+      <workItem from="1517537533231" duration="604000" />
+      <workItem from="1517891319326" duration="86000" />
+      <workItem from="1518141352872" duration="640000" />
+      <workItem from="1518152277727" duration="964000" />
+      <workItem from="1518436483629" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="追加：dd, animation のテストデータ">
       <created>1513919803001</created>
@@ -498,10 +500,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288746000" />
+    <option name="totallyTimeSpent" value="292728000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="680" y="5" width="1241" height="1046" extended-state="0" />
+    <frame x="310" y="27" width="1210" height="1012" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -510,13 +513,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32022473" sideWeight="0.50322235" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33068183" sideWeight="0.49785176" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09886364" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34356552" sideWeight="0.49785176" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.098108746" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54831463" sideWeight="0.49677765" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21508141" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.015424165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11091549" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.01584507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09344791" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -581,120 +584,67 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/workmake.php">
+    <entry file="file://$PROJECT_DIR$/top.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3128">
-          <caret line="136" column="81" lean-forward="true" selection-start-line="136" selection-start-column="81" selection-end-line="136" selection-end-column="81" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515545598065" expanded="true" signature="363:400" ph="select * fro... sketch" />
-            <marker date="1515545598065" expanded="true" signature="2315:2358" ph="..." />
-            <marker date="1515545598065" expanded="true" signature="2516:2559" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="209:229" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="428:534" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="2007:2050" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="2200:2243" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1978">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <marker date="1515845204386" expanded="true" signature="192:212" ph="select * fro... sketch" />
-            <marker date="1515845204386" expanded="true" signature="1515:1558" ph="..." />
-            <marker date="1515845204386" expanded="true" signature="1708:1751" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/element.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/editanime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style_editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style_editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/top.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="15" column="83" lean-forward="false" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/element.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/editanime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2323">
-          <caret line="83" column="6" lean-forward="true" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515845204386" expanded="true" signature="192:212" ph="select * fro... sketch" />
-            <marker date="1515845204386" expanded="true" signature="1515:1558" ph="..." />
-            <marker date="1515845204386" expanded="true" signature="1708:1751" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="209:229" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="428:534" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="2007:2050" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="2200:2243" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workmake.php">
+    <entry file="file://$PROJECT_DIR$/top.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515545598065" expanded="true" signature="363:400" ph="select * fro... sketch" />
-            <marker date="1515545598065" expanded="true" signature="2315:2358" ph="..." />
-            <marker date="1515545598065" expanded="true" signature="2516:2559" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="209:229" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="428:534" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="2007:2050" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="2200:2243" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515545598117" expanded="true" signature="209:229" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="428:534" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="2007:2050" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="2200:2243" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <marker date="1515545598117" expanded="true" signature="209:229" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="428:534" ph="select * fro... sketch" />
+            <marker date="1515545598117" expanded="true" signature="2007:2050" ph="..." />
+            <marker date="1515545598117" expanded="true" signature="2200:2243" ph="..." />
           </folding>
         </state>
       </provider>
